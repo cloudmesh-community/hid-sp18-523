@@ -1,27 +1,47 @@
-\documentclass{article}
+\documentclass{../../hid-sample/tex/format/laszewski}
+
+\addbibresource{hid-sp18-523.bib}
+\addbibheading{bibempty}{}
+
+\graphicspath{%
+{./}%
+{../../hid-sample/tex/format/images/}%
+}
+
+\newcommand{\TITLE}{Handbook of \\ Clouds and Big Data}
+\newcommand{\SUBTITLE}{Theory and Practice}
+\newcommand{\AUTHOR}{Gregor von Laszewski}
+\newcommand{\EMAIL}{laszewski@gmail.com}
+\newcommand{\LOCATION}{url}
+
 
 
 \begin{document}
 
 %\maketitle
 
-%input all 5 of your abstracts here to test them. Each will have its own tex file.
-\input{abstract-h20.tex}
-\input{abstract-dremel.tex}
-\input{abstract-genomics.tex}
-\input{abstract-vision.tex}
-\input{abstract-spanner.tex}
+% input all 5 of your abstracts here to test them. Each will have its own tex file.
+\input{abstract-h2O}
+\input{abstract-dremel}
+\input{abstract-genomics}
+\input{abstract-vision}
+\input{abstract-spanner}
 
 
-
-% replace sam\documentclass[options]{class}ple with your hid. make sure you have a filename
+% replace sample with your hid. make sure you have a filename
 % accordingly note your hid is something like hid-sp18-999
-% Adding biblograpgy
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\addcontentsline{toc}{chapter}{\textcolor{ocre}{Bibliography}}
 
-\bibliography{hid-sp18-523}
-\bibliographystyle{plainurl.bst}
+\section*{References}
+\printbibliography[heading=bibempty]
 
+\cleardoublepage
+\phantomsection
+\setlength{\columnsep}{0.75cm}
+\addcontentsline{toc}{chapter}{\textcolor{ocre}{Index}}
+\printindex
 
 \end{document}
