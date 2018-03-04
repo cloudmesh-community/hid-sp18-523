@@ -1,0 +1,38 @@
+swagger: "2.0"
+info:
+ version: "0.0.1"
+ title: "processinfo"
+ description: "A simple service to get processinfo as an example of using swagger -2.0 specification and codegen"
+ termsOfService: "http://swagger.io/terms/"
+ contact:
+  name: "Cloudmesh Process Service"
+ license:
+  name: "Apache"
+host: "localhost:8080"
+basePath: "/api"
+schemes:
+ - "http"
+consumes :
+ - "application/json"
+produces :
+ - "application/json"
+paths:
+ /process:
+   get:
+    description : "Returns process information of the hosting server"
+    produces:
+     - "application/json"
+    responses:
+     "200":
+       description: "Process info"
+
+       schema:
+         $ref: "#/definitions/PROCESS"
+definitions:
+ PROCESS:
+  type: "object"
+  required :
+   - "model"
+  properties:
+   model:
+    type: "string"
