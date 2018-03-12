@@ -12,18 +12,18 @@ in Environment variable. It also requires virtualenv to be installed on Ubuntu 1
 * On Ubuntu - Create a file "process.yaml" file that contains definition/structure of the service
 * Generate Server Side Stub Code using swagger-codegen jar(swagger-codegen-cli-2.3.1.jar) by running following command. 
 java -jar swagger-codegen-cli-2.3.1.jar generate
-    -i ~/github/cloudmesh-community/hid-sp18-523/Swagger/process.yaml
+    -i ~/github/cloudmesh-community/hid-sp18-523/Swagger/cloudmesh/process/process.yaml
     -l python-flask
-    -o ~/github/cloudmesh-community/hid-sp18-523/Swagger/server/process/flaskConnexion
+    -o ~/github/cloudmesh-community/hid-sp18-523/Swagger/cloudmesh/process/server/process/flaskConnexion
     -D supportPython2=true
-* Update the code of default_controller.py under ~/github/cloudmesh-community/hid-sp18-523/Swagger/server/process/flaskConnexion folder.
+* Update the code of default_controller.py under ~/github/cloudmesh-community/hid-sp18-523/cloudmesh/process/Swagger/server/process/flaskConnexion folder.
 * Install the virtualenv environment.
 * Run the REST service under virtual environment
 * Execute below code for Installing and generating Client side code under virtualenv environment. 
 java -jar swagger-codegen-cli-2.3.1.jar generate
-    -i ~/github/cloudmesh-community/hid-sp18-523/Swagger/process.yaml
+    -i ~/github/cloudmesh-community/hid-sp18-523/Swagger/cloudmesh/process/process.yaml
     -l python
-    -o ~/github/cloudmesh-community/hid-sp18-523/Swagger/client/process
+    -o ~/github/cloudmesh-community/hid-sp18-523/Swagger/cloudmesh/swagger/myclient/process
     -D supportPython2=true
 
 # Create the Bash Shell Script :
