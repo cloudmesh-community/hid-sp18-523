@@ -54,10 +54,10 @@ Execute the bash script - process_bash_script_Client.sh
 ## Test the service:
 
 * Through Browser 
-	- Verify the service by typing http://localhost:8080/api/process. 
+	- Verify the service by typing http://localhost:8080/cloudmesh/process. 
 
 * Through curl 
-	- curl -H "Content-Type: application/json" http://localhost:8080/api/process
+	- curl -H "Content-Type: application/json" http://localhost:8080/cloudmesh/process
 
 * Through Python Client 
 	-Create and Execute the "process_bash_script_Client.sh".It will start the REST Client in virtualenv
