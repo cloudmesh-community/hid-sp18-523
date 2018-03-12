@@ -9,7 +9,7 @@ info:
  license:
   name: "Apache"
 host: "localhost:8080"
-basePath: "/api"
+basePath: "/cloudmesh"
 schemes:
  - "http"
 consumes :
