@@ -10,4 +10,4 @@ try:
     api_response = api_instance.process_get()
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling DefaultApi->diskspace_get: %s\n" % e)
+    print("Exception when calling DefaultApi->process_get: %s\n" % e)
