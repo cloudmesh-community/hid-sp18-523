@@ -1,4 +1,4 @@
-# Project : REST Service for listing processes details with Swagger
+# REST Service for listing processes details with Swagger
 
 ## Objective :
 
