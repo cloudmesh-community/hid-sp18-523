@@ -1,0 +1,196 @@
+% status: 0
+% chapter: TBD
+
+\title{Domo}
+
+\author{Ritesh Tandon}
+\affiliation{%
+ \institution{Indiana University}
+  \country{USA}}
+\email{ritandon@iu.edu}
+
+\maketitle
+
+% The default list of authors is too long for headers}
+\renewcommand{\shortauthors}{R. Tandon}
+
+\section{Introduction}
+
+Data is the heart of information of any business. 
+Though it might seems easy, but it is very trivial 
+to find the relevant data that is required by different 
+people working in different departments of large organization. 
+More so, the bugger challenge is to derive the insights 
+from the data when it is located.
+Domo transforms the way orgaization's employee access, use, 
+analyze and share data. Domo gives the power to users to 
+make decision in real time. Domo can be thought of as cloud 
+based data operating system that has the ability to handle 
+and process data regardless of its type and location. 
+Domo brings different data sources spread across different 
+locations at one central location so that it can be easily 
+accessible for use. Domo also let the user share and 
+colloborate different data sources , visualization and 
+reports. It also has realiable data management feature 
+that provides high level of security , speed and scalability. 
+Domo makes data avialble on any device of any size thus 
+making it truly mobile.
+
+\keywords{hid523, Domo}
+
+
+
+\section{Domo- Inbuilt Solutions}
+
+Domo has custom inbuilt dashboard and visualization solution 
+for different roles ( such as BI, CEO, Finance, IT, Marketing, 
+Operations, Sales, Services etc )  within oroganization and 
+for different industries ( such as Education, Healthcare, 
+Manufacturing, Hospitatlity, Retail, Transportation etc )
+
+
+\section{Domo - Data Connectors}
+\begin{itemize}
+\item Data Connectors is the heart of Domo. Through Domo we may 
+connect to many different types of data sources. Domo supports 
+connecting to many types of data sources such as  Cloud App, 
+File, Database, On Premise, Api.
+
+\item Cloud App Connectors - Domo has  more than 400 cloud app 
+connectors including all famous ones such as amazon s3, 
+AWS, Adobe analytics, Google Analytics, Facebook, fitbit, 
+instagram, salesforce etc. 
+
+\item File Connectors - Through Domo we can alsoconnect to data 
+that is stored in files such as excel and/or csv files.
+
+\item Database - Domo has connectors for conneting relational ,
+non relational, SQL and NO-SQL databases such as Oracle, 
+MS SQL, MySQL, Hadoop etc.
+
+\item On Premise - Other than cloud based connectors Domo can also 
+connect to on premise databases/files etc as long as security 
+protocols are opened securely for connection.
+
+\item Api - Domo has Dev Studio tool for creating custom apps. 
+It is best suited for developers having web development 
+experince ( java script, css , html ). Domo App CLI is the 
+main tool that is used to create, edit and publish app designs 
+to the Domo instance.
+\end{itemize}
+
+\section{Domo - Data Flows and Transforms}
+
+Cleaning data is herculean task when dealing with data that 
+is dirty that needs to be cleaned before reporting. Domo has 
+Magic ETL tool that makes data cleaning job looks easy. 
+It helps join, transform and tidy up data with drag and 
+drop ease of use. 
+
+Domo also has SQL data flow that let the developer select 
+data set, perform transformation operation through SQL query 
+and generate tidy and processed output dataset. Domo also 
+give option to run the dataflow whenever dataset is updated 
+thus making sure that final visualization and report is 
+always based on latest clean data in almost real time.
+
+
+\section{Domo - Visualization}
+
+Domo has many inbuilt visualization template that helps the 
+user present the user story in refined visual format.
+These predefined template are called Cards in Domo. Horizontal bar, 
+Vertical bar, Line, Area , Data Science , Pie and Funnel are 
+few popular visualization categories. These individual categories 
+contain many use ful templates - for e.g - Data Science category 
+has visualization template for scatter plot, box plot, predictive 
+modeling , outliers etc to visually represent relevant data. 
+Donut, Pie, Treemap, Funnel, Folded funnel are few of the
+popular visualization template under this category.
+
+
+
+\section{How It Works}
+\begin{itemize}
+\item Create data connector as needed 
+( file , cloud, on premise , Api etc )
+\item Select the connector and create required dat set by 
+selecting specifying table, views or by custom sql query.
+\item Select the dataset and chose visualization card under 
+respective category ( Bar, Pie, Funnel , Scatter, 
+Predective modeling etc )
+\item Drag and drop the fields/attributes that are needed 
+in visualization/report 
+\item Apply inbuilt aggregate function on fields as needed 
+\item Save the card. Move to dashborad if needed.
+\item Give access and share your visulization card with concerned users.
+
+\end{itemize}
+
+\section{Domo - Dev Studio}
+
+Integrated development environment that provides developers 
+with web developemt experience to create custom apps that 
+can be deployed in Domo instance easily. Development environment 
+consists of following three main componenets-
+\begin{itemize}
+\item Domo App CLI - Used to create , edit and publisg custom app 
+on Domo environment
+\item App Design - Custom built template that can be connected to 
+different datasets and visualize data ( This can be used when 
+there is need of custom visulization requirement for which 
+standard template is not available )
+\item App Manifest - Configuration file that defines properties 
+of custom app
+\end{itemize}
+
+\section{Installation}
+\begin{itemize}
+\item Install node.js through download
+\item Install CLI using ``npm install -g ryuu`` on unix/linux based platform. 
+   Make sure that firewall is not blocking npm registry by pining
+   www.npmjs.com through terminal
+\end{itemize}
+
+
+\section{Creating simple Domo App}
+\begin{itemize}
+\item On the CLI Type command  ``domo init`` on terminal.
+   This will initiate basic design template
+\item We will be asked to enter design name and starter type App. 
+   Enter ``myfirstdomoapp`` as design name and ``HelloWorld`` as 
+   starter type. This will create directory and all the necesary
+   files that we need for building simple app
+
+      ``Following project structure is created -
+        app.cs
+        app.js
+        domo.js
+        index.html
+        manifest.json``~\cite{hid-sp18-523-Dev}
+
+\item Skip the data source connection part as we are building simple
+   custom app that can be deployed on Domo instance
+\item From the CLI run ``domo dev``. This will open browser and will 
+   render myfirstdomoapp.
+\item Make the styling changes in app.css and logic changes in app.js
+
+\end{itemize}
+
+
+\section{Sharing custom app using Domo}
+\begin{itemize}
+\item Login to Domo with CLI by typing ``domo login``
+\item publish the custom built app on domo instance
+   using ``domo publish``
+\end{itemize}
+
+\begin{acks}
+
+The author would like to thank Dr.~Gregor~von~Laszewski 
+for his support and suggestions in writing this paper.
+\end{acks}
+
+\bibliographystyle{ACM-Reference-Format}
+\bibliography{report} 
+
