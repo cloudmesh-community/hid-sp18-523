@@ -1,12 +1,18 @@
+% chktex-file 1
+%\documentclass{article}
+
 \documentclass{../../hid-sample/tex/format/laszewski}
 
-\addbibresource{hid-sp18-523.bib}
-\addbibheading{bibempty}{}
+
+\addbibresource{hid-sample.bib}  
+\defbibheading{bibempty}{}
 
 \graphicspath{%
 {./}%
 {../../hid-sample/tex/format/images/}%
 }
+
+\chapterimage{chapter.png}
 
 \newcommand{\TITLE}{Handbook of \\ Clouds and Big Data}
 \newcommand{\SUBTITLE}{Theory and Practice}
@@ -17,6 +23,8 @@
 
 
 \begin{document}
+
+\index{Test}
 
 %\maketitle
 
@@ -43,5 +51,6 @@
 \setlength{\columnsep}{0.75cm}
 \addcontentsline{toc}{chapter}{\textcolor{ocre}{Index}}
 \printindex
+
 
 \end{document}
