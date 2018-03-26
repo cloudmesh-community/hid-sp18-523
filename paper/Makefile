@@ -23,15 +23,11 @@ endif
 #>> report-latex.log 2>&1
 #	make -f Makefile check >> report-latex.log 2>&1
 
-all:
-	cp ../../hid-sample/paper/Makefile .
-	make -f Makefile generate
-
-generate: clean iureport
-	$(LATEX) ${FLAGS} ${FILE}
+all: clean iureport
+	$(LATEX) ${FILE}
+	$(LATEX) ${FILE}
 	$(BIBTEX) ${FILE}
-	$(LATEX) ${FLAGS} ${FILE}
-	$(LATEX) ${FLAGS} ${FILE}
+	$(LATEX) ${FILE}
 
 iureport:
 	cp ../../hid-sample/tex/format/iureport.cls .
