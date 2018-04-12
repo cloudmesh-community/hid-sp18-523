@@ -294,8 +294,7 @@ CB:CB:CA:48:E0:DF:06:6A:7D:75:E6:CB:22:BE:35:5A:9A:B3
 In puppet environment mangement tool known as r10k is used for managing configurations related to different environments such as testing, staging and production etc. These configuration related information is stored in central repository. r10k tool creates environment on puppet master and then use modules stored in repo to install and update the environment
 Following command is used on any node to install r10k tool
 
-```$ urlgrabber -o /etc/yum.repos.d/timhughes-r10k-epel-6.repo
-[https://copr.fedoraproject.org/coprs/timhughes/yum](https://copr.fedoraproject.org/coprs/timhughes/yum)  -y install rubygem-r10k```
+```$ urlgrabber -o /etc/yum.repos.d/timhughes-r10k-epel-6.repo [https://copr.fedoraproject.org/coprs/timhughes/yum](https://copr.fedoraproject.org/coprs/timhughes/yum)  -y install rubygem-r10k```
 
 ### Configure environment in /etc/puppet/puppet.conf for r10k
 
@@ -304,13 +303,14 @@ environmentpath = $confdir/environments
 
 ### Create a Configuration File for r10k Config
 
-```cat <<EOF >/etc/r10k.yaml
-:cachedir: '/var/cache/r10k'
-:sources:
-:opstree:
-remote: '/var/lib/git/fullstackpuppet-environment.git'
-basedir: '/etc/puppet/environments'
-EOF```
+```cat <<EOF >/etc/r10k.yaml```
+```:cachedir: '/var/cache/r10k'```
+```:sources:```
+```:opstree:```
+```remote: '/var/lib/git/fullstackpuppet-```
+```environment.git'```
+```basedir: '/etc/puppet/environments'```
+```EOF```
 
 ### Installing Puppet Manifest and Module
 
@@ -318,15 +318,7 @@ r10k deploy environment -pv
 
 Since the environment needs to be updated at regular intervals it is recommended to create cron job.
 
-```cat << EOF > /etc/cron.d/r10k.conf
-
-SHELL=/bin/bash
-
-PATH=/sbin:/bin:/usr/sbin:/usr/bin
-
-H/15 * * * * root r10k deploy environment -p
-
-EOF```
+```cat << EOF > /etc/cron.d/r10k.conf SHELL=/bin/bash PATH=/sbin:/bin:/usr/sbin:/usr/bin H/15 * * * * root r10k deploy environment -p EOF```
 
 ### Testing Installation
 
@@ -334,13 +326,7 @@ Puppet manifest for Puppet module needs to be complied in order to test/validate
 
 Run the following command and get a YAML output as the result.
 
-```curl --cert /etc/puppet/ssl/certs/puppet.corp.guest.pem \
-
---key /etc/puppet/ssl/private_keys/puppet.corp.guest.pem \
-
---cacert /etc/puppet/ssl/ca/ca_crt.pem \
-
--H 'Accept: yaml' \```
+```curl --cert /etc/puppet/ssl/certs/puppet.corp.guest.pem \--key /etc/puppet/ssl/private_keys/puppet.corp.guest.pem \--cacert /etc/puppet/ssl/ca/ca_crt.pem \-H 'Accept: yaml' \```
 
 ## Reference
 
