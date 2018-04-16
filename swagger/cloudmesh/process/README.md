@@ -56,7 +56,6 @@ Execute the bash script - process_bash_script_Client.sh
 * Through Browser 
 	- Verify the service by typing http://localhost:8080/cloudmesh/process. 
 
-![Process Image](images/process-screen-shot.png)
 
 * Through curl 
 	- curl -H "Content-Type: application/json" http://localhost:8080/cloudmesh/process
@@ -67,6 +66,6 @@ Execute the bash script - process_bash_script_Client.sh
 
 
 
-
+![Process Image](images/process-screen-shot.png)
 
 
