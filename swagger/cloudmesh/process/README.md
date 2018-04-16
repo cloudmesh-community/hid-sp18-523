@@ -66,6 +66,6 @@ Execute the bash script - process_bash_script_Client.sh
 
 
 
-![Process Image](images/process-screen-shot.png)
+![Process Image](https://github.com/cloudmesh-community/hid-sp18-523/blob/master/swagger/cloudmesh/process/images/process-screen-shot.PNG)
 
 
