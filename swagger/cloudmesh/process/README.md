@@ -1,5 +1,7 @@
 # REST Service for listing processes details with Swagger
 
+Dockerfile and Makefile format was adopted from Kadupitiya ( 419 ) and Arijit ( 520 )
+
 ## Objective :
 
 * This REST API is intended to list processes details ( CPU, Memory etc ) on the server it is running 
