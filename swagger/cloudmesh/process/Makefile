@@ -4,7 +4,7 @@ FLASKDIR=server/process/flaskConnexion
 
 
 docker-start:
-	cd $(FLASHDIR); docker build -t ritandon/swaggerprocess .;docker run -p 8080:8080 ritandon/swaggerprocess;
+	cd $(FLASKDIR); docker build -t ritandon/swaggerprocess .;docker run -p 8080:8080 ritandon/swaggerprocess;
 	
 docker-stop:
 	docker stop $$(docker ps -a -q -f status=running)
