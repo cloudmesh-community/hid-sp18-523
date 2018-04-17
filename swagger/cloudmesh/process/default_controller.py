@@ -14,7 +14,10 @@ def get_proc_list():
     ''' Retrieves a list [] of Proc objects representing the active
     process list list '''
     proc_list = []
+    #command='docker run ritandon/swaggerprocess ps -aux'
     sub_proc = Popen(['ps', 'aux'], shell=False, stdout=PIPE)
+    #sub_proc = Popen([command], shell=True, stdout=PIPE)
+    #sub_proc = Popen("docker run ritandon/swaggerprocess ps -aux", stdin=PIPE) 
     #Discard the first line (ps aux header)
     sub_proc.stdout.readline()
     for line in sub_proc.stdout:

@@ -1,18 +1,12 @@
 SWAGGERCODEGEN=java -jar swagger-codegen-cli-2.3.1.jar
 YAML=process.yaml
 FLASKDIR=server/process/flaskConnexion
+SERVERDIR=./server
 
-
-docker-start:
-	cd $(FLASKDIR); docker build -t ritandon/swaggerprocess .;docker run -p 8080:8080 ritandon/swaggerprocess;
-	
-docker-stop:
-	docker stop $$(docker ps -a -q -f status=running)
+all: service docker-build docker-start
 
 service: 
 	sudo wget https://oss.sonatype.org/content/repositories/releases/io/swagger/swagger-codegen-cli/2.3.1/swagger-codegen-cli-2.3.1.jar
-	#$(SWAGGERCODEGEN) generate  -i $(YAML)  -l python-flask  -o $(FLASKDIR)  -D supportPython2=true
-	
 	$(SWAGGERCODEGEN) generate  -i $(YAML)  -l python-flask  -o $(FLASKDIR)  -D supportPython2=true
 
 	#cp -r data $(FLASKDIR)
@@ -24,18 +18,26 @@ run:
 	sudo python setup.py install && python -m swagger_server
 
 test:
-	curl http://localhost:8080/cloudmesh/process
-
-start:
-	python -m swagger_server
+	curl -H "Content-Type: application/json" http://localhost:8080/cloudmesh/process
+	
 		            
 stop:
 	ps -ef | grep swagger | grep -v "grep"| awk '{print $$2}' | xargs kill -9
 
 
-container:
-	cd $(FLASKDIR);	sudo docker build -t ritandon/swaggerprocess .;sudo docker run -p 8080:8080 ritandon/swaggerprocess;
+docker-build:
+	rm $(FLASKDIR)/Dockerfile
+	cp -r Dockerfile $(FLASKDIR)/
+	cd $(FLASKDIR); sudo docker build -t cloudmeshprocess .; 
 
-osx:
-	docker build -t cloudmesh-process .
-	docker run -p 4000:80 cloudmesh-process 
+docker-start:
+	docker run -p 8080:8080 cloudmeshprocess
+
+
+clean:
+	rm -r $(SERVERDIR)
+	rm -f ./swagger-codegen-cli-2.3.1.jar
+
+docker-stop:
+	docker stop $$(docker ps -a -q -f status=running)
+
