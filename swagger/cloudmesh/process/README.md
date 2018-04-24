@@ -9,7 +9,41 @@ Dockerfile and Makefile format was adopted from Kadupitiya ( 409 ) and Arijit ( 
 * Note - This was created on Ubuntu 16.04. One should have swagger-codegen-cli-2.3.1.jar installed and specified
 in Environment variable. It also requires virtualenv to be installed on Ubuntu 16.04
 
-## Steps for creating the Server and client :
+
+# Steps to reproduce service code, build docker image and run in docker container
+ 
+Make file has following commands.Execute below commands from the Makefile to create REST service , create docker image
+and run it in docker container locally.
+
+Run following command to create service
+
+```make service```
+
+Run following command to build and create docker image
+
+```make docker-build```
+
+Run following command to run docker image service inside docker container
+
+```make docker-start```
+
+Run following command to test the service that runs in local docker container
+
+```make test```
+
+Alternatively access following url to view service result in browser
+
+```http://localhost:8080/cloudmesh/process```
+
+Run following command to clean. This will remove the server folder and delete the .jar file
+
+```make clean```
+
+
+ 
+# Details ( steps ) of creating service, executing and testing locally without Docker
+
+## Steps for creating the Server and client ( Manual Execution ) :
 
 * On Ubuntu - Create a file "process.yaml" file that contains definition/structure of the service
 * Generate Server Side Stub Code using swagger-codegen jar(swagger-codegen-cli-2.3.1.jar) by running following command. 
@@ -28,7 +62,7 @@ java -jar swagger-codegen-cli-2.3.1.jar generate
     -o ~/github/cloudmesh-community/hid-sp18-523/Swagger/cloudmesh/swagger/myclient/process
     -D supportPython2=true
 
-# Create the Bash Shell Script :
+## Create Bash Shell Script ( Local without Docker ):
 
 * Create the Bash Shell scripts that will generate the server stub code using yaml,replace the implementation of controller file, install the serber and run the service on virtualenv
 
@@ -53,7 +87,7 @@ Create the Bash Shell scripts to generate the client code and run using virtuale
 Execute the bash script - process_bash_script_Client.sh
 
 
-## Test the service:
+## Test the service ( Local without Docker ):
 
 * Through Browser 
 	- Verify the service by typing http://localhost:8080/cloudmesh/process. 
