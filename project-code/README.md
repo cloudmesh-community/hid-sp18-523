@@ -81,7 +81,9 @@ From the RMSE results, HyperTunned Boosted Decision Tree has provided better res
 
 ![RMSEComparison](images/RMSEComparison.png)
 
-![RMSEComparisionBetweenHypertune](Images/RMSEComparisionBetweenHypertune.png)
+Comparing the Hyper-Tune models
+
+![RMSEComparisionBetweenHypertune](images/RMSEComparisionBetweenHypertune.png)
 
 ## Predictive Model -
 
