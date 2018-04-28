@@ -106,7 +106,7 @@ Once the Prediction model has been executed successfully, it can be deployed as 
 
 It will generate the API key, which will be used for Azure Cloud deployment.
 
-![Webservicedeploy](images/Webservicedeploy)
+![Webservicedeploy](images/Webservicedeploy.png)
 
 It will provide an option to Test web service locally with below options - 
 * Click on Test button enabled at the bottom of the screen
