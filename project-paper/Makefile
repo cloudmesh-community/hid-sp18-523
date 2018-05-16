@@ -42,6 +42,7 @@ prepare:
 	@if [ $(DIR) != paper ]; then  cd ../../hid-sample; git pull ; fi
 	@if [ $(DIR) != paper ]; then  cp ../../hid-sample/paper/Makefile . ; fi
 	@if [ $(DIR) != paper ]; then  cp ../../hid-sample/paper/report.tex . ; fi
+	@if [ $(FINAL) == true ]; then  cp ../../hid-sample/paper/report-final.tex report.tex ; fi
 
 
 iureport:
