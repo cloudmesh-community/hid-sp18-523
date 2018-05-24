@@ -1,48 +1,47 @@
-#
-# Naturally you need to adapt this to make work for your project
-#
+SWAGGERCODEGEN=java -jar swagger-codegen-cli-2.3.1.jar
+YAML=prediction.yaml
+FLASKDIR=server/prediction/flaskConnexion
+SERVERDIR=./server
 
-all:
-	@echo "create a useful makefile that makes it easy to run your code"
-	@echo make sure your data is downloaded from the intenet"
+all: service docker-build docker-start
 
-data:
-	@echo "wget or curl your data from the internet"
+service: 
+	#sudo wget https://oss.sonatype.org/content/repositories/releases/io/swagger/swagger-codegen-cli/2.3.1/swagger-codegen-cli-2.3.1.jar
+	$(SWAGGERCODEGEN) generate  -i $(YAML)  -l python-flask  -o $(FLASKDIR)  -D supportPython2=true
 
-generate:
-	@echo "generat your code such as swagger services"
+	#cp -r data $(FLASKDIR)
+	rm $(FLASKDIR)/swagger_server/controllers/default_controller.py
+	cp -r default_controller.py $(FLASKDIR)/swagger_server/controllers
+	cp -r train.csv $(FLASKDIR)/swagger_server/controllers
+	cp -r test.csv $(FLASKDIR)/swagger_server/controllers
+	cp -r train.csv $(FLASKDIR)
+	cp -r test.csv $(FLASKDIR)
 
-install: install-swagger install-mongo
-	@echo "install your code so it can be used on the system it is supposed to run"
-	@echo "you could have multiple installs so we giva na exampel"
-
-install-swagger:
-	@echo "install your swagger services"
-
-install-mongo:
-	@echo "install your mongo services - this is just an example, you may not use mongo"
-
-start: start-swagger start-mongo
-  @echo "start your code so it can be used on the system it is supposed to run"
-	@echo "you could have multiple starts so we giva na exampel"
-
-start-swagger:
-	@echo "start your swagger services"
-
-stop-mongo:
-	@echo "stop your mongo services - this is just an example, you may not use mongo"
-
-stop: stop-swagger stop-mongo
-  @echo "stop your code so it can be used on the system it is supposed to run"
-	@echo "you could have multiple stops so we giva na exampel"
-
-stop-swagger:
-	@echo "stop your swagger services"
-
-stop-mongo:
-	@echo "stop your mongo services - this is just an example, you may not use mongo"
+run: 
+	cd $(FLASKDIR) && pip install -r requirements.txt && \
+	sudo python setup.py install && python -m swagger_server
 
 test:
-	@echo "test your service"
+	curl -H "Content-Type: application/json" http://localhost:8080/cloudmesh/prediction
+	
+		            
+stop:
+	ps -ef | grep swagger | grep -v "grep"| awk '{print $$2}' | xargs kill -9
 
+
+docker-build:
+	rm $(FLASKDIR)/Dockerfile
+	cp -r Dockerfile $(FLASKDIR)/
+	cd $(FLASKDIR); sudo docker build -t cloudmeshprediction .; 
+
+docker-start:
+	docker run -p 8080:8080 cloudmeshprediction
+
+
+clean:
+	rm -r $(SERVERDIR)
+	#rm -f ./swagger-codegen-cli-2.3.1.jar
+
+docker-stop:
+	docker stop $$(docker ps -a -q -f status=running)
 
