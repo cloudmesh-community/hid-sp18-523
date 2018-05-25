@@ -44,10 +44,11 @@
 
 
 \begin{abstract}
-In current world, data is getting generated and stored with different storage systems. 
-We need to use this data for a better understanding, analyze and can estimate the 
-future scenarios with certain probability. There are many algorithms, which have 
-developed and implemented for providing better accuracy on the future scenarios.
+In current world, data is getting generated and stored with different 
+storage systems. We need to use this data for a better understanding, analyze 
+and can estimate the future scenarios with certain probability. There are many 
+algorithms, which have developed and implemented for providing better accuracy 
+on the future scenarios.
 \end{abstract}
 
 \keywords{\locator\ REST, scikit learn, linear, decision tree, 
@@ -58,24 +59,24 @@ random forest, algorithm, Machine, learning}
 
 \section{Introduction}
 
-Scikit learn is a library created under machine learning algorithms, which uses 
-different datasets gathered over years to learn and predicts future scenarios. 
-Supervised and unsupervised learning can differentiation conducted for learning 
-variety of dataset.
+Scikit learn is a library created under machine learning algorithms, 
+which uses different datasets gathered over years to learn and predicts 
+future scenarios. Supervised and unsupervised learning can differentiation 
+conducted for learning variety of dataset.
 
 Supervised algorithms are on the dataset, which has the target variable, which 
-need to be predicted or estimated. This datasets can be acted with below different 
-approaches
+need to be predicted or estimated. This datasets can be acted with below 
+different approaches
 
-Classification is based on the classes and the labeled data, we need to predict 
-the unlabeled data.
+Classification is based on the classes and the labeled data, we need to predict
+ the unlabeled data.
 
 Regression is based on the continuous variable or data, we need to predict the 
 future state of data is known as regression
 
-Unsupervised algorithms are on the dataset, where we donot see the target variable 
-for prediction, we learn its behavior set of vector input variable to identify the 
-clustering group of similar behavior data or sample
+Unsupervised algorithms are on the dataset, where we donot see the 
+target variable for prediction, we learn its behavior set of vector input 
+variable to identify the clustering group of similar behavior data or sample
 ~\cite{sckitml}
 Kaggle is a known location for different kind of datasets gathered by various 
 institutes across globe.
@@ -91,43 +92,48 @@ Below are the 3 algorithm from Scikit learn
 
 \section{Reason}
 
-We are planning to use Regression learning algorithm because the target variable is 
-numerical and continuous in nature. We will be creating ML pipeline using linear, 
-regularized linear, tree and forest learning algorithm. We will compare and evaluate 
-different models based on RMSE of learning algorithm.
+We are planning to use Regression learning algorithm because the target 
+variable is numerical and continuous in nature. We will be creating ML 
+pipeline using linear, regularized linear, tree and forest learning algorithm.
+ We will compare and evaluate different models based on RMSE of learning 
+algorithm.
 
 \section{Technology Stack}
 
-Python will be used for Data loading, preprocessing and cleaning. Using Scikit learn 
-library, we will implement variety of algorithms to conduct above process and finally 
-will predict the sale price of its products.
+Python will be used for Data loading, preprocessing and cleaning. Using 
+Scikit learn library, we will implement variety of algorithms to conduct 
+above process and finally will predict the sale price of its products.
 
 REST services has been implemented to provide a prediction of price of the 
 products:
 
 \begin{itemize}
-	\item REST data preprocessing: It will be the service, which does the data processing 
-	with removal or imputing the data with mean or median. Removal of the columns which 
-	doesn’t any correlation with target variable
-	\item REST data prediction: it will be the service, which will do multiple predictions 
-	using multiple algorithms as below
+	\item REST data preprocessing: It will be the service, which does 
+the data processing 
+	with removal or imputing the data with mean or median. Removal of 
+the columns which doesn’t any correlation with target variable
+	\item REST data prediction: it will be the service, which will 
+do multiple predictions using multiple algorithms as below
 	
-	\item Rest API with Linear Regression – Display the outcome of product and predicted 
-	price
-	\item Rest API with Boosted Decision – Display the outcome of product and predicted price
-	\item Rest API with Hyper-tuned Boosted Decision – Display the outcome of product and predicted price
+	\item Rest API with Linear Regression – Display the outcome 
+of product and predicted price
+	\item Rest API with Boosted Decision – Display the outcome of 
+product and predicted price
+	\item Rest API with Hyper-tuned Boosted Decision – Display the 
+outcome of product and predicted price
 \end{itemize}
 
-Cloud technology will be Microsoft Azure, AWS. It has been implemented at Local machine and Docker.
+Cloud technology will be Microsoft Azure, AWS. It has been implemented at 
+Local machine and Docker.
 
-We have acquired the dataset from Kaggle and read the data dictionary details on 
-different websites which includes below describes attributes. We have 14204 instances and 13 
-attributes in the dataset, which will be spitted into Training and Test Data set. This dataset 
-is available on public websites
+We have acquired the dataset from Kaggle and read the data dictionary details 
+on different websites which includes below describes attributes. We have 14204 
+instances and 13 attributes in the dataset, which will be spitted into 
+Training and Test Data set. This dataset is available on public websites
 
-BigMart Dataset, With this dataset, we will predict the sale price of various products based 
-on the learning of historical data in the datasets using different algorithm. The dataset has 
-various data with respect to
+BigMart Dataset, With this dataset, we will predict the sale price of 
+various products based on the learning of historical data in the datasets 
+using different algorithm. The dataset has various data with respect to
 \begin{itemize}
 \item \verb|Item_Fat_Content|
 \item \verb|Item_Identifier|
@@ -146,7 +152,8 @@ various data with respect to
 ~\cite{kaggleds}
 
 \section{Dataset Details}
-It has following 12 attributes with continuous and categorical values with Unique Values –
+It has following 12 attributes with continuous and categorical values 
+with Unique Values –
 \begin{itemize}
 \item \verb|Item_Fat_Content has 5 unique values|
 \item \verb|Item_Identifier has 1559 unique values|
@@ -180,21 +187,24 @@ Correlation plot informs about the relation between variables -
 \end{figure}
 
 \section{Data Exploration}
-Analyzed and plotted the categorical and continuous feature summaries to see which feature is 
-closely related with target variable. This helped us with deciding which feature are influencing 
+Analyzed and plotted the categorical and continuous feature summaries to 
+see which feature is 
+closely related with target variable. This helped us with deciding which 
+feature are influencing 
 the prediction.
 
 \section{Data Preprocessing}
 \begin{itemize}
 \item \verb|Missing values (2439) of item weight is replaced with mean.|
-\item \verb|Missing values (4016) of outlet size observations, which been replaced with mode.|
+\item \verb|Missing values (4016) of outlet size observations, which been 
+replaced with mode.|
 \end{itemize}
 
 
 \section{Azure ML Studio}
-Azure ML studio provides the GUI interface for creating the Machine Learning Train 
-models and Predictions. It provides a provision to integrate with Azure Cloud and 
-expose the Web Services
+Azure ML studio provides the GUI interface for creating the Machine 
+Learning Train models and Predictions. It provides a provision to integrate 
+with Azure Cloud and expose the Web Services
 
 \subsection{Train Model - Azure}
 Created on Azure ML Studio - 3 Learning Algorithms used
@@ -204,7 +214,8 @@ Created on Azure ML Studio - 3 Learning Algorithms used
 \item \verb|HyperTuned Boosted Decision Tree|
 \end{itemize}
 
-From the RMSE results, Hyper-tuned Boosted Decision Tree has provided better results.
+From the RMSE results, Hyper-tuned Boosted Decision Tree has provided better 
+results.
 
 \begin{figure}[pic3]
 	\centering\includegraphics[width=\columnwidth]{Images/mlstudio/RMSEComparison.png}
@@ -217,9 +228,10 @@ From the RMSE results, Hyper-tuned Boosted Decision Tree has provided better res
 \end{figure}
 
 \subsection{Predictive Model -}
-Update the Trained model with Test dataset for predicting the Item Outlet Sales data. 
-Verified and updated the data cleaning process which we have implemented for Train dataset. 
-After converting the categorical data with indicators, we can apply the trained model.
+Update the Trained model with Test dataset for predicting the Item Outlet 
+Sales data. Verified and updated the data cleaning process which we have 
+implemented for Train dataset. After converting the categorical data with 
+indicators, we can apply the trained model.
 
 Created predictive model using the above Hyper-tuned Boosted Decision Tree.
 
@@ -237,8 +249,8 @@ Create the Web service input and Web service Output.
 \end{figure}
 
 \subsection{Web Service Deployment}
-Once the Prediction model has been executed successfully, it can be deployed as web service 
-from Azure ML Studio.
+Once the Prediction model has been executed successfully, it can be deployed 
+as web service from Azure ML Studio.
 
 It will generate the API key, which will be used for Azure Cloud deployment.
 
@@ -254,15 +266,16 @@ It will provide an option to Test web service locally with below options -
 \end{itemize}
 
 \subsection{Azure Cloud deployment}
-Once the Web Service is created locally, It will create a hyper link with name of the web 
-service. 
+Once the Web Service is created locally, It will create a hyper link with 
+name of the web service. 
 Click on the hyperlink generated on the Name of web service.
 
-It will open the web service dashboard for configuration and setup the consumption process 
-with Azure cloud.
+It will open the web service dashboard for configuration and setup the 
+consumption process with Azure cloud.
 
-It will provide the test tab on the dashboard, where we can provide the inputs and get the 
-prediction values once clicked on Test Request response button.
+It will provide the test tab on the dashboard, where we can provide the 
+inputs and get the prediction values once clicked on Test Request response 
+button.
 
 This step will assure that, the web services are working as expected.
 
@@ -271,13 +284,13 @@ This step will assure that, the web services are working as expected.
 	\caption{Webserviceconf}\label{fig:Webserviceconf}
 \end{figure}
 
-After clicking consume tab from Dashboard, It will display option for Response Request Web 
-Template link.
+After clicking consume tab from Dashboard, It will display option for 
+Response Request Web Template link.
 
 Copy the request response link generated on the page.
 
-Once clicked on the link, it will redirect to Azure cloud configuration using Response Request 
-Web application.
+Once clicked on the link, it will redirect to Azure cloud configuration 
+using Response Request Web application.
 
 Azure ML Request-Response Service Web App
 In Azure cloud, it need to created -
@@ -296,8 +309,8 @@ Expose the Web Service from Azure cloud
 Click on the below link to access the prediction web service - 
 https://predictbigmart.azurewebsites.net/
 
-Entered the values used to for testing locally, the amount should match so as to see if the 
-service is functioning as expected.
+Entered the values used to for testing locally, the amount should 
+match so as to see if the service is functioning as expected.
 
 \begin{figure}[pic8]
 	\centering\includegraphics[width=\columnwidth]{Images/mlstudio/WebService.png}
@@ -312,12 +325,13 @@ Download the CSV generated from Azure ML Studio -
 \item \verb|Select the range of columns and provide as input to API|
 \item \verb|Select the cell from where the prediction values needs to be displayed.|
 \item \verb|Click on Prediction button.|
-It will generate the prediction values for all the selected Input entries with Item Identifiers.
+It will generate the prediction values for all the selected Input entries 
+with Item Identifiers.
 \end{itemize}
 
 \begin{figure}[pic9]
-	\centering\includegraphics[width=\columnwidth]{Images/mlstudio/csvscreenshot.png}
-	\caption{csvscreenshot}\label{fig:csvscreenshot}
+ \centering\includegraphics[width=\columnwidth]{Images/mlstudio/csvscreenshot.png}
+ \caption{csvscreenshot}\label{fig:csvscreenshot}
 \end{figure}
 
 \subsection{Azure ML Studio - Challenge}
@@ -325,24 +339,24 @@ With Azure ML Studio, downloading code is not provided as an option.
 
 \section{Azure - Notebook Instance}
 
-On Azure ML Studio, there is another option of executing the Machine learning Algorithms.
-Its known as Notebook Instance, in this section, there can be a Jupyter notebook created and 
-executed with the Train Model, followed by prediction.
-Captured the time of execution on the same - 15.2 ms for overall batch prediction.
-With Model, the computation time is 1.95 ms
+On Azure ML Studio, there is another option of executing the Machine 
+learning Algorithms. Its known as Notebook Instance, in this section, 
+there can be a Jupyter notebook created and executed with the Train Model, 
+followed by prediction.Captured the time of execution on the same - 15.2 ms 
+for overall batch prediction. With Model, the computation time is 1.95 ms
 
 \begin{figure}[pic9]
-	\centering\includegraphics[width=\columnwidth]{Images/Azurenotebookscreenshot.png}
+\centering\includegraphics[width=\columnwidth]{Images/Azurenotebookscreenshot.png}
 	\caption{Azurenotebookscreensho}\label{fig:Azurenotebookscreensho}
 \end{figure}
 
 \section{AWS - Notebook Instance}
 
-On AWS - SageMaker, it can support Machine learning notebook creation and train the model,
-and do the prediction for from the fitted model. For this project, the Jupyter notebook instance was
-used for training model and prediction.
-Captured the time of execution on the same - 8.2 ms for overall batch prediction.
-With Model, the computation time is 371 micro secs.
+On AWS - SageMaker, it can support Machine learning notebook creation and 
+train the model, and do the prediction for from the fitted model. For this 
+project, the Jupyter notebook instance was used for training model and 
+prediction. Captured the time of execution on the same - 8.2 ms for overall 
+batch prediction. With Model, the computation time is 371 micro secs.
 
 \begin{figure}[pic10]
 	\centering\includegraphics[width=\columnwidth]{Images/AWSnotebookscreenshot.png}
@@ -351,10 +365,10 @@ With Model, the computation time is 371 micro secs.
 
 \section{LocalMachine - Notebook Instance}
 
-On AWS - SageMaker, it can support Machine learning notebook creation and train the model,
-and do the prediction for from the fitted model. For this project, the Jupyter notebook instance was
-used for training model and prediction.
-Captured the time of execution on the same is approx 10 mins.
+On AWS - SageMaker, it can support Machine learning notebook creation and 
+train the model, and do the prediction for from the fitted model. For this 
+project, the Jupyter notebook instance was used for training model and 
+prediction. Captured the time of execution on the same is approx 10 mins.
 
 Start time -
 \begin{figure}[pic11]
@@ -370,29 +384,33 @@ Endtime -
 
 \section{Docker}
 
-The Docker Image has been locally created and have shown the predicted price for a 
-set of data. This can be replicated using Docker commands. Once replicated locally, running the 
-locahost website will be created with port- 8080 exposed, will display the Bulk prediction results.
+The Docker Image has been locally created and have shown the predicted 
+price for a set of data. This can be replicated using Docker commands. 
+Once replicated locally, running the locahost website will be created 
+with port- 8080 exposed, will display the Bulk prediction results.
 Link for localhost - http://localhost:8080/cloudmesh/prediction
 
 \section{Conclusion}
 
-In this project, below two models have been implemented and hyper-tuned in Azure ML Studio, 
-Once we have the better model, used for prediction on Item Outlet Sales price for all the Items 
+In this project, below two models have been implemented and 
+hyper-tuned in Azure ML Studio, Once we have the better model, used for 
+prediction on Item Outlet Sales price for all the Items 
 across all the store outlets.
 \begin{itemize}
 \item \verb|Boosted Decision|
 \item \verb|Linear Regression|
 \item \verb|HyperTuned Boosted Decision|
 \end{itemize}
-Web service has been deployed on Azure Cloud, AWS Cloud, Local machine and Docker image and exposes 
-as to generate the prediction for Item Identifiers. It seems with above calculation, AWS with is 
-executing faster then Azure and local machine.
+Web service has been deployed on Azure Cloud, AWS Cloud, Local machine 
+and Docker image and exposes 
+as to generate the prediction for Item Identifiers. It seems with above 
+calculation, AWS with is executing faster then Azure and local machine.
 
 \section{Appendix}
 
 Web service has been deployed on Azure Cloud and exposes as to generate the prediction for Item Identifiers.
-Video recording has been uploaded at this location - https://www.youtube.com/watch?v=xrLto4XPn1o
+Video recording has been uploaded at this location -
+https://www.youtube.com/watch?v=xrLto4XPn1o
 
 
 \begin{acks}
