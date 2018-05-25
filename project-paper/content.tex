@@ -98,6 +98,7 @@ variable is numerical and continuous in nature. We will be creating ML
 pipeline using linear, regularized linear, tree and forest learning algorithm.
  We will compare and evaluate different models based on RMSE of learning 
 algorithm.
+~\cite{sckitml}
 
 \section{Technology Stack}
 
@@ -136,38 +137,39 @@ BigMart Dataset, With this dataset, we will predict the sale price of
 various products based on the learning of historical data in the datasets 
 using different algorithm. The dataset has various data with respect to
 \begin{itemize}
-\item Item_Fat_Content
-\item Item_Identifier
-\item Item_MRP
-\item Item_Outlet_Sales
-\item Item_Type
-\item Item_Visibility
-\item Item_Weight
-\item Outlet_Establishment_Year
-\item Outlet_Identifier
-\item Outlet_Location_Type
-\item Outlet_Size
-\item Outlet_Type
+\item $Item_Fat_Content$
+\item $Item_Identifier$
+\item $Item_MRP$
+\item $Item_Outlet_Sales$
+\item $Item_Type$
+\item $Item_Visibility$
+\item $Item_Weight$
+\item $Outlet_Establishment_Year$
+\item $Outlet_Identifier$
+\item $Outlet_Location_Type$
+\item $Outlet_Size$
+\item $Outlet_Type$
 \item source
 \end{itemize}
 ~\cite{kaggleds}
+
 
 \section{Dataset Details}
 It has following 12 attributes with continuous and categorical values 
 with Unique Values
 \begin{itemize}
-\item Item_Fat_Content has 5 unique values
-\item Item_Identifier has 1559 unique values
-\item Item_MRP has 8052 unique values
-\item Item_Outlet_Sales has 3494 unique values
-\item Item_Type has 16 unique values
-\item Item_Visibility has 13006 unique values
-\item Item_Weight has 416 unique values
-\item Outlet_Establishment_Year has 9unique values
-\item Outlet_Identifier has 10 unique values
-\item Outlet_Location_Type has 3 unique values
-\item Outlet_Size has 4 unique values
-\item Outlet_Type has 4 unique values
+\item $Item_Fat_Content has 5 unique values$
+\item $Item_Identifier has 1559 unique values$
+\item $Item_MRP has 8052 unique values$
+\item $Item_Outlet_Sales has 3494 unique values$
+\item $Item_Type has 16 unique values$
+\item $Item_Visibility has 13006 unique values$
+\item $Item_Weight has 416 unique values$
+\item $Outlet_Establishment_Year has 9unique values$
+\item $Outlet_Identifier has 10 unique values$
+\item $Outlet_Location_Type has 3 unique values$
+\item $Outlet_Size has 4 unique values$
+\item $Outlet_Type has 4 unique values$
 \end{itemize}
 
 
@@ -177,17 +179,18 @@ Histogram shows the distribution of data of different variables
 Plotting Histogram from Dataset
 
 \begin{figure}[pic1]
-	\centering\includegraphics[width=\columnwidth]{Images/mlstudio/
+\centering
+\includegraphics[width=\columnwidth]{Images/mlstudio/
 HistrogramofImpAttributes.png}
-	\caption{HistrogramofImpAttributes}
+\caption{HistrogramofImpAttributes}
 \label{fig:HistrogramofImpAttributes}
 \end{figure}
 
 Correlation plot informs about the relation between variables 
 \begin{figure}[pic2]
-	\centering\includegraphics[width=\columnwidth]
-{Images/mlstudio/Correlation.png}
-	\caption{Correlation}\label{fig:Correlation}
+\centering
+\includegraphics[width=\columnwidth]{Images/mlstudio/Correlation.png}
+\caption{Correlation}\label{fig:Correlation}
 \end{figure}
 
 \section{Data Exploration}
@@ -222,15 +225,16 @@ From the RMSE results, Hyper-tuned Boosted Decision Tree has provided better
 results.
 
 \begin{figure}[pic3]
-	\centering\includegraphics[width=\columnwidth]
-{Images/mlstudio/RMSEComparison.png}
-	\caption{RMSEComparison.png}\label{fig:RMSEComparison}
+\centering
+\includegraphics[width=\columnwidth]{Images/mlstudio/RMSEComparison.png}
+\caption{RMSEComparison.png}\label{fig:RMSEComparison}
 \end{figure}
 
 \begin{figure}[pic4]
-	\centering\includegraphics[width=\columnwidth]
-{Images/mlstudio/RMSEComparisionBetweenHypertune.png}
-	\caption{RMSEComparisionBetweenHypertune.png}
+\centering
+\includegraphics[width=\columnwidth]{Images/mlstudio/
+RMSEComparisionBetweenHypertune.png}
+\caption{RMSEComparisionBetweenHypertune.png}
 \label{fig:RMSEComparisionBetweenHypertune}
 \end{figure}
 
@@ -251,9 +255,10 @@ From the score function, have extracted only 2 columns
 Create the Web service input and Web service Output.
 
 \begin{figure}[pic5]
-	\centering\includegraphics[width=\columnwidth]
-{Images/mlstudio/PredictionOutputfromModel.png}
-	\caption{PredictionOutputfromModel.png}
+\centering
+\includegraphics[width=\columnwidth]{Images/mlstudio/
+PredictionOutputfromModel.png}
+\caption{PredictionOutputfromModel.png}
 \label{fig:PredictionOutputfromModel}
 \end{figure}
 
@@ -264,9 +269,9 @@ as web service from Azure ML Studio.
 It will generate the API key, which will be used for Azure Cloud deployment.
 
 \begin{figure}[pic6]
-	\centering\includegraphics[width=\columnwidth]
-{Images/mlstudio/Webservicedeploy.png}
-	\caption{Webservicedeploy.png}
+\centering
+\includegraphics[width=\columnwidth]{Images/mlstudio/Webservicedeploy.png}
+\caption{Webservicedeploy.png}
 \label{fig:Webservicedeploy}
 \end{figure}
 
@@ -292,9 +297,9 @@ button.
 This step will assure that, the web services are working as expected.
 
 \begin{figure}[pic7]
-	\centering\includegraphics[width=\columnwidth]
-{Images/mlstudio/Webserviceconf.png}
-	\caption{Webserviceconf}\label{fig:Webserviceconf}
+\centering
+\includegraphics[width=\columnwidth]{Images/mlstudio/Webserviceconf.png}
+\caption{Webserviceconf}\label{fig:Webserviceconf}
 \end{figure}
 
 After clicking consume tab from Dashboard, It will display option for 
@@ -326,9 +331,9 @@ Entered the values used to for testing locally, the amount should
 match so as to see if the service is functioning as expected.
 
 \begin{figure}[pic8]
-	\centering\includegraphics[width=\columnwidth]
-{Images/mlstudio/WebService.png}
-	\caption{WebService}\label{fig:WebService}
+\centering
+\includegraphics[width=\columnwidth]{Images/mlstudio/WebService.png}
+\caption{WebService}\label{fig:WebService}
 \end{figure}
 
 Batch Mode for Web Service Execution
@@ -344,9 +349,9 @@ with Item Identifiers.
 \end{itemize}
 
 \begin{figure}[pic9]
- \centering\includegraphics[width=\columnwidth]
-{Images/mlstudio/csvscreenshot.png}
- \caption{csvscreenshot}\label{fig:csvscreenshot}
+\centering
+\includegraphics[width=\columnwidth]{Images/mlstudio/csvscreenshot.png}
+\caption{csvscreenshot}\label{fig:csvscreenshot}
 \end{figure}
 
 \subsection{Azure ML Studio with Challenge}
@@ -361,9 +366,9 @@ followed by prediction.Captured the time of execution on the same with 15.2 ms
 for overall batch prediction. With Model, the computation time is 1.95 ms
 
 \begin{figure}[pic9]
-\centering\includegraphics[width=\columnwidth]
-{Images/Azurenotebookscreenshot.png}
-	\caption{Azurenotebookscreensho}
+\centering
+\includegraphics[width=\columnwidth]{Images/Azurenotebookscreenshot.png}
+\caption{Azurenotebookscreensho}
 \label{fig:Azurenotebookscreensho}
 \end{figure}
 
@@ -376,9 +381,9 @@ prediction. Captured the time of execution on the same with 8.2 ms for overall
 batch prediction. With Model, the computation time is 371 micro secs.
 
 \begin{figure}[pic10]
-	\centering\includegraphics[width=\columnwidth]
-{Images/AWSnotebookscreenshot.png}
-	\caption{AWSnotebookscreenshot}
+\centering
+\includegraphics[width=\columnwidth]{Images/AWSnotebookscreenshot.png}
+\caption{AWSnotebookscreenshot}
 \label{fig:AWSnotebookscreenshot}
 \end{figure}
 
@@ -391,16 +396,16 @@ prediction. Captured the time of execution on the same is approx 10 mins.
 
 Start time
 \begin{figure}[pic11]
-	\centering\includegraphics[width=\columnwidth]
-{Images/Starttime_local.png}
-	\caption{Starttime_local}\label{fig:Starttime_local}
+\centering
+\includegraphics[width=\columnwidth]{Images/Starttime_local.png}
+\caption{Starttime_local}\label{fig:Starttime_local}
 \end{figure}
 
 Endtime 
 \begin{figure}[pic12]
-	\centering\includegraphics[width=\columnwidth]
-{Images/EndTime_local.png}
-	\caption{EndTime_local}\label{fig:EndTime_local}
+\centering
+\includegraphics[width=\columnwidth]{Images/EndTime_local.png}
+\caption{EndTime_local}\label{fig:EndTime_local}
 \end{figure}
 
 \section{Docker}
