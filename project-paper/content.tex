@@ -1,4 +1,4 @@
-% status: 98
+% status: 100
 % chapter: REST
 
 
@@ -364,16 +364,25 @@ On AWS SageMaker, it can support Machine learning notebook creation and
 train the model, and do the prediction for from the fitted model. For this 
 project, the Jupyter notebook instance was used for training model and 
 prediction. Captured the time of execution on the same is approx 10 mins.
+\begin{verbatim}
 
+\end{verbatim}
 Start time
+\begin{verbatim}
+
+\end{verbatim}
 
 \includegraphics[width=\columnwidth]{Images/Starttimelocal.png}
+\begin{verbatim}
 
+\end{verbatim}
 
 Endtime 
+\begin{verbatim}
+
+\end{verbatim}
 
 \includegraphics[width=\columnwidth]{Images/EndTimelocal.png}
-
 
 \section{Docker}
 
@@ -398,6 +407,23 @@ Web service has been deployed on Azure Cloud, AWS Cloud, Local machine
 and Docker image and exposes 
 as to generate the prediction for Item Identifiers. It seems with above 
 calculation, AWS with is executing faster then Azure and local machine.
+
+\subsection{Performance Comparison}
+\begin{verbatim}
+
+\end{verbatim}
+\begin{tabular}{|l|l|l|}
+\hline
+Environment &   Description    &     Elapsed Time \\
+\hline
+Azure Cloud &   Notebook Instance  & 15.2 ms \\
+\hline
+AWS Cloud &   Notebook Instance  & 8.2 ms \\
+\hline
+Local &   Notebook Instance  & 9 min 10 s \\
+\hline
+\end{tabular}
+
 
 \section{Appendix}
 
