@@ -4,6 +4,10 @@ REVIEW=review
 DEFAULT=$(FILE)
 LATEX=pdflatex
 BIBTEX=bibtex
+DIR=$(shell basename "${PWD}")
+OS=$(shell uname)
+
+SAMPLE=../../hid-sample
 
 UNAME := $(shell uname)
 
@@ -23,21 +27,43 @@ endif
 #>> report-latex.log 2>&1
 #	make -f Makefile check >> report-latex.log 2>&1
 
-all: clean iureport
-	$(LATEX) ${FILE}
-	$(LATEX) ${FILE}
-	$(BIBTEX) ${FILE}
-	$(LATEX) ${FILE}
+
+all: prepare
+	make -f Makefile generate
+
+generate: clean iureport check log
+		$(LATEX) ${FLAGS} ${FILE}
+		$(BIBTEX) ${FILE}
+		$(LATEX) ${FLAGS} ${FILE}
+		$(LATEX) ${FLAGS} ${FILE}
+
+prepare:
+	@if [ $(DIR) == paper ]; then  echo 'no need to copy'; fi; 
+	@if [ $(DIR) != paper ]; then  cd ../../hid-sample; git pull ; fi
+	@if [ $(DIR) != paper ]; then  cp ../../hid-sample/paper/Makefile . ; fi
+	@if [ $(DIR) != paper ]; then  cp ../../hid-sample/paper/report.tex . ; fi
+
 
 iureport:
-	cp ../../hid-sample/tex/format/iureport.cls .
-	cp ../../hid-sample/tex/format/ACM-Reference-Format.bst .
+	cp $(SAMPLE)/tex/format/iureport.cls .
+	cp $(SAMPLE)/tex/format/ACM-Reference-Format.bst .
 
-check:
-	chktex -q -n 13 -n 8 content.tex
+check: prepare
+	@$(SAMPLE)/bin/check-quotes.py content.tex
+	@chktex -q -n 13 -n 8 content.tex
 
 check-ta:
-	@python 	../../hid-sample/paper/check.py 
+	@python $(SAMPLE)/paper/check.py 
+
+log:
+	@echo '\\appendix' > check.tex
+	@echo '\\section{chktex}'>> check.tex
+	@echo '\\begin{tiny}'>> check.tex
+	@echo '\\begin{verbatim}'>> check.tex
+	@make check >> check.tex
+	@echo "\\end{verbatim}" >> check.tex
+	@echo '\\end{tiny}'>> check.tex
+	@echo "creating check.tex"
 
 bibtex:
 	@echo 
@@ -197,7 +223,7 @@ clean:
 	rm -rf _region_.*
 	rm -f iureport.cls
 	rm -f ACM-Reference-Format.bst
-
+	rm -f check.tex
 
 view:
 	$(OPEN) ${FILE}.pdf
