@@ -393,11 +393,13 @@ faster then Azure and local machine.
 Performance Comparison
 ----------------------
 
-  Environment   Description         Elapsed Time
-  ------------- ------------------- --------------
-  Azure Cloud   Notebook Instance   15.2 ms
-  AWS Cloud     Notebook Instance   8.2 ms
-  Local         Notebook Instance   9 min 10 s
+  Environment  | Description       |  Elapsed Time
+  ________________________________________________
+
+  Azure Cloud  | Notebook Instance |  15.2 ms
+  AWS Cloud    | Notebook Instance |  8.2 ms
+  Local        | Notebook Instance |  9 min 10 s
+
 
 Appendix
 ========
