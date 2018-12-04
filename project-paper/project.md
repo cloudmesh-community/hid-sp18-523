@@ -1,10 +1,8 @@
 
 # REST Service Framework with SciKit Learn Algorithms :smiley: hid-sp18-520, hid-sp18-523
 
-| Arijit Sinha
-| arisinha@iu.edu
-| Ritesh Tandon
-| ritandon@iu.edu
+| Arijit Sinha Ritesh Tandon
+| arisinha@iu.edu ritandon@iu.edu
 | Indiana University Bloomington
 | hid: hid-sp18-520, hid-sp18-523
 | github: [:cloud:](https://github.com/cloudmesh-community/hid-sp18-523/tree/master/project-paper/project.md)
