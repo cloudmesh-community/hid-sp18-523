@@ -419,7 +419,7 @@ Appendix
 
 Web service has been deployed on Azure Cloud and exposes as to generate
 the prediction for Item Identifiers. Video recording has been uploaded
-at this location at https://www.youtube.com/watch?v=xrLto4XPn1o
+at this location at https://www.youtube.com/watch?v=xrLto4XPn1o&t=518s
 
 The authors would like to thank Dr. Gregor von Laszewski for his support
 and suggestions to write this paper.
