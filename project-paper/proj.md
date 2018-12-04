@@ -31,7 +31,7 @@ predict the unlabeled data.
 Regression is based on the continuous variable or data, we need to
 predict the future state of data is known as regression
 
-Unsupervised algorithms are on the dataset, where we donot see the
+Unsupervised algorithms are on the dataset, where we do not see the
 target variable for prediction, we learn its behavior set of vector
 input variable to identify the clustering group of similar behavior data
 or sample  [@sckitml] Kaggle is a known location for different kind of
@@ -163,11 +163,11 @@ Histogram shows the distribution of data of different variables
 
 Plotting Histogram from Dataset
 
-![image](Images/mlstudio/HistrogramofImpAttributes.png){width="\columnwidth"}
+![image](Images/mlstudio/HistrogramofImpAttributes.png)
 
 Correlation plot informs about the relation between variables
 
-![image](Images/mlstudio/Correlation.png){width="\columnwidth"}
+![image](Images/mlstudio/Correlation.png)
 
 Data Exploration
 ================
@@ -205,9 +205,9 @@ Created on Azure ML Studio, 3 Learning Algorithms used
 From the RMSE results, Hyper-tuned Boosted Decision Tree has provided
 better results.
 
-![image](Images/mlstudio/RMSEComparison.png){width="\columnwidth"}
+![image](Images/mlstudio/RMSEComparison.png)
 
-![image](Images/mlstudio/RMSEComparisionBetweenHypertune.png){width="\columnwidth"}
+![image](Images/mlstudio/RMSEComparisionBetweenHypertune.png)
 
 Predictive Model
 ----------------
@@ -228,7 +228,7 @@ From the score function, have extracted only 2 columns
 
 Create the Web service input and Web service Output.
 
-![image](Images/mlstudio/PredictionOutputfromModel.png){width="\columnwidth"}
+![image](Images/mlstudio/PredictionOutputfromModel.png)
 
 Web Service Deployment
 ----------------------
@@ -239,7 +239,7 @@ deployed as web service from Azure ML Studio.
 It will generate the API key, which will be used for Azure Cloud
 deployment.
 
-![image](Images/mlstudio/Webservicedeploy.png){width="\columnwidth"}
+![image](Images/mlstudio/Webservicedeploy.png)
 
 It will provide an option to Test web service locally with below options
 
@@ -264,7 +264,7 @@ response button.
 
 This step will assure that, the web services are working as expected.
 
-![image](Images/mlstudio/Webserviceconf.png){width="\columnwidth"}
+![image](Images/mlstudio/Webserviceconf.png)
 
 After clicking consume tab from Dashboard, It will display option for
 Response Request Web Template link.
@@ -297,7 +297,7 @@ https://predictbigmart.azurewebsites.net/
 Entered the values used to for testing locally, the amount should match
 so as to see if the service is functioning as expected.
 
-![image](Images/mlstudio/WebService.png){width="\columnwidth"}
+![image](Images/mlstudio/WebService.png)
 
 Batch Mode for Web Service Execution Download the CSV generated from
 Azure ML Studio
@@ -314,7 +314,7 @@ Azure ML Studio
 -   Click on Prediction button. It will generate the prediction values
     for all the selected Input entries with Item Identifiers.
 
-![image](Images/mlstudio/csvscreenshot.png){width="\columnwidth"}
+![image](Images/mlstudio/csvscreenshot.png)
 
 Azure ML Studio with Challenge
 ------------------------------
@@ -331,7 +331,7 @@ Model, followed by prediction.Captured the time of execution on the same
 with 15.2 ms for overall batch prediction. With Model, the computation
 time is 1.95 ms
 
-![image](Images/Azurenotebookscreenshot.png){width="\columnwidth"}
+![image](Images/Azurenotebookscreenshot.png)
 
 AWS with Notebook Instance
 ==========================
@@ -343,7 +343,7 @@ training model and prediction. Captured the time of execution on the
 same with 8.2 ms for overall batch prediction. With Model, the
 computation time is 371 micro secs.
 
-![image](Images/AWSnotebookscreenshot.png){width="\columnwidth"}
+![image](Images/AWSnotebookscreenshot.png)
 
 LocalMachine with Notebook Instance
 ===================================
@@ -356,11 +356,11 @@ mins.
 
 Start time
 
-![image](Images/Starttimelocal.png){width="\columnwidth"}
+![image](Images/Starttimelocal.png)
 
 Endtime
 
-![image](Images/EndTimelocal.png){width="\columnwidth"}
+![image](Images/EndTimelocal.png)
 
 Docker
 ======
