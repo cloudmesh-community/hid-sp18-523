@@ -1,17 +1,30 @@
+
+# REST Service Framework with SciKit Learn Algorithms :hand: hid-sp18-523, hid-sp18-520
+
+| Ritesh Tandon
+| ritandon@iu.edu
+| Arijit Sinha
+| arisinha@iu.edu
+| Indiana University Bloomington
+| hid: hid-sp18-523, hid-sp18-520
+| github: [:cloud:](https://github.com/cloudmesh-community/hid-sp18-523/tree/master/project-paper/proj.md)
+| code: https://github.com/cloudmesh-community/hid-sp18-523/tree/master/project-code
+
 ---
-abstract: |
+
+Keywords: docker, Scikit
+
+---
+
+
+abstract:
+============
     In current world, data is getting generated and stored with different
     storage systems. We need to use this data for a better understanding,
     analyze and can estimate the future scenarios with certain probability.
     There are many algorithms, which have developed and implemented for
     providing better accuracy on the future scenarios.
-author:
-- Arijit Sinha
-- Ritesh Tandon
-bibliography:
-- 'report.bib'
-title: REST Service Framework with SciKit Learn Algorithms
----
+
 
 Introduction
 ============
