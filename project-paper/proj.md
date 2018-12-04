@@ -19,11 +19,11 @@ Keywords: docker, Scikit
 
 abstract:
 ============
-    In current world, data is getting generated and stored with different
-    storage systems. We need to use this data for a better understanding,
-    analyze and can estimate the future scenarios with certain probability.
-    There are many algorithms, which have developed and implemented for
-    providing better accuracy on the future scenarios.
+In current world, data is getting generated and stored with different 
+storage systems. We need to use this data for a better understanding, 
+analyze and can estimate the future scenarios with certain probability. 
+There are many algorithms, which have developed and implemented for 
+providing better accuracy on the future scenarios.
 
 
 Introduction
