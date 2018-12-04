@@ -1,5 +1,5 @@
 
-# REST Service Framework with SciKit Learn Algorithms :hand: hid-sp18-520, hid-sp18-523
+# REST Service Framework with SciKit Learn Algorithms :smiley: hid-sp18-520, hid-sp18-523
 
 | Arijit Sinha
 | arisinha@iu.edu
