@@ -9,7 +9,7 @@
 
 ---
 
-Keywords: Cloud AutoML, Neural, Google Cloud, Vision
+Keywords: Domo
 
 ---
 
