@@ -17,12 +17,12 @@ Keywords: Domo
 abstract
 ============
 
-    Domo is cloud based data integration platform that enables employees to
-    engage with data that is located anywhere in real time. It provides
-    flexibility to outside partners and third party vendors to integrate and
-    collaborate with data. Domo has more than 400 data connectors. Data can
-    be accessed directly from public or private cloud regardless if it is
-    available on-premise or proprietary systems.
+Domo is cloud based data integration platform that enables employees to
+engage with data that is located anywhere in real time. It provides
+flexibility to outside partners and third party vendors to integrate and
+collaborate with data. Domo has more than 400 data connectors. Data can
+be accessed directly from public or private cloud regardless if it is
+available on-premise or proprietary systems.
 
 
 Introduction
