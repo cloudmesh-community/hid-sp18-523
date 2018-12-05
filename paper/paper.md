@@ -56,10 +56,10 @@ Retail and Transportation etc)
 Data Connectors
 ===============
 
-Data Connectors is the heart of Domo. Through Domo we may connect to
-many different types of data sources. Domo supports connecting to many
-types of data sources such as Cloud App, File, Database, On Premise and
-Api.
+Data Connectors is the heart of Domo. Different types of data 
+sources, such as relational , non relational, flat files , csv
+Cloud App, cloud File, third party API etc can be easily 
+connected through Domo.
 
 Cloud App Connectors; Domo has more than 400 cloud app connectors
 including all famous ones such as amazon s3, AWS, Adobe analytics,
@@ -197,9 +197,9 @@ ClientId and client Secret. Once authenticated; users can access API
 functionality through access token. Login to Domo instance and click on
 create new client link under user avatar icon to create client. Specify
 application name and description. Choose one or more from Audit, Data,
-Dashboard and User application scope as applicable. We have to be
+Dashboard and User application scope as applicable. One has to be
 careful while choosing application scope; if application scope is only
-for accessing data we should only select Data scope else developers will
+for accessing data one should only select Data scope else developers will
 get access to user, audit related information as well. Once Client Id and
 Client Secret is obtained, next step to obtain access token.
 Following request can be made to obtain access token using Id and
