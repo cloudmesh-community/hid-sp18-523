@@ -5,7 +5,7 @@
 | ritandon@iu.edu
 | Indiana University, Bloomington
 | hid : hid-sp18-523
-| github: [:cloud:](https://github.com/cloudmesh-community/hid-sp18-523/tree/master/paper/paper.md)
+| github: [:smiley:](https://github.com/cloudmesh-community/hid-sp18-523/tree/master/paper/paper.md)
 
 ---
 
