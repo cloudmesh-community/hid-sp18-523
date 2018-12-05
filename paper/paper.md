@@ -9,7 +9,7 @@
 
 ---
 
-Keywords: Domo
+Keywords: Domo, API, token
 
 ---
 
