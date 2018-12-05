@@ -162,10 +162,10 @@ Creating simple Domo App
 
 Command domo init on CLI terminal create basic design template.
 
-We will be asked to enter design name and starter type App. Enter
-myfirstdomoapp as design name and HelloWorld as starter type. This will
-create directory and all the necessary files that we need for building
-simple app
+Enter design name and starter type App. Enter myfirstdomoapp as 
+design name and HelloWorld as starter type. This will
+create directory and all the necessary files that are needed
+for building simple app
 
       Following project structure is created -
           app.cs
@@ -176,13 +176,16 @@ simple app
 
  @hid-sp18-523-Dev
 
-Skip the data source connection part as we are building simple custom
-app that can be deployed on Domo instance
+Choose the data source to which app needs to connect to. 
+This is optional and based on app functionality.
+simple custom app that does not connect to data source can 
+be deployed on Domo instance.
 
 From the CLI run domo dev command. This will open browser and will
 render myfirstdomoapp
 
-Make the styling changes in app.css and logic changes in app.js
+Make styling changes in app.css and code logic changes in app.js to
+build UI and app functionality respectively.
 
 API Authentication
 ==================
