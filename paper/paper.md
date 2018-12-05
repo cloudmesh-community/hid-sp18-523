@@ -1,11 +1,11 @@
 
-# Cloud Domo  :hand: hid-sp18-523 
+# Cloud Domo  :smiley: hid-sp18-523 
 
 | Ritesh Tandon
 | ritandon@iu.edu
 | Indiana University, Bloomington
 | hid : hid-sp18-523
-| github: [:smiley:](https://github.com/cloudmesh-community/hid-sp18-523/tree/master/paper/paper.md)
+| github: [:cloud:](https://github.com/cloudmesh-community/hid-sp18-523/tree/master/paper/paper.md)
 
 ---
 
