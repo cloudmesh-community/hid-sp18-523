@@ -13,7 +13,7 @@ Keywords: Domo
 
 ---
 
-abstract
+Abstract
 ============
 
 Domo is cloud based data integration platform that enables employees to
