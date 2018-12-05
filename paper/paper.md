@@ -65,7 +65,7 @@ Cloud App Connectors; Domo has more than 400 cloud app connectors
 including all famous ones such as amazon s3, AWS, Adobe analytics,
 Google Analytics, Facebook, Fitbit, instagram and salesforce etc.
 
-File Connectors; Through Domo we can also connect to data that is stored
+File Connectors; Domo can also connect to data that is stored
 in files such as excel and/or csv files.
 
 Database; Domo has connectors for connecting relational, non relational,
