@@ -232,12 +232,13 @@ command
 
     GET /data/v1/:alias?:queryOperators
 
- [@hid-sp18-523-DataApi] Alias is the name of the dataset that we have
+@hid-sp18-523-DataApi 
+Alias is the name of the dataset that we have
 defined in our manifest file. We can define and run our custom query
 using queryOperators. We can pass aggregate functions such as count,
 sum, min, max, avg, filter, group by and order by etc. We can control the
 format of the returned data of API by setting the request accept header
-of XMLHttpRequest object to following formats [@hid-sp18-523-DataApi]
+of XMLHttpRequest object to following formats @hid-sp18-523-DataApi.
 
     array-of-objects
       csv
