@@ -85,7 +85,7 @@ Data Flows and Transforms
 Cleaning data is herculean task when dealing with data which is dirty
 that needs to be cleaned before reporting. Domo has Magic ETL tool that
 makes data cleaning job looks easy. It helps join, transform and tidy up
-data with drag and drop ease of use [@hid-sp18-523-Dev]
+data with drag and drop ease of use @hid-sp18-523-Dev.
 
 Domo also has SQL data flow that let the developer select data set,
 perform transformation operation through SQL query and generate tidy and
@@ -171,7 +171,7 @@ simple app
           index.html
           manifest.json
 
- [@hid-sp18-523-Dev]
+ @hid-sp18-523-Dev
 
 Skip the data source connection part as we are building simple custom
 app that can be deployed on Domo instance
@@ -200,13 +200,13 @@ for accessing data we should only select Data scope else developers will
 get access to user, audit related information as well. Once Client Id and
 Client Secret is obtained, next step to obtain access token. We can make
 following request to obtain access token using Id and
-secret [@hid-sp18-523-Authticate]
+secret @hid-sp18-523-Authticate
 
     $curl -v -u {CLIENT_ID}:{CLIENT_SECRET} 
     https://api.domo.com/oauth/token?
         grant_type=client_credentials&scope={SCOPE}
 
- [@hid-sp18-523-Authticate]
+ @hid-sp18-523-Authticate
 
 Once we request the token using above command we will get the JSON
 response. Body of JSON response will contain multiple key value pairs.
@@ -220,7 +220,7 @@ we have obtained
     $curl -v -H Authorization:'bearer {access-token} 
     https://api.domo.com/v1/datasets
 
- [@hid-sp18-523-Authticate]
+ @hid-sp18-523-Authticate
 
 We can build our custom app using Domo API as explained above.
 
@@ -244,7 +244,7 @@ of XMLHttpRequest object to following formats [@hid-sp18-523-DataApi]
       excel
       json
 
- [@hid-sp18-523-DataApi]
+ @hid-sp18-523-DataApi
 
 We can also specify return format in domo.get method.
 
@@ -257,10 +257,10 @@ instance users
     GET /domo/users/v1?includeDetails={true|false}
         &limit={int}&offset={int}
 
- [@hid-sp18-523-User] While calling API we can control user details
+ @hid-sp18-523-User While calling API we can control user details
 returned by the API,limit the number of records we want the API to
 return and specify offset to get the list of users starting from given
-offset.  [@hid-sp18-523-User]
+offset @hid-sp18-523-User.
 
 Single User API
 ===============
@@ -270,10 +270,11 @@ Domo offer following end point for accessing information of single user
     GET /domo/users/v1/:userId?
         includeDetails={true|false}
 
- [@hid-sp18-523-User] We can pass the user id of whom we needs details
+@hid-sp18-523-User 
+We can pass the user id of whom we needs details
 or pass the current user accessing through environment variable.While
 calling API we can control user details returned by the
-API [@hid-sp18-523-User]
+API @hid-sp18-523-User.
 
 Sharing custom app using Domo
 =============================
