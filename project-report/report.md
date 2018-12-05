@@ -1,5 +1,5 @@
 
-# SciKit Learn Algorithms with Rest API:smiley: hid-sp18-520, hid-sp18-523
+# SciKit Learn Algorithms with Rest API :wave: hid-sp18-520, hid-sp18-523
 
 | Arijit Sinha, Ritesh Tandon
 | arisinha@iu.edu, ritandon@iu.edu
@@ -8,6 +8,12 @@
 | github: [:cloud:](https://github.com/cloudmesh-community/hid-sp18-523/tree/master/project-paper/project.md)
 | code: [:cloud:](https://github.com/cloudmesh-community/hid-sp18-523/tree/master/project-code)
 
+:o: Please can you see our sample and learn how to refer to figures in the text
+
+:o: Please fix the TOC, ther must only be one top level headline which is the title use `#` instead of underline
+
+:o: use `*` instead of `-` in itemized lists
+
 ---
 
 Keywords: docker, Scikit, AWS, Azure, Linear Regression, Boosted Decision
@@ -15,7 +21,7 @@ Keywords: docker, Scikit, AWS, Azure, Linear Regression, Boosted Decision
 ---
 
 
-Abstract:
+Abstract
 ============
 In current world, data is getting generated and stored with different 
 storage systems. We need to use this data for a better understanding, 
@@ -54,9 +60,7 @@ Scope of work
 Below are the 3 algorithm from Scikit learn
 
 -   Implement Linear Regression
-
 -   Implement Boosted Decision
-
 -   Implement Hyper-tuned Boosted Decision
 
 Reason
@@ -82,16 +86,12 @@ the products:
     processing with removal or imputing the data with mean or median.
     Removal of the columns which doesn’t any correlation with target
     variable
-
 -   REST data prediction: it will be the service, which will do multiple
     predictions using multiple algorithms as below
-
 -   Rest API with Linear Regression – Display the outcome of product and
     predicted price
-
 -   Rest API with Boosted Decision – Display the outcome of product and
     predicted price
-
 -   Rest API with Hyper-tuned Boosted Decision – Display the outcome of
     product and predicted price
 
@@ -110,32 +110,22 @@ datasets using different algorithm. The dataset has various data with
 respect to
 
 -   Item Fat Content
-
 -   Item Identifier
-
 -   Item MRP
-
 -   Item Outlet Sales
-
 -   Item Type
-
 -   Item Visibility
-
 -   Item Weight
-
 -   Outlet Establishment Year
-
 -   Outlet Identifier
-
 -   Outlet Location Type
-
 -   Outlet Size
-
 -   Outlet Type
-
 -   source
 
- @kaggleds
+:o: what is this? If it is a citation brackets are missing and bad label
+
+@kaggleds
 
 Dataset Details
 ===============
@@ -144,27 +134,16 @@ It has following 12 attributes with continuous and categorical values
 with Unique Values
 
 -   Item Fat Content has 5 unique values
-
 -   Item Identifier has 1559 unique values
-
 -   Item MRP has 8052 unique values
-
 -   Item Outlet Sales has 3494 unique values
-
 -   Item Type has 16 unique values
-
 -   Item Visibility has 13006 unique values
-
 -   Item Weight has 416 unique values
-
 -   Outlet Establishment Year has 9unique values
-
 -   Outlet Identifier has 10 unique values
-
 -   Outlet Location Type has 3 unique values
-
 -   Outlet Size has 4 unique values
-
 -   Outlet Type has 4 unique values
 
 Data Visualization
@@ -191,7 +170,6 @@ Data Preprocessing
 ==================
 
 -   Missing values (2439) of item weight is replaced with mean.
-
 -   Missing values (4016) of outlet size observations, which been
     replaced with mode.
 
@@ -208,9 +186,7 @@ Train Model with Azure
 Created on Azure ML Studio, 3 Learning Algorithms used
 
 -   Boosted Decision Tree
-
 -   Linear Regression
-
 -   HyperTuned Boosted Decision Tree
 
 From the RMSE results, Hyper-tuned Boosted Decision Tree has provided
@@ -234,7 +210,6 @@ Tree.
 From the score function, have extracted only 2 columns
 
 -   Item Identifer
-
 -   Item Outlet Sales
 
 Create the Web service input and Web service Output.
@@ -255,7 +230,6 @@ deployment.
 It will provide an option to Test web service locally with below options
 
 -   Click on Test button enabled at the bottom of the screen
-
 -   Download the CSV file from the tool to test the Web API with
     prediction model.
 
@@ -289,15 +263,10 @@ Azure ML Request, Response Service Web App In Azure cloud, it need to
 created as
 
 -   Create the request response service web app
-
 -   Create Resource Group
-
 -   Add Model Management services
-
 -   Click on the URL link generated under resource group
-
 -   Update the Settings with API POST URL
-
 -   Update the API key generated from Web service from Azure ML studio.
 
 Expose the Web Service from Azure cloud
@@ -314,14 +283,10 @@ Batch Mode for Web Service Execution Download the CSV generated from
 Azure ML Studio
 
 -   Open the CSV, it will be open with Web API built in
-
 -   Use Sample data link on the API
-
 -   Select the range of columns and provide as input to API
-
 -   Select the cell from where the prediction values needs to be
     displayed.
-
 -   Click on Prediction button. It will generate the prediction values
     for all the selected Input entries with Item Identifiers.
 
@@ -391,9 +356,7 @@ on Item Outlet Sales price for all the Items across all the store
 outlets.
 
 -   Boosted Decision
-
 -   Linear Regression
-
 -   HyperTuned Boosted Decision
 
 Web service has been deployed on Azure Cloud, AWS Cloud, Local machine
