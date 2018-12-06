@@ -260,7 +260,7 @@ Azure ML Studio
 * Click on Prediction button. It will generate the prediction values
   for all the selected Input entries with Item Identifiers.
 
-![image](Images/mlstudio/csvscreenshot.png){#fig:CSV screenshot}
+![image](Images/mlstudio/csvscreenshot.png){#fig:CSV API screenshot}
 
 ## Azure ML Studio with Challenge
 
