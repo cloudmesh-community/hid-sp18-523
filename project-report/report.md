@@ -130,11 +130,11 @@ Histogram shows the distribution of data of different variables
 
 Plotting Histogram from Dataset
 
-![image](Images/mlstudio/HistrogramofImpAttributes.png){#fig:Histogram of Important Attributes}
+![Histogram of Attributes](Images/mlstudio/HistrogramofImpAttributes.png){#fig:Histogram of Important Attributes}
 
 Correlation plot informs about the relation between variables
 
-![image](Images/mlstudio/Correlation.png){#fig:Correlation Matrix}
+![Correlation Matrix](Images/mlstudio/Correlation.png){#fig:Correlation Matrix}
 
 ## Data Exploration
 
@@ -165,9 +165,9 @@ Created on Azure ML Studio, 3 Learning Algorithms used
 From the RMSE results, Hyper-tuned Boosted Decision Tree has provided
 better results.
 
-![image](Images/mlstudio/RMSEComparison.png){#fig:RMSE Error Comparison}
+![RMSE Comparision](Images/mlstudio/RMSEComparison.png){#fig:RMSE Error Comparison}
 
-![image](Images/mlstudio/RMSEComparisionBetweenHypertune.png){#fig:RMSE Comparisions}
+![Hypertune RMSE comparision](Images/mlstudio/RMSEComparisionBetweenHypertune.png){#fig:RMSE Comparisions}
 
 ## Predictive Model
 
@@ -186,7 +186,7 @@ From the score function, have extracted only 2 columns
 
 Create the Web service input and Web service Output.
 
-![image](Images/mlstudio/PredictionOutputfromModel.png){#fig:Output of Prediction from Models}
+![Model Output](Images/mlstudio/PredictionOutputfromModel.png){#fig:Output of Prediction from Models}
 
 ## Web Service Deployment
 
@@ -196,7 +196,7 @@ deployed as web service from Azure ML Studio.
 It will generate the API key, which will be used for Azure Cloud
 deployment.
 
-![image](Images/mlstudio/Webservicedeploy.png){#fig:Azure Deploy WebService}
+![Azure Webservice Deploy](Images/mlstudio/Webservicedeploy.png){#fig:Azure Deploy WebService}
 
 It will provide an option to Test web service locally with below options
 
@@ -219,7 +219,7 @@ response button.
 
 This step will assure that, the web services are working as expected.
 
-![image](Images/mlstudio/Webserviceconf.png){#fig:WebService Configuration}
+![Configration Webservice](Images/mlstudio/Webserviceconf.png){#fig:WebService Configuration}
 
 After clicking consume tab from Dashboard, It will display option for
 Response Request Web Template link.
@@ -247,7 +247,7 @@ Click on the below link to access the prediction web service
 Entered the values used to for testing locally, the amount should match
 so as to see if the service is functioning as expected.
 
-![image](Images/mlstudio/WebService.png){#fig:WebService}
+![Webservice](Images/mlstudio/WebService.png){#fig:WebService}
 
 Batch Mode for Web Service Execution Download the CSV generated from
 Azure ML Studio
@@ -260,7 +260,7 @@ Azure ML Studio
 * Click on Prediction button. It will generate the prediction values
   for all the selected Input entries with Item Identifiers.
 
-![image](Images/mlstudio/csvscreenshot.png){#fig:CSV API screenshot}
+![API on CSV](Images/mlstudio/csvscreenshot.png){#fig:CSV API screenshot}
 
 ## Azure ML Studio with Challenge
 
@@ -275,7 +275,7 @@ Model, followed by prediction.Captured the time of execution on the same
 with 15.2 ms for overall batch prediction. With Model, the computation
 time is 1.95 ms
 
-![image](Images/Azurenotebookscreenshot.png){#fig:Azure Notebook}
+![Azure Notebook Screen](Images/Azurenotebookscreenshot.png){#fig:Azure Notebook}
 
 ## AWS with Notebook Instance
 
@@ -286,7 +286,7 @@ training model and prediction. Captured the time of execution on the
 same with 8.2 ms for overall batch prediction. With Model, the
 computation time is 371 micro secs.
 
-![image](Images/AWSnotebookscreenshot.png){#fig:AWS Screenshot}
+![AWS Notebook Screen](Images/AWSnotebookscreenshot.png){#fig:AWS Screenshot}
 
 ## LocalMachine with Notebook Instance
 
@@ -298,11 +298,11 @@ mins.
 
 Start time
 
-![image](Images/Starttimelocal.png){#fig:Start Time from Local}
+![Local Start Time](Images/Starttimelocal.png){#fig:Start Time from Local}
 
 Endtime
 
-![image](Images/EndTimelocal.png){#fig:End Time from Local}
+![Local End Time](Images/EndTimelocal.png){#fig:End Time from Local}
 
 ## Docker
 
