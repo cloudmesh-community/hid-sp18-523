@@ -352,5 +352,9 @@ and suggestions to write this paper.
 
 ## Workbreakdown
 
-Arijit and Ritesh worked on data processing and designing the Machine learning 
-Algorithms.
+Arijit and Ritesh worked on data processing,Data exploration and designing 
+the Machine learning Algorithms. We both have brainstromed on visualizing 
+data. Arijit worked on Azure cloud and creating web service and Ritesh 
+worked on Docker image creation on local machine. We both worked on 
+comparing performance benchmarks. Compared the time running on AWS cloud 
+to prepare the time comparision chart and project report.
