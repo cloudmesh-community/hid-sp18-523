@@ -1,4 +1,4 @@
-# SciKit Learn Algorithms with Rest API :smiley: hid-sp18-520 hid-sp18-523
+# SciKit Learn Algorithms with Rest API :hand: hid-sp18-520 hid-sp18-523
 
 | Arijit Sinha, Ritesh Tandon
 | arisinha@iu.edu, ritandon@iu.edu
