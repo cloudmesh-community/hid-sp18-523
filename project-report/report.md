@@ -129,11 +129,11 @@ Histogram shows the distribution of data of different variables
 
 Plotting Histogram from Dataset
 
-![image](Images/mlstudio/HistrogramofImpAttributes.png)
+![image](Images/mlstudio/HistrogramofImpAttributes.png){Histogram of Important Attributes}
 
 Correlation plot informs about the relation between variables
 
-![image](Images/mlstudio/Correlation.png)
+![image](Images/mlstudio/Correlation.png){Correlation Matrix}
 
 ## Data Exploration
 
@@ -164,9 +164,9 @@ Created on Azure ML Studio, 3 Learning Algorithms used
 From the RMSE results, Hyper-tuned Boosted Decision Tree has provided
 better results.
 
-![image](Images/mlstudio/RMSEComparison.png)
+![image](Images/mlstudio/RMSEComparison.png){RMSE Error Comparison}
 
-![image](Images/mlstudio/RMSEComparisionBetweenHypertune.png)
+![image](Images/mlstudio/RMSEComparisionBetweenHypertune.png){RMSEComparision}
 
 ## Predictive Model
 
@@ -185,7 +185,7 @@ From the score function, have extracted only 2 columns
 
 Create the Web service input and Web service Output.
 
-![image](Images/mlstudio/PredictionOutputfromModel.png)
+![image](Images/mlstudio/PredictionOutputfromModel.png){Output of Prediction}
 
 ## Web Service Deployment
 
@@ -195,7 +195,7 @@ deployed as web service from Azure ML Studio.
 It will generate the API key, which will be used for Azure Cloud
 deployment.
 
-![image](Images/mlstudio/Webservicedeploy.png)
+![image](Images/mlstudio/Webservicedeploy.png){Webservice deploy}
 
 It will provide an option to Test web service locally with below options
 
@@ -218,7 +218,7 @@ response button.
 
 This step will assure that, the web services are working as expected.
 
-![image](Images/mlstudio/Webserviceconf.png)
+![image](Images/mlstudio/Webserviceconf.png){Web Configration}
 
 After clicking consume tab from Dashboard, It will display option for
 Response Request Web Template link.
@@ -241,12 +241,12 @@ created as
 Expose the Web Service from Azure cloud
 
 Click on the below link to access the prediction web service
-https://predictbigmart.azurewebsites.net/
+* <https://predictbigmart.azurewebsites.net/>
 
 Entered the values used to for testing locally, the amount should match
 so as to see if the service is functioning as expected.
 
-![image](Images/mlstudio/WebService.png)
+![image](Images/mlstudio/WebService.png){WebService}
 
 Batch Mode for Web Service Execution Download the CSV generated from
 Azure ML Studio
@@ -259,7 +259,7 @@ Azure ML Studio
 * Click on Prediction button. It will generate the prediction values
   for all the selected Input entries with Item Identifiers.
 
-![image](Images/mlstudio/csvscreenshot.png)
+![image](Images/mlstudio/csvscreenshot.png){CSV screenshot}
 
 ## Azure ML Studio with Challenge
 
@@ -274,7 +274,7 @@ Model, followed by prediction.Captured the time of execution on the same
 with 15.2 ms for overall batch prediction. With Model, the computation
 time is 1.95 ms
 
-![image](Images/Azurenotebookscreenshot.png)
+![image](Images/Azurenotebookscreenshot.png){Azure Notebook}
 
 ## AWS with Notebook Instance
 
@@ -285,7 +285,7 @@ training model and prediction. Captured the time of execution on the
 same with 8.2 ms for overall batch prediction. With Model, the
 computation time is 371 micro secs.
 
-![image](Images/AWSnotebookscreenshot.png)
+![image](Images/AWSnotebookscreenshot.png){AWS Screenshot}
 
 ## LocalMachine with Notebook Instance
 
@@ -297,11 +297,11 @@ mins.
 
 Start time
 
-![image](Images/Starttimelocal.png)
+![image](Images/Starttimelocal.png){Start Time from Local}
 
 Endtime
 
-![image](Images/EndTimelocal.png)
+![image](Images/EndTimelocal.png){End Time from Local}
 
 ## Docker
 
@@ -309,7 +309,8 @@ The Docker Image has been locally created and have shown the predicted
 price for a set of data. This can be replicated using Docker commands.
 Once replicated locally, running the locahost website will be created
 with port- 8080 exposed, will display the Bulk prediction results. Link
-for localhost at http://localhost:8080/cloudmesh/prediction
+for localhost at 
+* <http://localhost:8080/cloudmesh/prediction>
 
 ## Conclusion
 
@@ -318,9 +319,9 @@ in Azure ML Studio, Once we have the better model, used for prediction
 on Item Outlet Sales price for all the Items across all the store
 outlets.
 
--   Boosted Decision
--   Linear Regression
--   HyperTuned Boosted Decision
+* Boosted Decision
+* Linear Regression
+* HyperTuned Boosted Decision
 
 Web service has been deployed on Azure Cloud, AWS Cloud, Local machine
 and Docker image and exposes as to generate the prediction for Item
@@ -340,7 +341,8 @@ Local        | Notebook Instance |  9 min 10 s
 
 Web service has been deployed on Azure Cloud and exposes as to generate
 the prediction for Item Identifiers. Video recording has been uploaded
-at this location at https://www.youtube.com/watch?v=xrLto4XPn1o&t=518s
+at this location at 
+* <https://www.youtube.com/watch?v=xrLto4XPn1o&t=518s>
 
 ## Acknowledgement 
 
