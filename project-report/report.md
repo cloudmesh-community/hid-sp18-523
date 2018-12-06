@@ -117,9 +117,6 @@ respect to
 * Outlet Size
 * Outlet Type
 * source
-
-:o: what is this? If it is a citation brackets are missing and bad label
-
 [@kaggleds]
 
 ## Dataset Details
