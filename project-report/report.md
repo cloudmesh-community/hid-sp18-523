@@ -167,7 +167,7 @@ better results.
 
 ![image](Images/mlstudio/RMSEComparison.png){#fig:RMSE Error Comparison}
 
-![image](Images/mlstudio/RMSEComparisionBetweenHypertune.png){#fig:RMSEComparision}
+![image](Images/mlstudio/RMSEComparisionBetweenHypertune.png){#fig:RMSE Comparisions}
 
 ## Predictive Model
 
@@ -186,7 +186,7 @@ From the score function, have extracted only 2 columns
 
 Create the Web service input and Web service Output.
 
-![image](Images/mlstudio/PredictionOutputfromModel.png){#fig:Output of Prediction}
+![image](Images/mlstudio/PredictionOutputfromModel.png){#fig:Output of Prediction from Models}
 
 ## Web Service Deployment
 
@@ -196,7 +196,7 @@ deployed as web service from Azure ML Studio.
 It will generate the API key, which will be used for Azure Cloud
 deployment.
 
-![image](Images/mlstudio/Webservicedeploy.png){#fig:Webservice deploy}
+![image](Images/mlstudio/Webservicedeploy.png){#fig:Azure Deploy WebService}
 
 It will provide an option to Test web service locally with below options
 
@@ -219,7 +219,7 @@ response button.
 
 This step will assure that, the web services are working as expected.
 
-![image](Images/mlstudio/Webserviceconf.png){#fig:Web Configration}
+![image](Images/mlstudio/Webserviceconf.png){#fig:WebService Configuration}
 
 After clicking consume tab from Dashboard, It will display option for
 Response Request Web Template link.
