@@ -7,18 +7,11 @@
 | github: [:cloud:](https://github.com/cloudmesh-community/hid-sp18-523/tree/master/project-paper/project.md)
 | code: [:cloud:](https://github.com/cloudmesh-community/hid-sp18-523/tree/master/project-code)
 
-:o: Please can you see our sample and learn how to refer to figures in the text
-
-:o: Please fix the TOC, ther must only be one top level headline which is the title use `#` instead of underline
-
-:o: use `*` instead of `-` in itemized lists
-
 ---
 
 Keywords: docker, Scikit, AWS, Azure, Linear Regression, Boosted Decision
 
 ---
-
 
 ## Abstract
 
@@ -28,24 +21,19 @@ analyze and can estimate the future scenarios with certain probability.
 There are many algorithms, which have developed and implemented for 
 providing better accuracy on the future scenarios.
 
-
 ## Introduction
 
 Scikit learn is a library created under machine learning algorithms,
 which uses different datasets gathered over years to learn and predicts
 future scenarios. Supervised and unsupervised learning can
 differentiation conducted for learning variety of dataset.
-
 Supervised algorithms are on the dataset, which has the target variable,
 which need to be predicted or estimated. This datasets can be acted with
 below different approaches
-
 Classification is based on the classes and the labeled data, we need to
 predict the unlabeled data.
-
 Regression is based on the continuous variable or data, we need to
 predict the future state of data is known as regression
-
 Unsupervised algorithms are on the dataset, where we do not see the
 target variable for prediction, we learn its behavior set of vector
 input variable to identify the clustering group of similar behavior data
@@ -66,7 +54,7 @@ We are planning to use Regression learning algorithm because the target
 variable is numerical and continuous in nature. We will be creating ML
 pipeline using linear, regularized linear, tree and forest learning
 algorithm. We will compare and evaluate different models based on RMSE
-of learning algorithm.  @sckitml
+of learning algorithm. [@sckitml]
 
 ## Technology Stack
 
@@ -92,13 +80,11 @@ the products:
 
 Cloud technology utilized will be Microsoft Azure, AWS, it has been
 implemented at Local machine and Docker.
-
 We have acquired the dataset from Kaggle and read the data dictionary
 details on different websites which includes below describes attributes.
 We have 14204 instances and 13 attributes in the dataset, which will be
 spitted into Training and Test Data set. This dataset is available on
 public websites
-
 BigMart Dataset, With this dataset, we will predict the sale price of
 various products based on the learning of historical data in the
 datasets using different algorithm. The dataset has various data with
