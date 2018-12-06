@@ -4,7 +4,7 @@
 | arisinha@iu.edu, ritandon@iu.edu
 | Indiana University Bloomington
 | hid: hid-sp18-520, hid-sp18-523
-| github: [:cloud:](https://github.com/cloudmesh-community/hid-sp18-523/tree/master/project-paper/report.md)
+| github: [:cloud:](https://github.com/cloudmesh-community/hid-sp18-523/tree/master/project-report/report.md)
 | code: [:cloud:](https://github.com/cloudmesh-community/hid-sp18-523/tree/master/project-code)
 
 ---
