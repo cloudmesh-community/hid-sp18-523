@@ -1,5 +1,4 @@
-
-# SciKit Learn Algorithms with Rest API :wave: hid-sp18-520, hid-sp18-523
+# SciKit Learn Algorithms with Rest API :wave: hid-sp18-520 hid-sp18-523
 
 | Arijit Sinha, Ritesh Tandon
 | arisinha@iu.edu, ritandon@iu.edu
@@ -21,8 +20,8 @@ Keywords: docker, Scikit, AWS, Azure, Linear Regression, Boosted Decision
 ---
 
 
-Abstract
-============
+## Abstract
+
 In current world, data is getting generated and stored with different 
 storage systems. We need to use this data for a better understanding, 
 analyze and can estimate the future scenarios with certain probability. 
@@ -30,8 +29,7 @@ There are many algorithms, which have developed and implemented for
 providing better accuracy on the future scenarios.
 
 
-Introduction
-============
+## Introduction
 
 Scikit learn is a library created under machine learning algorithms,
 which uses different datasets gathered over years to learn and predicts
@@ -54,17 +52,15 @@ input variable to identify the clustering group of similar behavior data
 or sample  @sckitml Kaggle is a known location for different kind of
 datasets gathered by various institutes across globe.
 
-Scope of work
-=============
+## Scope of work
 
 Below are the 3 algorithm from Scikit learn
 
--   Implement Linear Regression
--   Implement Boosted Decision
--   Implement Hyper-tuned Boosted Decision
+* Implement Linear Regression
+* Implement Boosted Decision
+* Implement Hyper-tuned Boosted Decision
 
-Reason
-======
+## Reason
 
 We are planning to use Regression learning algorithm because the target
 variable is numerical and continuous in nature. We will be creating ML
@@ -72,8 +68,7 @@ pipeline using linear, regularized linear, tree and forest learning
 algorithm. We will compare and evaluate different models based on RMSE
 of learning algorithm.  @sckitml
 
-Technology Stack
-================
+## Technology Stack
 
 Python will be used for Data loading, preprocessing and cleaning. Using
 Scikit learn library, we will implement variety of algorithms to conduct
@@ -82,18 +77,18 @@ above process and finally will predict the sale price of its products.
 REST services has been implemented to provide a prediction of price of
 the products:
 
--   REST data preprocessing: It will be the service, which does the data
-    processing with removal or imputing the data with mean or median.
-    Removal of the columns which doesn’t any correlation with target
-    variable
--   REST data prediction: it will be the service, which will do multiple
+* REST data preprocessing: It will be the service, which does the data
+  processing with removal or imputing the data with mean or median.
+  Removal of the columns which doesn’t any correlation with target
+  variable
+* REST data prediction: it will be the service, which will do multiple
     predictions using multiple algorithms as below
--   Rest API with Linear Regression – Display the outcome of product and
-    predicted price
--   Rest API with Boosted Decision – Display the outcome of product and
-    predicted price
--   Rest API with Hyper-tuned Boosted Decision – Display the outcome of
-    product and predicted price
+* Rest API with Linear Regression – Display the outcome of product and
+  predicted price
+* Rest API with Boosted Decision – Display the outcome of product and
+  predicted price
+* Rest API with Hyper-tuned Boosted Decision – Display the outcome of
+  product and predicted price
 
 Cloud technology utilized will be Microsoft Azure, AWS, it has been
 implemented at Local machine and Docker.
@@ -109,45 +104,43 @@ various products based on the learning of historical data in the
 datasets using different algorithm. The dataset has various data with
 respect to
 
--   Item Fat Content
--   Item Identifier
--   Item MRP
--   Item Outlet Sales
--   Item Type
--   Item Visibility
--   Item Weight
--   Outlet Establishment Year
--   Outlet Identifier
--   Outlet Location Type
--   Outlet Size
--   Outlet Type
--   source
+* Item Fat Content
+* Item Identifier
+* Item MRP
+* Item Outlet Sales
+* Item Type
+* Item Visibility
+* Item Weight
+* Outlet Establishment Year
+* Outlet Identifier
+* Outlet Location Type
+* Outlet Size
+* Outlet Type
+* source
 
 :o: what is this? If it is a citation brackets are missing and bad label
 
-@kaggleds
+[@kaggleds]
 
-Dataset Details
-===============
+## Dataset Details
 
 It has following 12 attributes with continuous and categorical values
 with Unique Values
 
--   Item Fat Content has 5 unique values
--   Item Identifier has 1559 unique values
--   Item MRP has 8052 unique values
--   Item Outlet Sales has 3494 unique values
--   Item Type has 16 unique values
--   Item Visibility has 13006 unique values
--   Item Weight has 416 unique values
--   Outlet Establishment Year has 9unique values
--   Outlet Identifier has 10 unique values
--   Outlet Location Type has 3 unique values
--   Outlet Size has 4 unique values
--   Outlet Type has 4 unique values
+* Item Fat Content has 5 unique values
+* Item Identifier has 1559 unique values
+* Item MRP has 8052 unique values
+* Item Outlet Sales has 3494 unique values
+* Item Type has 16 unique values
+* Item Visibility has 13006 unique values
+* Item Weight has 416 unique values
+* Outlet Establishment Year has 9unique values
+* Outlet Identifier has 10 unique values
+* Outlet Location Type has 3 unique values
+* Outlet Size has 4 unique values
+* Outlet Type has 4 unique values
 
-Data Visualization
-==================
+## Data Visualization
 
 Histogram shows the distribution of data of different variables
 
@@ -159,35 +152,31 @@ Correlation plot informs about the relation between variables
 
 ![image](Images/mlstudio/Correlation.png)
 
-Data Exploration
-================
+## Data Exploration
 
 Analyzed and plotted the categorical and continuous feature summaries to
 see which feature is closely related with target variable. This helped
 us with deciding which feature are influencing the prediction.
 
-Data Preprocessing
-==================
+## Data Preprocessing
 
--   Missing values (2439) of item weight is replaced with mean.
--   Missing values (4016) of outlet size observations, which been
-    replaced with mode.
+* Missing values (2439) of item weight is replaced with mean.
+* Missing values (4016) of outlet size observations, which been
+  replaced with mode.
 
-Azure ML Studio
-===============
+## Azure ML Studio
 
 Azure ML studio provides the GUI interface for creating the Machine
 Learning Train models and Predictions. It provides a provision to
 integrate with Azure Cloud and expose the Web Services
 
-Train Model with Azure
-----------------------
+## Train Model with Azure
 
 Created on Azure ML Studio, 3 Learning Algorithms used
 
--   Boosted Decision Tree
--   Linear Regression
--   HyperTuned Boosted Decision Tree
+* Boosted Decision Tree
+* Linear Regression
+* HyperTuned Boosted Decision Tree
 
 From the RMSE results, Hyper-tuned Boosted Decision Tree has provided
 better results.
@@ -196,8 +185,7 @@ better results.
 
 ![image](Images/mlstudio/RMSEComparisionBetweenHypertune.png)
 
-Predictive Model
-----------------
+## Predictive Model
 
 Update the Trained model with Test dataset for predicting the Item
 Outlet Sales data. Verified and updated the data cleaning process which
@@ -209,15 +197,14 @@ Tree.
 
 From the score function, have extracted only 2 columns
 
--   Item Identifer
--   Item Outlet Sales
+* Item Identifer
+* Item Outlet Sales
 
 Create the Web service input and Web service Output.
 
 ![image](Images/mlstudio/PredictionOutputfromModel.png)
 
-Web Service Deployment
-----------------------
+## Web Service Deployment
 
 Once the Prediction model has been executed successfully, it can be
 deployed as web service from Azure ML Studio.
@@ -229,12 +216,11 @@ deployment.
 
 It will provide an option to Test web service locally with below options
 
--   Click on Test button enabled at the bottom of the screen
--   Download the CSV file from the tool to test the Web API with
+* Click on Test button enabled at the bottom of the screen
+* Download the CSV file from the tool to test the Web API with
     prediction model.
 
-Azure Cloud deployment
-----------------------
+## Azure Cloud deployment
 
 Once the Web Service is created locally, It will create a hyper link
 with name of the web service. Click on the hyperlink generated on the
@@ -262,12 +248,12 @@ using Response Request Web application.
 Azure ML Request, Response Service Web App In Azure cloud, it need to
 created as
 
--   Create the request response service web app
--   Create Resource Group
--   Add Model Management services
--   Click on the URL link generated under resource group
--   Update the Settings with API POST URL
--   Update the API key generated from Web service from Azure ML studio.
+* Create the request response service web app
+* Create Resource Group
+* Add Model Management services
+* Click on the URL link generated under resource group
+* Update the Settings with API POST URL
+* Update the API key generated from Web service from Azure ML studio.
 
 Expose the Web Service from Azure cloud
 
@@ -282,23 +268,21 @@ so as to see if the service is functioning as expected.
 Batch Mode for Web Service Execution Download the CSV generated from
 Azure ML Studio
 
--   Open the CSV, it will be open with Web API built in
--   Use Sample data link on the API
--   Select the range of columns and provide as input to API
--   Select the cell from where the prediction values needs to be
-    displayed.
--   Click on Prediction button. It will generate the prediction values
-    for all the selected Input entries with Item Identifiers.
+* Open the CSV, it will be open with Web API built in
+* Use Sample data link on the API
+* Select the range of columns and provide as input to API
+* Select the cell from where the prediction values needs to be
+  displayed.
+* Click on Prediction button. It will generate the prediction values
+  for all the selected Input entries with Item Identifiers.
 
 ![image](Images/mlstudio/csvscreenshot.png)
 
-Azure ML Studio with Challenge
-------------------------------
+## Azure ML Studio with Challenge
 
 With Azure ML Studio, downloading code is not provided as an option.
 
-Azure with Notebook Instance
-============================
+## Azure with Notebook Instance
 
 On Azure ML Studio, there is another option of executing the Machine
 learning Algorithms. Its known as Notebook Instance, in this section,
@@ -309,8 +293,7 @@ time is 1.95 ms
 
 ![image](Images/Azurenotebookscreenshot.png)
 
-AWS with Notebook Instance
-==========================
+## AWS with Notebook Instance
 
 On AWS SageMaker service, it can support Machine learning notebook
 creation and train the model, and do the prediction for from the fitted
@@ -321,8 +304,7 @@ computation time is 371 micro secs.
 
 ![image](Images/AWSnotebookscreenshot.png)
 
-LocalMachine with Notebook Instance
-===================================
+## LocalMachine with Notebook Instance
 
 On AWS SageMaker, it can support Machine learning notebook creation and
 train the model, and do the prediction for from the fitted model. For
@@ -338,8 +320,7 @@ Endtime
 
 ![image](Images/EndTimelocal.png)
 
-Docker
-======
+## Docker
 
 The Docker Image has been locally created and have shown the predicted
 price for a set of data. This can be replicated using Docker commands.
@@ -347,8 +328,7 @@ Once replicated locally, running the locahost website will be created
 with port- 8080 exposed, will display the Bulk prediction results. Link
 for localhost at http://localhost:8080/cloudmesh/prediction
 
-Conclusion
-==========
+## Conclusion
 
 In this project, below two models have been implemented and hyper-tuned
 in Azure ML Studio, Once we have the better model, used for prediction
@@ -364,9 +344,7 @@ and Docker image and exposes as to generate the prediction for Item
 Identifiers. It seems with above calculation, AWS with is executing
 faster then Azure and local machine.
 
-Performance Comparison
-========================
-
+## Performance Comparison
 
 Environment  | Description       |  Elapsed Time
 -------------|-------------------|----------------
@@ -375,12 +353,13 @@ AWS Cloud    | Notebook Instance |  8.2 ms
 Local        | Notebook Instance |  9 min 10 s
 
 
-Appendix
-========
+## Appendix
 
 Web service has been deployed on Azure Cloud and exposes as to generate
 the prediction for Item Identifiers. Video recording has been uploaded
 at this location at https://www.youtube.com/watch?v=xrLto4XPn1o&t=518s
+
+## Acknowledgement 
 
 The authors would like to thank Dr. Gregor von Laszewski for his support
 and suggestions to write this paper.
