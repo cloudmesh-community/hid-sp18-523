@@ -131,9 +131,9 @@ Dev Studio
 ==========
 
 Integrated development environment that provides developers with web
-development experience to create custom apps that can be deployed in Domo
-instance easily. Development environment consists of following three
-main components
+development experience to create custom apps that can be deployed in 
+Domo instance easily. Development environment consists of following 
+three main components
 
 Domo App CLI is Used to create, edit and publish custom app on Domo
 environment
