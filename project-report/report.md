@@ -23,10 +23,10 @@ providing better accuracy on the future scenarios.
 
 ## Introduction
 
-Scikit learn is a library created under machine learning algorithms,
+Scikit learn is a library created for machine learning algorithms,
 which uses different datasets gathered over years to learn and predicts
-future scenarios. Supervised and unsupervised learning can
-differentiation conducted for learning variety of dataset.
+future scenarios. This library have methods for implementing supervized
+and unsupervized machine learning algorithm.
 Supervised algorithms are on the dataset, which has the target variable,
 which need to be predicted or estimated. This datasets can be acted with
 below different approaches
