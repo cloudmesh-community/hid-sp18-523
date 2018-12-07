@@ -239,6 +239,41 @@ render myfirstdomoapp
 Make styling changes in app.css and code logic changes in app.js to
 build UI and app functionality respectively.
 
+## Building Responsive App in Domo
+
+Domo let developers build app that can be displayed on device of any 
+size without losing quality. Using the principles of responsive that 
+is design supported by Domo platform developers can build their app 
+that renders perfectly on desktop, tablet and mobile devices. Domo use 
+container to render the content of app. These container can take any of 
+below four sizes that it supports.
+Full: This is customizable and can be defined in developers app manifest 
+file
+Large: This is defined for displaying rendering content on devices 
+with 460x540px size
+Medium:This is defined for displaying rendering content on devices 
+with 225x250px size
+Small: This is defined for displaying rendering content on devices 
+with 225x105px size 
+
+By default Domo development environment renders app content inside iframe. 
+Developers have to open source code of iframe into a new tab which can then 
+be changed in order to test responsiveness of app content. Developers have 
+to first create directory structure using manifest only option and then later 
+on add responsive stylesheet, either of third party vendor or custom created 
+css. Developer have to add javascript in order to dynamically create layout 
+for placing app content. For e.g Row of tiles and grid can be created using 
+java script file.
+
+Developers have to chose and decide number of tiles depending on the size of 
+the screen content will be rendered when creating custom responsive css. 
+Ideally for larger screen 8 tiles are used to fill in a row. For Normal 
+desktop 6 and for tablet 4 tiles in a row are ideal.
+
+
+@hid-sp18-523-Domo-Responsive
+
+
 ## API Authentication
 
 Security of data that is transmitted over wire is of highest importance
