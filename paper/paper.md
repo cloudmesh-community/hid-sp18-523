@@ -134,7 +134,7 @@ After completing above steps, developers have to submit their custom connector
 for publishing using Domo Submit For Publishing command. 
 
 
-@hid-sp18-523-Domo
+@hid-sp18-523-Domo-Connector
 
 
 
