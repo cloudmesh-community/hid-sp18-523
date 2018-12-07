@@ -13,8 +13,6 @@ Keywords: Domo, API, token
 
 ---
 
-:o: this paper is too short to justify an absract merge into introduction without redundancy
-
 
 ## Introduction
 
