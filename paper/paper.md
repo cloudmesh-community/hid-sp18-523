@@ -381,5 +381,7 @@ template that may be used for building custom app. Domo business cloud
 platform offers high availability, performance and scalability for the
 applications that are deployed on Domo instance.
 
+## Acknowledgement
+
 The author would like to thank Dr Gregor Von Laszewski for his suggestions
 and guidance on the content that is presented in paper.
