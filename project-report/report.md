@@ -262,29 +262,41 @@ Azure ML Studio
 
 ![API on CSV](images/csvscreenshot.png){#fig:CSV API screenshot}
 
-## Azure ML Studio with Challenge
+## Drawback of using Azure ML Studio
 
-With Azure ML Studio, downloading code is not provided as an option.
+Azure ML studio provides easy to use drag and drop objects for
+all steps ( from model intialization to deployment ) such as 
+data preprocessing, training model, fitting model, evaluating 
+model, tuning model and prediction. It is every easy to use and
+handy tool for data scientists and data engineer. However, it has 
+a drawback; developers are not able to generate the code that is 
+generated at the backend for further experimentation and testing.
+
 
 ## Azure with Notebook Instance
 
-On Azure ML Studio, there is another option of executing the Machine
-learning Algorithms. Its known as Notebook Instance, in this section,
-there can be a Jupyter notebook created and executed with the Train
-Model, followed by prediction.Captured the time of execution on the same
-with 15.2 ms for overall batch prediction. With Model, the computation
-time is 1.95 ms
+Notebook instance of Azure ML Studio was used to execute python
+code file for benchmarking. Code containing data preprocessing, 
+training model, fitting model, evaluating model, tuning model and 
+prediction steps was executed on Azure notebook instance. 
+It took 15.2 ms for overall batch prediction using notebook. 
+Computation time using model saved on disk was recorded  as 
+1.95 micro secs.
+
 
 ![Azure Notebook Screen](images/Azurenotebookscreenshot.png){#fig:Azure Notebook}
 
 ## AWS with Notebook Instance
 
-On AWS SageMaker service, it can support Machine learning notebook
-creation and train the model, and do the prediction for from the fitted
-model. For this project, the Jupyter notebook instance was used for
-training model and prediction. Captured the time of execution on the
-same with 8.2 ms for overall batch prediction. With Model, the
-computation time is 371 micro secs.
+AWS Sagemaker service was used to benchmark performance of
+model on AWS cloud. Python notebook file containing code for
+data preprocessing, training model, fitting model, evaluating 
+model, tuning model and prediction was executed on AWS notebook
+instance. 
+Execution time of prediction was captured for comparison.
+It took 8.2 ms for overall batch prediction using notebook. 
+Computation time using model saved on disk was recorded  as 
+371 micro secs.
 
 ![AWS Notebook Screen](images/AWSnotebookscreenshot.png){#fig:AWS Screenshot}
 
@@ -292,7 +304,7 @@ computation time is 371 micro secs.
 
 Python notebook file was executed on local instance for comparing 
 performance with cloud. Data preprocessing, training, fitting and 
-prediction steps were performed on local instance.
+prediction steps were performed on local python instance.
 Start time and end time was recorded and execution time was calculated.
 It was observed that execution and prediction took more time compared
 to execution time on cloud. It took approximately 10 minutes on local
@@ -308,11 +320,11 @@ Endtime
 
 ## Docker
 
-The Docker Image has been locally created. Excution of docker image of
-model predict price of passed dataset. This can be replicated using Docker 
-commands.
-Once replicated locally, running the locahost website will be created
-with port- 8080 exposed. This will predict prices of all items of datset.
+Docker Image was created on local environment. Excution of docker image of
+model predict prices for passed dataset. This code can be reproduced  
+using Docker commands.
+Once replicated locally, running locahost website created by docker
+image on port- 8080 will predict prices of all items of datset.
 
 Link for localhost 
 
@@ -326,13 +338,13 @@ In this project, below two models have been implemented and hyper-tuned.
 * Linear Regression
 * HyperTuned Boosted Decision
 
-Best model was decided based on accuracy and it was used for prediction
-of sales price of all  Items across all store outlets.
+Best model was decided based on accuracy and that was used for prediction
+of sales price of items across all store outlets.
 
-Model was  deployed on Azure Cloud, AWS Cloud, Local machine
-and Docker image and exposes to generate the prediction of prices for 
-Item Identifiers. Performance was benchmarked on different cloud and 
-local environment. On comparison we observed that prediction performance
+Model was  deployed on Azure Cloud, AWS Cloud and Local machine for 
+predicting prices. Docker image was created for reproducing. 
+Performance was benchmarked on different cloud and local environment. 
+On comparison we observed that prediction performance
 was best on AWS cloud.
 
 ## Performance Comparison
@@ -341,14 +353,17 @@ Environment  | Description       |  Elapsed Time
 -------------|-------------------|----------------
 Azure Cloud  | Notebook Instance |  15.2 ms
 AWS Cloud    | Notebook Instance |  8.2 ms
-Local        | Notebook Instance |  9 min 10 s
+Local        | Python Instance   |  9 min 10 s
 
 
 ## Appendix
 
-Web service has been deployed on Azure Cloud and exposes as to generate
-the prediction for Item Identifiers. Video recording has been uploaded
-at this location at 
+Web service was deployed on Azure Cloud. Weservice endpoints
+was exposed to predict price of passed Item Identifiers. 
+
+Deployment and usage playback Video of using exposed webservice 
+endpoint is uploaded at below location
+
 * <https://www.youtube.com/watch?v=xrLto4XPn1o&t=518s>
 
 ## Acknowledgement 
