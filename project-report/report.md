@@ -288,13 +288,15 @@ computation time is 371 micro secs.
 
 ![AWS Notebook Screen](images/AWSnotebookscreenshot.png){#fig:AWS Screenshot}
 
-## LocalMachine with Notebook Instance
+## LocalMachine Instance
 
-On AWS SageMaker, it can support Machine learning notebook creation and
-train the model, and do the prediction for from the fitted model. For
-this project, the Jupyter notebook instance was used for training model
-and prediction. Captured the time of execution on the same is approx 10
-mins.
+Python notebook file was executed on local instance for comparing 
+performance with cloud. Data preprocessing, training, fitting and 
+prediction steps were performed on local instance.
+Start time and end time was recorded and execution time was calculated.
+It was observed that execution and prediction took more time compared
+to execution time on cloud. It took approximately 10 minutes on local
+instance.
 
 Start time
 
@@ -306,28 +308,32 @@ Endtime
 
 ## Docker
 
-The Docker Image has been locally created and have shown the predicted
-price for a set of data. This can be replicated using Docker commands.
+The Docker Image has been locally created. Excution of docker image of
+model predict price of passed dataset. This can be replicated using Docker 
+commands.
 Once replicated locally, running the locahost website will be created
-with port- 8080 exposed, will display the Bulk prediction results. Link
-for localhost at 
+with port- 8080 exposed. This will predict prices of all items of datset.
+
+Link for localhost 
+
 * <http://localhost:8080/cloudmesh/prediction>
 
 ## Conclusion
 
-In this project, below two models have been implemented and hyper-tuned
-in Azure ML Studio, Once we have the better model, used for prediction
-on Item Outlet Sales price for all the Items across all the store
-outlets.
+In this project, below two models have been implemented and hyper-tuned. 
 
 * Boosted Decision
 * Linear Regression
 * HyperTuned Boosted Decision
 
-Web service has been deployed on Azure Cloud, AWS Cloud, Local machine
-and Docker image and exposes as to generate the prediction for Item
-Identifiers. It seems with above calculation, AWS with is executing
-faster then Azure and local machine.
+Best model was decided based on accuracy and it was used for prediction
+of sales price of all  Items across all store outlets.
+
+Model was  deployed on Azure Cloud, AWS Cloud, Local machine
+and Docker image and exposes to generate the prediction of prices for 
+Item Identifiers. Performance was benchmarked on different cloud and 
+local environment. On comparison we observed that prediction performance
+was best on AWS cloud.
 
 ## Performance Comparison
 
