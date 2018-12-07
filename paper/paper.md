@@ -13,8 +13,9 @@ Keywords: Domo, API, token
 
 ---
 
-Abstract
-============
+:o: this paper is too short to justify an absract merge into introduction without redundancy
+
+## Abstract
 
 Domo is cloud based data integration platform that enables employees to
 engage with globally distributed data in real time. It provides
@@ -24,8 +25,7 @@ be accessed directly from public or private cloud regardless if it is
 available on-premise or proprietary systems.
 
 
-Introduction
-============
+## Introduction
 
 Data is heart of information for any business. Though it might seems
 easy; but, it is very trivial to find relevant data that is required
@@ -44,8 +44,7 @@ provides high level of security, speed and scalability.
 Domo makes data available on any device of any size thus making it truly 
 mobile.
 
-Domo- Inbuilt Solutions
-=======================
+## Domo Inbuilt Solutions
 
 Domo has custom inbuilt dashboard and visualization solution for
 different roles (such as BI, CEO, Finance, IT, Marketing, Operations,
@@ -53,8 +52,7 @@ Sales and Services etc) within organization and for different
 industries (such as Education, Healthcare, Manufacturing, Hospitality,
 Retail and Transportation etc)
 
-Data Connectors
-===============
+## Data Connectors
 
 Data Connectors is the heart of Domo. Different types of data 
 sources, such as relational , non relational, flat files , csv
@@ -80,8 +78,7 @@ suited for developers having web development experience (java script,
 css, html). Domo App CLI is the main tool that is used to create, edit
 and publish app designs to the Domo instance.
 
-Data Flows and Transforms
-=========================
+## Data Flows and Transforms
 
 Cleaning data is herculean task when dealing with dirty data 
 that needs to be cleaned before reporting. Domo has Magic ETL tool that
@@ -94,8 +91,7 @@ processed output dataset. Domo also give option to run  data flow
 whenever dataset is updated; thus making sure that final visualization
 and report is always based on latest clean data in almost real time.
 
-Visualization
-=============
+## Visualization
 
 Domo has many inbuilt visualization template that helps user present
 their user story in refined visual format. These predefined template are
@@ -107,8 +103,7 @@ predictive modeling, outliers etc to visually represent relevant data.
 Donut, Pie, Treemap, Funnel, Folded funnel are few of the popular
 visualization template under this category.
 
-How It Works
-============
+## How It Works
 
 Create data connector as needed (file, cloud, on premise, Api etc)
 
@@ -127,8 +122,7 @@ Save card. Move to dashboard if needed.
 
 Give access and share your visualization card with concerned users.
 
-Dev Studio
-==========
+## Dev Studio
 
 Integrated development environment that provides developers with web
 development experience to create custom apps that can be deployed in 
@@ -145,8 +139,7 @@ available)
 
 App Manifest is Configuration file that defines properties of custom app
 
-Installation
-============
+## Installation
 
 Install node.js through download
 
@@ -157,8 +150,7 @@ npm install -g ryuu command ( unix/linux based platform ).
 Make sure that firewall is not blocking npm registry by pining
 www.npmjs.com through terminal
 
-Creating simple Domo App
-========================
+## Creating simple Domo App
 
 Command domo init on CLI terminal create basic design template.
 
@@ -187,8 +179,7 @@ render myfirstdomoapp
 Make styling changes in app.css and code logic changes in app.js to
 build UI and app functionality respectively.
 
-API Authentication
-==================
+## API Authentication
 
 Security of data that is transmitted over wire is of highest importance
 to any organization. Any public API is expected to validate and
@@ -229,8 +220,7 @@ of created datasets after replacing obtained access token.
 
 Custom app using Domo API can be built as explained above.
 
-Data API
-========
+## Data API
 
 Base url (end point) of the data API can be accessed through following
 command
@@ -256,8 +246,7 @@ of XMLHttpRequest object to following formats @hid-sp18-523-DataApi.
 
 Return format can also be specified in domo.get method.
 
-Multi User API
-==============
+## Multi User API
 
 Domo offer following end point for accessing information to all Domo
 instance users
@@ -273,8 +262,7 @@ control over retreiving custom user list by passing offset to API.
 
 @hid-sp18-523-User.
 
-Single User API
-===============
+## Single User API
 
 Domo offer following end point for accessing information of single user
 
@@ -289,16 +277,14 @@ environment variable.
 
 @hid-sp18-523-User.
 
-Sharing custom app using Domo
-=============================
+## Sharing custom app using Domo
 
 Custom app, visualization card, report can be easily shared with 
 users by logging in to Domo CLI through domo login command and then
 publishing the custom built app on domo instance using domo publish
 command.
 
-Conclusion
-==========
+## Conclusion
 
 Domo is used as cloud based tool for real time data visualization and
 reporting. Through Dev Studio and public API, Domo lets the developer
@@ -307,5 +293,5 @@ template that may be used for building custom app. Domo business cloud
 platform offers high availability, performance and scalability for the
 applications that are deployed on Domo instance.
 
-Author would like to thank Dr Gregor Von Laszewski for his suggestions
+The author would like to thank Dr Gregor Von Laszewski for his suggestions
 and guidance on the content that is presented in paper.
