@@ -92,7 +92,7 @@ After completing these steps developers may submit their custom connector for
 publishing. Domo developers will review, validate and notify developers when 
 their connector will be ready for use.
 
-### User Authentication
+#### Custom Connector - User Authentication
 
 Developers have to write code block for validating API credentials and 
 authenticating using username and password. They need to pass encoded 
@@ -100,7 +100,7 @@ user name and password to request header for authorization. After reading
 the response Developer needs to make use of  authenticationSuccess() 
 and authenticationFailed() method to let the user navigate.
 
-### Configure Selectable Reports
+#### Custom Connector - Configure Selectable Reports
 
 Domo Custom connector also has ability to let the developers define reports 
 that their custom connectors can contain. These Reports provides extensibility 
@@ -109,7 +109,7 @@ This lets user of the custom connector chose reports they wish to use.
 These reports appears in Report dropdown menu once connector is published.
 
 
-### Data processing steps
+#### Custom Connector - Data processing steps
 
 This step let the developer define data processing and transformation steps of 
 the data that is retrieved from API endpoint call. This is performed for every 
@@ -119,7 +119,7 @@ needs to be defined in code using datagrid.addcolumn() method and then data is
 added one row at a time.
 
 
-### Sending data to Domo
+#### Custom Connector - Sending data to Domo
 
 Developers have to ensure that their data is correctly uploaded and represented 
 in Domo. In order to do so, developers have to make use of Domo Create/Update 
@@ -127,7 +127,7 @@ dataset and Run Script command. Success message will confirm that data is
 successfully published in Domo.
 
 
-### Submission of custom connector
+#### Custom Connector - Submission of custom connector
 
 
 After completing above steps, developers have to submit their custom connector 
