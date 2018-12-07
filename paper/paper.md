@@ -166,20 +166,14 @@ visualization template under this category.
 ## Create Domo Visualization Cards
 
 Create data connector as needed (file, cloud, on premise, Api etc)
-
 Select the connector and create required data set by selecting 
 table, views or by custom sql query.
-
 Select dataset and chose visualization card under respective
 category (Bar, Pie, Funnel, Scatter, Predictive modeling etc)
-
 Drag and drop the fields/attributes that are needed in
 visualization/report
-
 Apply inbuilt aggregate function on fields as needed
-
 Save card. Move to dashboard if needed.
-
 Give access and share your visualization card with concerned users.
 
 ## Dev Studio
@@ -264,7 +258,6 @@ on add responsive stylesheet, either of third party vendor or custom created
 css. Developer have to add javascript in order to dynamically create layout 
 for placing app content. For e.g Row of tiles and grid can be created using 
 java script file.
-
 Developers have to chose and decide number of tiles depending on the size of 
 the screen content will be rendered when creating custom responsive css. 
 Ideally for larger screen 8 tiles are used to fill in a row. For Normal 
