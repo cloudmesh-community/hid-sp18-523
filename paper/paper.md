@@ -15,7 +15,8 @@ Keywords: Domo, API, token
 
 :o: this paper is too short to justify an absract merge into introduction without redundancy
 
-## Abstract
+
+## Introduction
 
 Domo is cloud based data integration platform that enables employees to
 engage with globally distributed data in real time. It provides
@@ -23,16 +24,11 @@ flexibility to outside partners and third party vendors to integrate and
 collaborate with data. Domo has more than 400 data connectors. Data can
 be accessed directly from public or private cloud regardless if it is
 available on-premise or proprietary systems.
-
-
-## Introduction
-
-Data is heart of information for any business. Though it might seems
-easy; but, it is very trivial to find relevant data that is required
-by different people working in different departments of large
-organization. More so, the bigger challenge is to derive insights
-from the data after it is located. Domo transforms the way orgaizations
-employee access, use, analyze and share data. Domo gives power to
+Data is heart of information for any business. it is very trivial to find 
+relevant data that is requiredby different people working in different 
+departments of large organization. More so, the bigger challenge is to 
+derive insights from the data after it is located. Domo transforms the way 
+orgaizations employee access, use, analyze and share data. Domo gives power to
 users and helps them make decision in real time. Domo can be thought of 
 as cloud based data operating system that has the ability to handle and 
 process data regardless of its type and location. Domo brings different data
@@ -78,6 +74,70 @@ suited for developers having web development experience (java script,
 css, html). Domo App CLI is the main tool that is used to create, edit
 and publish app designs to the Domo instance.
 
+## Connector Dev Studio ( Creating custom connector )
+
+Connector Dev Studio enables developers to create their own data connectors
+if they do not find any existing connector in Domo library. They may chose 
+to use that connector exclusively for their own organization or can make it 
+publicly available for contributing to community. Developers need to have 
+JavaScript knowledge in order to build their own custom connector. 
+Certain conditions are required to be met in order to build custom connector; 
+APIs must use https, it should be REST API , it should either require No 
+Authentication or should be able to get authenticated using OAuth 2.0 or API 
+key or through user name and password.Build Now menu command lets the developer 
+navigate to Connector Dev Studio Integrated development Environment ( IDE ). 
+Developers have to upload their custom connector icon image, configure 
+authentication , define reports and  define data processing steps. 
+After completing these steps developers may submit their custom connector for 
+publishing. Domo developers will review, validate and notify developers when 
+their connector will be ready for use.
+
+### User Authentication
+
+Developers have to write code block for validating API credentials and 
+authenticating using username and password. They need to pass encoded 
+user name and password to request header for authorization. After reading 
+the response Developer needs to make use of  authenticationSuccess() 
+and authenticationFailed() method to let the user navigate.
+
+### Configure Selectable Reports
+
+Domo Custom connector also has ability to let the developers define reports 
+that their custom connectors can contain. These Reports provides extensibility 
+to developers of calling  different API endpoints to acheive different function. 
+This lets user of the custom connector chose reports they wish to use. 
+These reports appears in Report dropdown menu once connector is published.
+
+
+### Data processing steps
+
+This step let the developer define data processing and transformation steps of 
+the data that is retrieved from API endpoint call. This is performed for every 
+report that developer has defined for their custom connector. Developers need to 
+write script for parsing , manipulating and storing data in Domo. Data structure 
+needs to be defined in code using datagrid.addcolumn() method and then data is 
+added one row at a time.
+
+
+### Sending data to Domo
+
+Developers have to ensure that their data is correctly uploaded and represented 
+in Domo. In order to do so, developers have to make use of Domo Create/Update 
+dataset and Run Script command. Success message will confirm that data is 
+successfully published in Domo.
+
+
+### Submission of custom connector
+
+
+After completing above steps, developers have to submit their custom connector 
+for publishing using Domo Submit For Publishing command. 
+
+
+[@hid-sp18-523-Domo]
+
+
+
 ## Data Flows and Transforms
 
 Cleaning data is herculean task when dealing with dirty data 
@@ -103,7 +163,7 @@ predictive modeling, outliers etc to visually represent relevant data.
 Donut, Pie, Treemap, Funnel, Folded funnel are few of the popular
 visualization template under this category.
 
-## How It Works
+## Create Domo Visualization Cards
 
 Create data connector as needed (file, cloud, on premise, Api etc)
 
