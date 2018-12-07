@@ -206,16 +206,14 @@ It will provide an option to Test web service locally with below options
 
 ## Azure Cloud deployment
 
-Once the Web Service is created locally, It will create a hyper link
-with name of the web service. Click on the hyperlink generated on the
-Name of web service.
+Once Web Service is created locally, It creates a hyper link
+with name of the web service. On clicking this hyperlink 
+service dashboard opens up that let the develop set up and 
+configure web service on Azure cloud for consumption.
 
-It will open the web service dashboard for configuration and setup the
-consumption process with Azure cloud.
-
-It will provide the test tab on the dashboard, where we can provide the
-inputs and get the prediction values once clicked on Test Request
-response button.
+It provides test tab on the dashboard where we can provide
+inputs and get the prediction values given by model after 
+clicking on Test Request response button.
 
 This step will assure that, the web services are working as expected.
 
