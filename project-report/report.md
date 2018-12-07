@@ -132,11 +132,11 @@ Histogram shows the distribution of data of different variables
 
 Plotting Histogram from Dataset
 
-![Histogram of Attributes](images/HistrogramofImpAttributes.png){#fig:Histogram of Important Attributes}
+![Histogram of Important Attributes](images/HistrogramofImpAttributes.png){#fig:HistogramofImportantAttributes}
 
 Correlation plot informs about the relation between variables
 
-![Correlation Matrix](images/Correlation.png){#fig:Correlation Matrix}
+![Correlation Matrix between Variables](images/Correlation.png){#fig:CorrelationMatrixbetweenVariables}
 
 ## Data Exploration
 
@@ -167,9 +167,9 @@ Created on Azure ML Studio, 3 Learning Algorithms used
 From the RMSE results, Hyper-tuned Boosted Decision Tree has provided
 better results.
 
-![RMSE Comparision](images/RMSEComparison.png){#fig:RMSE Error Comparison}
+![RMSE Comparision Results](images/RMSEComparison.png){#fig:RMSEComparisionResults}
 
-![Hypertune RMSE comparision](images/RMSEComparisionBetweenHypertune.png){#fig:RMSE Comparisions}
+![Hypertuned Algorithm RMSE Comparision](images/RMSEComparisionBetweenHypertune.png){#fig:HypertunedAlgorithmRMSEComparision}
 
 ## Predictive Model
 
@@ -188,7 +188,7 @@ From the score function, have extracted only 2 columns
 
 Create the Web service input and Web service Output.
 
-![Model Output](images/PredictionOutputfromModel.png){#fig:Output of Prediction from Models}
+![Output of Prediction from Models](images/PredictionOutputfromModel.png){#fig:OutputofPredictionfromModels}
 
 ## Web Service Deployment
 
@@ -198,7 +198,7 @@ deployed as web service from Azure ML Studio.
 It will generate the API key, which will be used for Azure Cloud
 deployment.
 
-![Azure Webservice Deploy](images/Webservicedeploy.png){#fig:Azure Deploy WebService}
+![Azure MLStudio Webservice Deploy](images/Webservicedeploy.png){#fig:AzureMLStudioWebserviceDeploy}
 
 It will provide an option to Test web service locally with below options
 
@@ -221,7 +221,7 @@ response button.
 
 This step will assure that, the web services are working as expected.
 
-![Configration Webservice](images/Webserviceconf.png){#fig:WebService Configuration}
+![WebService Configration Details](images/Webserviceconf.png){#fig:WebServiceConfigrationDetails}
 
 After clicking consume tab from Dashboard, It will display option for
 Response Request Web Template link.
@@ -249,7 +249,7 @@ Click on the below link to access the prediction web service
 Entered the values used to for testing locally, the amount should match
 so as to see if the service is functioning as expected.
 
-![Webservice](images/WebService.png){#fig:WebService}
+![WebService Result](images/WebService.png){#fig:WebServiceResult}
 
 Batch Mode for Web Service Execution Download the CSV generated from
 Azure ML Studio
@@ -262,7 +262,7 @@ Azure ML Studio
 * Click on Prediction button. It will generate the prediction values
   for all the selected Input entries with Item Identifiers.
 
-![API on CSV](images/csvscreenshot.png){#fig:CSV API screenshot}
+![Built API on CSV File](images/csvscreenshot.png){#fig:BuiltAPIonCSVFile}
 
 ## Drawback of using Azure ML Studio
 
@@ -286,7 +286,7 @@ Computation time using model saved on disk was recorded  as
 1.95 micro secs.
 
 
-![Azure Notebook Screen](images/Azurenotebookscreenshot.png){#fig:Azure Notebook}
+![Azure Notebook Screenshot](images/Azurenotebookscreenshot.png){#fig:AzureNotebookScreenshot}
 
 ## AWS with Notebook Instance
 
@@ -300,7 +300,7 @@ It took 8.2 ms for overall batch prediction using notebook.
 Computation time using model saved on disk was recorded  as 
 371 micro secs.
 
-![AWS Notebook Screen](images/AWSnotebookscreenshot.png){#fig:AWS Screenshot}
+![AWS Notebook Screenshot](images/AWSnotebookscreenshot.png){#fig:AWSNotebookScreenshot}
 
 ## LocalMachine Instance
 
@@ -314,11 +314,11 @@ instance.
 
 Start time
 
-![Local Start Time](images/Starttimelocal.png){#fig:Start Time from Local}
+![Local Machine Start Time](images/Starttimelocal.png){#fig:LocalMachineStartTime}
 
 Endtime
 
-![Local End Time](images/EndTimelocal.png){#fig:End Time from Local}
+![Local Machine End Time](images/EndTimelocal.png){#fig:LocalMachineEndTime}
 
 ## Docker
 
