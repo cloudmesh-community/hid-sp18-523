@@ -1,4 +1,4 @@
-# SciKit Learn Algorithms with Rest API :wave: hid-sp18-520 hid-sp18-523
+# SciKit Learn Algorithms with Rest API :smiley: hid-sp18-520 hid-sp18-523
 
 | Arijit Sinha, Ritesh Tandon
 | arisinha@iu.edu, ritandon@iu.edu
@@ -6,8 +6,6 @@
 | hid: hid-sp18-520, hid-sp18-523
 | github: [:cloud:](https://github.com/cloudmesh-community/hid-sp18-523/tree/master/project-report/report.md)
 | code: [:cloud:](https://github.com/cloudmesh-community/hid-sp18-523/tree/master/project-code)
-
-:o: revisit figure captions, see our sample chapter
 
 ---
 
