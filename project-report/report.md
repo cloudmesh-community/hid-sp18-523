@@ -296,13 +296,38 @@ It took 15.2 ms for overall batch prediction using notebook.
 Computation time using model saved on disk was recorded  as 
 1.95 micro secs.
 
+#### Code
 
 ```
-line 1
-line 2
+Predict on original Test Set using Random forest model with Hypertune
+
+%%time
+overallprediction=clfgrdmof.predict(testr[predictors])
+CPU times: user 15 ms, sys: 761 µs, total: 15.7 ms
+Wall time: 15.2 ms
+
+print(overallprediction)
+[1648.57907925 1413.2015807  700.49019691  ... 11922.98505294 3487.44068317
+ 1308.81770146]
+
+import pickle
+filename = 'finalized_model.pkl'
+pickle.dump(clfgrdmof, open(filename, 'wb'))
+
+ 
+# load the model from disk
+loaded_model = pickle.load(open(filename, 'rb'))
+Test1 = loaded_model.predict(testr[predictors])
+
+%%time
+print(Test1)
+[1648.57907925 1413.2015807 700.49019691  ... 1922.98505294 3487.44068317
+ 1308.81770146]
+CPU times: user 1.68 ms, sys: 277 ms, total: 1.96 ms
+Wall time: 1.95 ms
 ```
 
-![Azure Notebook Screenshot](images/Azurenotebookscreenshot.png){#fig:AzureNotebookScreenshot}
+
 
 ## AWS with Notebook Instance
 
@@ -316,12 +341,37 @@ It took 8.2 ms for overall batch prediction using notebook.
 Computation time using model saved on disk was recorded  as 
 371 micro secs.
 
+#### Code
+
 ```
-line 1
-line 2
+Predict on original Test Set using Random forest model with Hypertune
+
+%%time
+overallprediction=clfgrdmof.predict(testr[predictors])
+CPU times: user 12 ms, sys: 0 ns, total: 12 ms
+Wall time: 8.2 ms
+
+print(overallprediction)
+[1610.61752003 1401.48146969  578.3748237  ... 1854.50378336 3521.16741962
+ 1286.86433971]
+
+import pickle
+filename = 'finalized_model.pkl'
+pickle.dump(clfgrdmof, open(filename, 'wb'))
+
+ 
+# load the model from disk
+loaded_model = pickle.load(open(filename, 'rb'))
+Test1 = loaded_model.predict(testr[predictors])
+
+%%time
+print(Test1)
+[1610.61752003 1401.48146969  578.3748237  ... 1854.50378336 3521.16741962
+ 1286.86433971]
+CPU times: user 0 ns, sys: 0 ns, total: 0 ns
+Wall time: 371 µs
 ```
 
-![AWS Notebook Screenshot](images/AWSnotebookscreenshot.png){#fig:AWSNotebookScreenshot}
 
 ## LocalMachine Instance
 
@@ -353,6 +403,16 @@ Link for localhost
 
 * <http://localhost:8080/cloudmesh/prediction>
 
+
+## Performance Comparison
+
+Environment  | Description       |  Elapsed Time
+-------------|-------------------|----------------
+Azure Cloud  | Notebook Instance |  15.2 ms
+AWS Cloud    | Notebook Instance |  8.2 ms
+Local        | Python Instance   |  1 min 10 s
+
+
 ## Conclusion
 
 In this project, below two models have been implemented and hyper-tuned. 
@@ -370,13 +430,6 @@ Performance was benchmarked on different cloud and local environment.
 On comparison we observed that prediction performance
 was best on AWS cloud.
 
-## Performance Comparison
-
-Environment  | Description       |  Elapsed Time
--------------|-------------------|----------------
-Azure Cloud  | Notebook Instance |  15.2 ms
-AWS Cloud    | Notebook Instance |  8.2 ms
-Local        | Python Instance   |  9 min 10 s
 
 
 ## Appendix
