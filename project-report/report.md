@@ -280,6 +280,11 @@ Computation time using model saved on disk was recorded  as
 1.95 micro secs.
 
 
+```
+line 1
+line 2
+```
+
 ![Azure Notebook Screenshot](images/Azurenotebookscreenshot.png){#fig:AzureNotebookScreenshot}
 
 ## AWS with Notebook Instance
@@ -293,6 +298,11 @@ Execution time of prediction was captured for comparison.
 It took 8.2 ms for overall batch prediction using notebook. 
 Computation time using model saved on disk was recorded  as 
 371 micro secs.
+
+```
+line 1
+line 2
+```
 
 ![AWS Notebook Screenshot](images/AWSnotebookscreenshot.png){#fig:AWSNotebookScreenshot}
 
