@@ -1,4 +1,4 @@
-# SciKit Learn Algorithms with Rest API :wave: hid-sp18-520 hid-sp18-523
+# SciKit Learn Algorithms with Rest API :smiley: hid-sp18-520 hid-sp18-523
 
 | Arijit Sinha, Ritesh Tandon
 | arisinha@iu.edu, ritandon@iu.edu
@@ -37,7 +37,7 @@ predict the future state of data is known as regression
 Unsupervised algorithms are on the dataset, where we do not see the
 target variable for prediction, we learn its behavior set of vector
 input variable to identify the clustering group of similar behavior data
-or sample  @sckitml Kaggle is a known location for different kind of
+or sample [@sckitml]. Kaggle is a known location for different kind of
 datasets gathered by various institutes across globe.
 
 ## Scope of work
@@ -133,7 +133,7 @@ output
 
 ![Histogram of Important Attributes](images/HistrogramofImpAttributes.png){#fig:HistogramofImportantAttributes}
 
-+@fig:CorrelationMatrixbetweenVariablesCorrelation shows the 
+In +@fig:CorrelationMatrixbetweenVariables shows the 
 plot about the corelation between variables in the dataset.
 This will display the features which are higly correlated in 
 darker color.
@@ -166,7 +166,7 @@ Created on Azure ML Studio, 3 Learning Algorithms used
 * Linear Regression
 * HyperTuned Boosted Decision Tree
 
-As seen in the results below in +@fig:RMSEComparisionResults and +@fig:HypertunedAlgorithmRMSEComparision
+As seen in the results below in +@fig:RMSEComparisionResults and +@fig:HypertunedAlgorithmRMSEComparision 
 regarding the RMSE result scores, Hyper-tuned Boosted Decision 
 Tree has provided better results.
 
@@ -217,7 +217,7 @@ Once Web Service is created locally, It creates a hyper link
 with name of the web service. On clicking this hyperlink 
 service dashboard opens up that let the develop set up and 
 configure web service on Azure cloud for consumption as 
-shown in the below +@fig:WebServiceConfigrationDetails.
+shown in the below +@fig:WebServiceConfigrationDetails. 
 
 It provides test tab on the dashboard where we can provide
 inputs and get the prediction values given by model after 
@@ -251,7 +251,7 @@ Click on the below link to access the prediction web service
 * <https://predictbigmart.azurewebsites.net/>
 
 Entered the values used to for testing locally, from the 
-+@fig:WebServiceResult we see that amount should matched
++@fig:WebServiceResult, we see that amount should matched
 which confirms service is functioning as expected for
 predicting values.
 
@@ -278,13 +278,12 @@ generated from the local or webservice created.
 ## Drawback of using Azure ML Studio
 
 Azure ML studio provides easy to use drag and drop objects for
-all steps ( from model intialization to deployment ) such as 
+all steps (from model intialization to deployment) such as 
 data preprocessing, training model, fitting model, evaluating 
 model, tuning model and prediction. It is every easy to use and
 handy tool for data scientists and data engineer. However, it has 
 a drawback; developers are not able to generate the code that is 
 generated at the backend for further experimentation and testing.
-
 
 ## Azure with Notebook Instance
 
@@ -326,8 +325,6 @@ print(Test1)
 CPU times: user 1.68 ms, sys: 277 ms, total: 1.96 ms
 Wall time: 1.95 ms
 ```
-
-
 
 ## AWS with Notebook Instance
 
@@ -372,7 +369,6 @@ CPU times: user 0 ns, sys: 0 ns, total: 0 ns
 Wall time: 371 µs
 ```
 
-
 ## LocalMachine Instance
 
 Python notebook file was executed on local instance for comparing 
@@ -409,7 +405,6 @@ image on port- 8080 will predict prices of all items of datset.
 Link for localhost 
 
 * <http://localhost:8080/cloudmesh/prediction>
-
 
 ## Performance Comparison
 
