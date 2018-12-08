@@ -15,6 +15,7 @@ RUN pip install statsmodels
 RUN pip install sklearn
 RUN pip install azureml
 RUN pip install flask
+RUN pip install scipy
 
 
 
