@@ -294,7 +294,7 @@ training model, fitting model, evaluating model, tuning model and
 prediction steps was executed on Azure notebook instance. 
 It took 15.2 ms for overall batch prediction using notebook. 
 Computation time using model saved on disk was recorded  as 
-1.95 micro secs.
+1.95 mili seconds as shown in below code.
 
 #### Code
 
@@ -383,13 +383,20 @@ It was observed that execution and prediction took more time compared
 to execution time on cloud. It took approximately 10 minutes on local
 instance.
 
-Start time
+#### Local Execution - Prediction Time
 
-![Local Machine Start Time](images/Starttimelocal.png){#fig:LocalMachineStartTime}
-
-Endtime
-
-![Local Machine End Time](images/EndTimelocal.png){#fig:LocalMachineEndTime}
+```
+Local Start Time: 
+2018-12-08 01:39:40.654383
+Local End Time: 
+2018-12-08 01:39:40.684909
+[1710.00908356 1425.18637329  566.05070462 ... 1825.71847362 3565.54132359
+ 1278.2714367 ]
+[1710.00908356 1425.18637329  566.05070462 ... 1825.71847362 3565.54132359
+ 1278.2714367 ]
+[1710.00908356 1425.18637329  566.05070462 ... 1825.71847362 3565.54132359
+ 1278.2714367 ]
+```
 
 ## Docker
 
@@ -410,8 +417,12 @@ Environment  | Description       |  Elapsed Time
 -------------|-------------------|----------------
 Azure Cloud  | Notebook Instance |  15.2 ms
 AWS Cloud    | Notebook Instance |  8.2 ms
-Local        | Python Instance   |  1 min 10 s
+Local        | Python Instance   |  0.03 seconds
 
+From above comparison we note that AWS cloud is faster 
+giving performance of 0.0082 seconds whereas prediction on 
+Azure has took 0.0152 seconds. lowest being the local environment 
+with 0.03 second
 
 ## Conclusion
 
@@ -428,7 +439,8 @@ Model was  deployed on Azure Cloud, AWS Cloud and Local machine for
 predicting prices. Docker image was created for reproducing. 
 Performance was benchmarked on different cloud and local environment. 
 On comparison we observed that prediction performance
-was best on AWS cloud.
+was best on AWS cloud. From above table we note that performance on AWS
+was 85 % faster compared to Azure and 265 % faster as compared to local.
 
 
 
