@@ -126,9 +126,7 @@ with Unique Values
 
 ## Data Visualization
 
-Histogram shows the distribution of data of different variables
-
-Plotting Histogram from Dataset
+The histogram in +@fig:HistogramofImportantAttributes shows the distribution of data of different variables. :o: I still do not understand this.
 
 ![Histogram of Important Attributes](images/HistrogramofImpAttributes.png){#fig:HistogramofImportantAttributes}
 
