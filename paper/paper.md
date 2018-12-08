@@ -1,5 +1,5 @@
 
-# Cloud Domo  :smiley: hid-sp18-523 
+# Cloud Domo  :smiley::new: hid-sp18-523 
 
 | Ritesh Tandon
 | ritandon@iu.edu
@@ -195,7 +195,8 @@ App Manifest is Configuration file that defines properties of custom app
 
 First Install node.js from https://nodejs.org/en/ website. Make sure 
 that itis installed by executing node --version command. Next step
-is to install CLI using below command on unix/linux platform
+is to install CLI using below command on unix/linux 
+platform [@hid-sp18-523-Dev].
 
       npm install -g ryuu command 
 
