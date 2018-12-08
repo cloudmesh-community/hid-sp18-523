@@ -133,12 +133,12 @@ output
 
 ![Histogram of Important Attributes](images/HistrogramofImpAttributes.png){#fig:HistogramofImportantAttributes}
 
-+@fig1:CorrelationMatrixbetweenVariablesCorrelation shows the 
++@fig:CorrelationMatrixbetweenVariablesCorrelation shows the 
 plot about the corelation between variables in the dataset.
 This will display the features which are higly correlated in 
 darker color.
 
-![Correlation Matrix between Variables](images/Correlation.png){#fig1:CorrelationMatrixbetweenVariables}
+![Correlation Matrix between Variables](images/Correlation.png){#fig:CorrelationMatrixbetweenVariables}
 
 ## Data Exploration
 
@@ -166,13 +166,13 @@ Created on Azure ML Studio, 3 Learning Algorithms used
 * Linear Regression
 * HyperTuned Boosted Decision Tree
 
-As seen in the results below in +@fig2:RMSEComparisionResults and +@ig3:HypertunedAlgorithmRMSEComparision
+As seen in the results below in +@fig:RMSEComparisionResults and +@fig:HypertunedAlgorithmRMSEComparision
 regarding the RMSE result scores, Hyper-tuned Boosted Decision 
 Tree has provided better results.
 
-![RMSE Comparision Results](images/RMSEComparison.png){#fig2:RMSEComparisionResults}
+![RMSE Comparision Results](images/RMSEComparison.png){#fig:RMSEComparisionResults}
 
-![Hypertuned Algorithm RMSE Comparision](images/RMSEComparisionBetweenHypertune.png){#fig3:HypertunedAlgorithmRMSEComparision}
+![Hypertuned Algorithm RMSE Comparision](images/RMSEComparisionBetweenHypertune.png){#fig:HypertunedAlgorithmRMSEComparision}
 
 ## Predictive Model
 
@@ -189,21 +189,21 @@ From the score function, have extracted only 2 columns
 * Item Identifer
 * Item Outlet Sales
 
-In below +@fig4OutputofPredictionfromModels shows WebService
+In below +@fig:OutputofPredictionfromModels shows WebService
 input and WebService Output using the selected model on
 the dataset with predicted value.
 
-![Output of Prediction from Models](images/PredictionOutputfromModel.png){#fig4:OutputofPredictionfromModels}
+![Output of Prediction from Models](images/PredictionOutputfromModel.png){#fig:OutputofPredictionfromModels}
 
 ## Web Service Deployment
 
 Once the Prediction model has been executed successfully, it can be
 deployed as web service from Azure ML Studio.
 
-+@fig5:AzureMLStudioWebserviceDeploy shows the generated
++@fig:AzureMLStudioWebserviceDeploy shows the generated
 API key, which will be used for Azure Cloud deployment.
 
-![Azure MLStudio Webservice Deploy](images/Webservicedeploy.png){#fig5:AzureMLStudioWebserviceDeploy}
+![Azure MLStudio Webservice Deploy](images/Webservicedeploy.png){#fig:AzureMLStudioWebserviceDeploy}
 
 It will provide an option to Test web service locally with below options
 
@@ -217,7 +217,7 @@ Once Web Service is created locally, It creates a hyper link
 with name of the web service. On clicking this hyperlink 
 service dashboard opens up that let the develop set up and 
 configure web service on Azure cloud for consumption as 
-shown in the below +@fig6:WebServiceConfigrationDetails.
+shown in the below +@fig:WebServiceConfigrationDetails.
 
 It provides test tab on the dashboard where we can provide
 inputs and get the prediction values given by model after 
@@ -225,7 +225,7 @@ clicking on Test Request response button.
 
 This step will assure that, the web services are working as expected.
 
-![WebService Configration Details](images/Webserviceconf.png){#fig6:WebServiceConfigrationDetails}
+![WebService Configration Details](images/Webserviceconf.png){#fig:WebServiceConfigrationDetails}
 
 After clicking consume tab from Dashboard, It will display option for
 Response Request Web Template link.
@@ -296,9 +296,9 @@ It took 15.2 ms for overall batch prediction using notebook.
 Computation time using model saved on disk was recorded  as 
 1.95 mili seconds as shown in below code.
 
-#### Code
+### Code
 
-```
+```python
 Predict on original Test Set using Random forest model with Hypertune
 
 %%time
@@ -341,9 +341,9 @@ It took 8.2 ms for overall batch prediction using notebook.
 Computation time using model saved on disk was recorded  as 
 371 micro secs.
 
-#### Code
+### Code
 
-```
+```python
 Predict on original Test Set using Random forest model with Hypertune
 
 %%time
@@ -383,9 +383,9 @@ It was observed that execution and prediction took more time compared
 to execution time on cloud. It took approximately 10 minutes on local
 instance.
 
-#### Local Execution - Prediction Time
+### Local Execution - Prediction Time
 
-```
+```python
 Local Start Time: 
 2018-12-08 01:39:40.654383
 Local End Time: 
@@ -417,12 +417,12 @@ Environment  | Description       |  Elapsed Time
 -------------|-------------------|----------------
 Azure Cloud  | Notebook Instance |  15.2 ms
 AWS Cloud    | Notebook Instance |  8.2 ms
-Local        | Python Instance   |  0.03 seconds
+Local        | Python Instance   |  0.03 sec
 
 From above comparison we note that AWS cloud is faster 
 giving performance of 0.0082 seconds whereas prediction on 
 Azure has took 0.0152 seconds. lowest being the local environment 
-with 0.03 second
+with 0.03 second.
 
 ## Conclusion
 
@@ -439,10 +439,7 @@ Model was  deployed on Azure Cloud, AWS Cloud and Local machine for
 predicting prices. Docker image was created for reproducing. 
 Performance was benchmarked on different cloud and local environment. 
 On comparison we observed that prediction performance
-was best on AWS cloud. From above table we note that performance on AWS
-was 85 % faster compared to Azure and 265 % faster as compared to local.
-
-
+was best on AWS cloud. 
 
 ## Appendix
 
@@ -450,7 +447,7 @@ Web service was deployed on Azure Cloud. Weservice endpoints
 was exposed to predict price of passed Item Identifiers. 
 
 Deployment and usage playback Video of using exposed webservice 
-endpoint is uploaded at below location
+endpoint is uploaded at below location.
 
 * <https://www.youtube.com/watch?v=xrLto4XPn1o&t=518s>
 
