@@ -239,13 +239,13 @@ is design supported by Domo platform developers can build their app
 that renders perfectly on desktop, tablet and mobile devices. Domo use 
 container to render the content of app. These container can take any of 
 below four sizes that it supports.
-*Full: This is customizable and can be defined in developers app manifest 
+* Full: This is customizable and can be defined in developers app manifest 
 file
-*Large: This is defined for displaying rendering content on devices 
+* Large: This is defined for displaying rendering content on devices 
 with 460x540px size
-*Medium:This is defined for displaying rendering content on devices 
+* Medium:This is defined for displaying rendering content on devices 
 with 225x250px size
-*Small: This is defined for displaying rendering content on devices 
+* Small: This is defined for displaying rendering content on devices 
 with 225x105px size 
 By default Domo development environment renders app content inside iframe. 
 Developers have to open source code of iframe into a new tab which can then 
