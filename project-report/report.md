@@ -411,7 +411,7 @@ Link for localhost
 
 Environment - Ubuntu 16.04 , python
 
-###### Testing using local python instance
+#### Testing using local python instance
 
 step 1 - Download project-code folder from github to local drive on Ubuntu
 
@@ -424,7 +424,7 @@ python Project-BIgMartPrediction.py
 
 ```
 
-###### Testing Using Docker Image
+#### Testing Using Docker Image
 
 step 1 - Download project-code folder from github to local drive on Ubuntu
 
