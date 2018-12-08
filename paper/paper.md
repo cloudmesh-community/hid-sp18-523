@@ -88,7 +88,7 @@ Developers have to upload their custom connector icon image, configure
 authentication , define reports and  define data processing steps. 
 After completing these steps developers may submit their custom connector for 
 publishing. Domo developers will review, validate and notify developers when 
-their connector will be ready for use.
+their connector will be ready for use [@hid-sp18-523-Domo-Connector].
 
 #### Custom Connector - User Authentication
 
@@ -96,7 +96,8 @@ Developers have to write code block for validating API credentials and
 authenticating using username and password. They need to pass encoded 
 user name and password to request header for authorization. After reading 
 the response Developer needs to make use of  authenticationSuccess() 
-and authenticationFailed() method to let the user navigate.
+and authenticationFailed() method to let the user 
+navigate [@hid-sp18-523-Domo-Connector].
 
 #### Custom Connector - Configure Selectable Reports
 
@@ -104,7 +105,8 @@ Domo Custom connector also has ability to let the developers define reports
 that their custom connectors can contain. These Reports provides extensibility 
 to developers of calling  different API endpoints to acheive different function. 
 This lets user of the custom connector chose reports they wish to use. 
-These reports appears in Report dropdown menu once connector is published.
+These reports appears in Report dropdown menu once connector 
+is published [@hid-sp18-523-Domo-Connector].
 
 
 #### Custom Connector - Data processing steps
@@ -114,7 +116,7 @@ the data that is retrieved from API endpoint call. This is performed for every
 report that developer has defined for their custom connector. Developers need to 
 write script for parsing , manipulating and storing data in Domo. Data structure 
 needs to be defined in code using datagrid.addcolumn() method and then data is 
-added one row at a time.
+added one row at a time [@hid-sp18-523-Domo-Connector].
 
 
 #### Custom Connector - Sending data to Domo
@@ -122,17 +124,15 @@ added one row at a time.
 Developers have to ensure that their data is correctly uploaded and represented 
 in Domo. In order to do so, developers have to make use of Domo Create/Update 
 dataset and Run Script command. Success message will confirm that data is 
-successfully published in Domo.
+successfully published in Domo [@hid-sp18-523-Domo-Connector].
 
 
 #### Custom Connector - Submission of custom connector
 
 
 After completing above steps, developers have to submit their custom connector 
-for publishing using Domo Submit For Publishing command. 
-
-
-@hid-sp18-523-Domo-Connector
+for publishing using Domo Submit For Publishing 
+command [@hid-sp18-523-Domo-Connector]. 
 
 
 
@@ -193,14 +193,14 @@ App Manifest is Configuration file that defines properties of custom app
 
 ## Installation
 
-Install node.js through download
+First Install node.js from https://nodejs.org/en/ website. Make sure 
+that itis installed by executing node --version command. Next step
+is to install CLI using below command on unix/linux platform
 
-Install CLI using below command -
-
-npm install -g ryuu command ( unix/linux based platform ). 
+      npm install -g ryuu command 
 
 Make sure that firewall is not blocking npm registry by pining
-www.npmjs.com through terminal
+www.npmjs.com through terminal [@hid-sp18-523-Dev].
 
 ## Creating simple Domo App
 
@@ -209,7 +209,8 @@ Command domo init on CLI terminal create basic design template.
 Enter design name and starter type App. Enter myfirstdomoapp as 
 design name and HelloWorld as starter type. This will
 create directory and all the necessary files that are needed
-for building simple app
+for building simple app. Directory structure shown below
+is created [@hid-sp18-523-Dev].
 
       Following project structure is created -
           app.cs
@@ -218,7 +219,6 @@ for building simple app
           index.html
           manifest.json
 
- @hid-sp18-523-Dev
 
 Choose the data source to which app needs to connect to. 
 This is optional and based on app functionality.
@@ -247,7 +247,6 @@ Medium:This is defined for displaying rendering content on devices
 with 225x250px size
 Small: This is defined for displaying rendering content on devices 
 with 225x105px size 
-
 By default Domo development environment renders app content inside iframe. 
 Developers have to open source code of iframe into a new tab which can then 
 be changed in order to test responsiveness of app content. Developers have 
@@ -259,10 +258,9 @@ java script file.
 Developers have to chose and decide number of tiles depending on the size of 
 the screen content will be rendered when creating custom responsive css. 
 Ideally for larger screen 8 tiles are used to fill in a row. For Normal 
-desktop 6 and for tablet 4 tiles in a row are ideal.
+desktop 6 and for tablet 4 tiles in a row are 
+ideal [@hid-sp18-523-Domo-Responsive].
 
-
-@hid-sp18-523-Domo-Responsive
 
 
 ## API Authentication
@@ -283,13 +281,12 @@ for accessing data one should only select Data scope else developers will
 get access to user, audit related information as well. Once Client Id and
 Client Secret is obtained, next step to obtain access token.
 Following request can be made to obtain access token using Id and
-secret @hid-sp18-523-Authticate
+secret [@hid-sp18-523-Authticate].
 
     $curl -v -u {CLIENT_ID}:{CLIENT_SECRET} 
     https://api.domo.com/oauth/token?
         grant_type=client_credentials&scope={SCOPE}
 
- @hid-sp18-523-Authticate
 
 Above command provides result in JSON format.
 Body of JSON response contains multiple key value pairs.
@@ -297,23 +294,22 @@ The most important among those are access token and expires in key.
 These obtained access token must be passed in header of any future request.
 
 For e.g Below command is used for calling Domo API that gives the list
-of created datasets after replacing obtained access token.
+of created datasets after replacing obtained access 
+token [@hid-sp18-523-Authticate].
 
     $curl -v -H Authorization:'bearer {access-token} 
     https://api.domo.com/v1/datasets
 
- @hid-sp18-523-Authticate
 
 Custom app using Domo API can be built as explained above.
 
 ## Data API
 
 Base url (end point) of the data API can be accessed through following
-command
+command [@hid-sp18-523-DataApi].
 
     GET /data/v1/:alias?:queryOperators
 
-@hid-sp18-523-DataApi
 
 Alias is the name of the dataset that is defined in manifest file. 
 Custom query can be run using queryOperators. Aggregate functions such 
@@ -321,47 +317,44 @@ as count, sum, min, max, avg, filter, group by and order by etc can be used
 with custom query.
 
 Format of returned data of API can be set using request accept header
-of XMLHttpRequest object to following formats @hid-sp18-523-DataApi.
+of XMLHttpRequest object to following formats [@hid-sp18-523-DataApi].
 
     array-of-objects
       csv
       excel
       json
 
- @hid-sp18-523-DataApi
 
 Return format can also be specified in domo.get method.
 
 ## Multi User API
 
 Domo offer following end point for accessing information to all Domo
-instance users
+instance users [@hid-sp18-523-User]
 
     GET /domo/users/v1?includeDetails={true|false}
         &limit={int}&offset={int}
 
- @hid-sp18-523-User 
  
 User details returned by API can be controlled by calling API.
 Such as , number of records. Developers also has 
-control over retreiving custom user list by passing offset to API.
+control over retreiving custom user list by passing offset 
+to API [@hid-sp18-523-User].
 
-@hid-sp18-523-User.
 
 ## Single User API
 
-Domo offer following end point for accessing information of single user
+Domo offer following end point for accessing information of 
+single user [@hid-sp18-523-User].
 
     GET /domo/users/v1/:userId?
         includeDetails={true|false}
-
-@hid-sp18-523-User 
+ 
 
 user id of user whose details are required can be passed.It is very
 easy to get details of current logged in user by accessing through 
-environment variable.
+environment variable [@hid-sp18-523-User].
 
-@hid-sp18-523-User.
 
 ## Sharing custom app using Domo
 
