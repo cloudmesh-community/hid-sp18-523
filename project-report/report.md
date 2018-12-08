@@ -399,7 +399,7 @@ Local End Time:
 Docker Image was created on local environment. Excution of docker image of
 model predict prices for passed dataset. This code can be reproduced  
 using Docker commands.
-Once replicated locally, running locahost website created by docker
+Once replicated locally, running locahost endpoint url created by docker
 image on port- 8080 will predict prices of all items of datset.
 
 Link for localhost 
