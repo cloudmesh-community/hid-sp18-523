@@ -54,7 +54,7 @@ We are planning to use Regression learning algorithm because the target
 variable is numerical and continuous in nature. We will be creating ML
 pipeline using linear, regularized linear, tree and forest learning
 algorithm. We will compare and evaluate different models based on RMSE
-of learning algorithm. [@sckitml]
+of learning algorithm [@sckitml].
 
 ## Technology Stack
 
@@ -104,7 +104,7 @@ respect to
 * Outlet Type
 * source
 
-[@kaggleds]
+[@kaggleds].
 
 ## Dataset Details
 
@@ -126,13 +126,19 @@ with Unique Values
 
 ## Data Visualization
 
-The histogram in +@fig:HistogramofImportantAttributes shows the distribution of data of different variables. :o: I still do not understand this.
+The histogram in +@fig:HistogramofImportantAttributes shows the 
+distribution of data of different variables from the dataset.
+These are the important feature influencing the predicted 
+output
 
 ![Histogram of Important Attributes](images/HistrogramofImpAttributes.png){#fig:HistogramofImportantAttributes}
 
-Correlation plot informs about the relation between variables
++@fig1:CorrelationMatrixbetweenVariablesCorrelation shows the 
+plot about the corelation between variables in the dataset.
+This will display the features which are higly correlated in 
+darker color.
 
-![Correlation Matrix between Variables](images/Correlation.png){#fig:CorrelationMatrixbetweenVariables}
+![Correlation Matrix between Variables](images/Correlation.png){#fig1:CorrelationMatrixbetweenVariables}
 
 ## Data Exploration
 
@@ -160,12 +166,13 @@ Created on Azure ML Studio, 3 Learning Algorithms used
 * Linear Regression
 * HyperTuned Boosted Decision Tree
 
-From the RMSE results, Hyper-tuned Boosted Decision Tree has provided
-better results.
+As seen in the results below in +@fig2:RMSEComparisionResults and +@ig3:HypertunedAlgorithmRMSEComparision
+regarding the RMSE result scores, Hyper-tuned Boosted Decision 
+Tree has provided better results.
 
-![RMSE Comparision Results](images/RMSEComparison.png){#fig:RMSEComparisionResults}
+![RMSE Comparision Results](images/RMSEComparison.png){#fig2:RMSEComparisionResults}
 
-![Hypertuned Algorithm RMSE Comparision](images/RMSEComparisionBetweenHypertune.png){#fig:HypertunedAlgorithmRMSEComparision}
+![Hypertuned Algorithm RMSE Comparision](images/RMSEComparisionBetweenHypertune.png){#fig3:HypertunedAlgorithmRMSEComparision}
 
 ## Predictive Model
 
@@ -182,19 +189,21 @@ From the score function, have extracted only 2 columns
 * Item Identifer
 * Item Outlet Sales
 
-Create the Web service input and Web service Output.
+In below +@fig4OutputofPredictionfromModels shows WebService
+input and WebService Output using the selected model on
+the dataset with predicted value.
 
-![Output of Prediction from Models](images/PredictionOutputfromModel.png){#fig:OutputofPredictionfromModels}
+![Output of Prediction from Models](images/PredictionOutputfromModel.png){#fig4:OutputofPredictionfromModels}
 
 ## Web Service Deployment
 
 Once the Prediction model has been executed successfully, it can be
 deployed as web service from Azure ML Studio.
 
-It will generate the API key, which will be used for Azure Cloud
-deployment.
++@fig5:AzureMLStudioWebserviceDeploy shows the generated
+API key, which will be used for Azure Cloud deployment.
 
-![Azure MLStudio Webservice Deploy](images/Webservicedeploy.png){#fig:AzureMLStudioWebserviceDeploy}
+![Azure MLStudio Webservice Deploy](images/Webservicedeploy.png){#fig5:AzureMLStudioWebserviceDeploy}
 
 It will provide an option to Test web service locally with below options
 
@@ -207,7 +216,8 @@ It will provide an option to Test web service locally with below options
 Once Web Service is created locally, It creates a hyper link
 with name of the web service. On clicking this hyperlink 
 service dashboard opens up that let the develop set up and 
-configure web service on Azure cloud for consumption.
+configure web service on Azure cloud for consumption as 
+shown in the below +@fig6:WebServiceConfigrationDetails.
 
 It provides test tab on the dashboard where we can provide
 inputs and get the prediction values given by model after 
@@ -215,7 +225,7 @@ clicking on Test Request response button.
 
 This step will assure that, the web services are working as expected.
 
-![WebService Configration Details](images/Webserviceconf.png){#fig:WebServiceConfigrationDetails}
+![WebService Configration Details](images/Webserviceconf.png){#fig6:WebServiceConfigrationDetails}
 
 After clicking consume tab from Dashboard, It will display option for
 Response Request Web Template link.
@@ -240,8 +250,10 @@ Expose the Web Service from Azure cloud
 Click on the below link to access the prediction web service
 * <https://predictbigmart.azurewebsites.net/>
 
-Entered the values used to for testing locally, the amount should match
-so as to see if the service is functioning as expected.
+Entered the values used to for testing locally, from the 
++@fig:WebServiceResult we see that amount should matched
+which confirms service is functioning as expected for
+predicting values.
 
 ![WebService Result](images/WebService.png){#fig:WebServiceResult}
 
@@ -255,6 +267,11 @@ Azure ML Studio
   displayed.
 * Click on Prediction button. It will generate the prediction values
   for all the selected Input entries with Item Identifiers.
+
++@fig:BuiltAPIonCSVFile shows the API got created on the CSV format
+file, for generating the predicted values using the features from
+the dataset. These predicted values matches with the values 
+generated from the local or webservice created.
 
 ![Built API on CSV File](images/csvscreenshot.png){#fig:BuiltAPIonCSVFile}
 
