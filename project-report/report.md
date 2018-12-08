@@ -36,8 +36,8 @@ Regression is based on the continuous variable or data, we need to
 predict the future state of data is known as regression
 Unsupervised algorithms are on the dataset, where we do not see the
 target variable for prediction, we learn its behavior set of vector
-input variable to identify the clustering group of similar behavior data
-or sample [@sckitml]. Kaggle is a known location for different kind of
+input variable to identify the clustering group of similar behavior data 
+or sample [@sckitml]. Kaggle is a known location for different kind of 
 datasets gathered by various institutes across globe.
 
 ## Scope of work
@@ -142,7 +142,7 @@ darker color.
 
 ## Data Exploration
 
-Analyzed and plotted the categorical and continuous feature summaries to
+Analyzed and plotted the categorical and continuous feature summaries to 
 see which feature is closely related with target variable. This helped
 us with deciding which feature are influencing the prediction.
 
