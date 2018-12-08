@@ -406,6 +406,56 @@ Link for localhost
 
 * <http://localhost:8080/cloudmesh/prediction>
 
+## Code Reproducing steps
+
+
+Environment - Ubuntu 16.04 , python
+
+###### Testing using local python instance
+
+step 1 - Download project-code folder from github to local drive on Ubuntu
+
+step 2 - On terminal go to project-code folder
+
+step 2 - Run below command to exceute locally
+
+```
+python Project-BIgMartPrediction.py
+
+```
+
+###### Testing Using Docker Image
+
+step 1 - Download project-code folder from github to local drive on Ubuntu
+
+step 2 - On terminal go to project-code folder
+
+step 3 - Run below command
+
+```
+make service
+```
+
+step 4 - Run below command to build docker image by name cloudmeshprediction
+
+```
+make docker-build
+```
+
+step 5 - Run below command to start service. This will create service endpoint
+         and will start the service on local environment
+         
+```
+make docker-start
+```
+
+step 6 - Open new terminal and run below command
+
+```
+curl -H "Content-Type: application/json" http://localhost:8080/cloudmesh/prediction
+```
+
+
 ## Performance Comparison
 
 Environment  | Description       |  Elapsed Time
