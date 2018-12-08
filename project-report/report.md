@@ -455,7 +455,6 @@ step 6 - Open new terminal and run below command
 curl -H "Content-Type: application/json" http://localhost:8080/cloudmesh/prediction
 ```
 
-
 ## Performance Comparison
 
 Environment  | Description       |  Elapsed Time
