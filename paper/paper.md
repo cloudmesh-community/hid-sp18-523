@@ -1,5 +1,5 @@
 
-# Cloud Domo  :smiley::new: hid-sp18-523 
+# Cloud Domo
 
 | Ritesh Tandon
 | ritandon@iu.edu
