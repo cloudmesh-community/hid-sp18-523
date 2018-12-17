@@ -57,6 +57,41 @@ Spring 2018
 
 * 2018/01/4 - Read the book, corrected the errors in google doc technology abstract.
 
+## Week ( August 5 - 11  )
 
-## Next Week Plan
-* Read the REST API through wagger details and implement it.
+* Updated content of abstract dremel
+* updated content of abstract h2o
+* updated content of abstract genomics
+
+## Week ( August 26 - 31  )
+
+* updated content of abstract spanner
+* updated content of abstract vision 
+
+
+## Week ( September 16 - 22  )
+
+* Updated content of abstract dremel
+* updated content of abstract spanner
+* updated content of abstract h2o
+* updated content of abstract vision 
+* updated content of abstract genomics
+
+## Week ( October 21 - 27  )
+
+* Updated content of abstract dremel
+* Updated content of abstract spanner
+
+## Week ( December 02 - 08 )
+
+* Updated content of abstract dremel.md. Sent pull request for merging.
+* Updated content of abstract h2o. Sent pull request for merging.
+* Updated content of abstract spanner. Sent pull request for merging.
+* updated content of abstract vision. Sent pull request for merging. 
+* updated content of abstract genomics. Sent pull request for merging.
+
+* Dec - 06 - 2018 - Updated content in project-report in MD format
+* Dec - 07 - 2018 - Updated content in project-report in MD format
+* Dec - 08 - 2018 - Updated content in project-report in MD format
+
+
