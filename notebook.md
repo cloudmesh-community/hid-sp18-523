@@ -2,6 +2,21 @@
 Author: Tandon, Ritesh
 Spring 2018
 
+:o: please sort in reverse order
+
+## Week ( December 02 - 08 )
+
+* Updated content of abstract dremel.md. Sent pull request for merging.
+* Updated content of abstract h2o. Sent pull request for merging.
+* Updated content of abstract spanner. Sent pull request for merging.
+* updated content of abstract vision. Sent pull request for merging. 
+* updated content of abstract genomics. Sent pull request for merging.
+* Dec - 06 - 2018 - Updated content in project-report in MD format
+* Dec - 07 - 2018 - Updated content in project-report in MD format
+* Dec - 08 - 2018 - Updated content in project-report in MD format
+
+
+
 ## Week 1 Notes
 
 
@@ -81,17 +96,5 @@ Spring 2018
 
 * Updated content of abstract dremel
 * Updated content of abstract spanner
-
-## Week ( December 02 - 08 )
-
-* Updated content of abstract dremel.md. Sent pull request for merging.
-* Updated content of abstract h2o. Sent pull request for merging.
-* Updated content of abstract spanner. Sent pull request for merging.
-* updated content of abstract vision. Sent pull request for merging. 
-* updated content of abstract genomics. Sent pull request for merging.
-
-* Dec - 06 - 2018 - Updated content in project-report in MD format
-* Dec - 07 - 2018 - Updated content in project-report in MD format
-* Dec - 08 - 2018 - Updated content in project-report in MD format
 
 
