@@ -1,20 +1,24 @@
+---
 owner:
   firstname: Ritesh
   lastname: Tandon
   hid: hid-sp18-523
   community: i524
+  semester: sp18
 technologies:
-  https://github.com/cloudmesh/technologies/blob/master/chapters/incomming/dremel.md 
-  https://github.com/cloudmesh/technologies/blob/master/chapters/incomming/spanner.md 
-  https://github.com/cloudmesh/technologies/blob/master/chapters/incomming/vision.md 
-  https://github.com/cloudmesh/technologies/blob/master/chapters/incomming/h2o.md 
-  https://github.com/cloudmesh/technologies/blob/master/chapters/incomming/genomics.md 
+  - url: https://github.com/cloudmesh/technologies/blob/master/chapters/incomming/dremel.md 
+  - url: https://github.com/cloudmesh/technologies/blob/master/chapters/incomming/spanner.md 
+  - url: https://github.com/cloudmesh/technologies/blob/master/chapters/incomming/vision.md 
+  - url: https://github.com/cloudmesh/technologies/blob/master/chapters/incomming/h2o.md 
+  - url: https://github.com/cloudmesh/technologies/blob/master/chapters/incomming/genomics.md 
 paper:
-  https://github.com/cloudmesh-community/hid-sp18-523/tree/master/paper 
+  - title: "YOU MUST PUT YOUR TITLE HERE"
+    keyword: Azure, AzureML
+    url: https://github.com/cloudmesh-community/hid-sp18-523/tree/master/paper/paper.md 
+    group: hid-sp18-523
 project:
   - keyword: docker, Scikit, AWS, Azure, Linear Regression, Boosted Decision
     title: SciKit Learn Algorithms with Rest API
-    url: https://github.com/cloudmesh-community/hid-sp18-523/tree/master/project-report
+    url: https://github.com/cloudmesh-community/hid-sp18-523/tree/master/project-report/report.md
     group: hid-sp18-520 hid-sp18-523
     code: https://github.com/cloudmesh-community/hid-sp18-523/tree/master/project-code
-
