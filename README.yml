@@ -12,8 +12,8 @@ technologies:
   - url: https://github.com/cloudmesh/technologies/blob/master/chapters/incomming/h2o.md 
   - url: https://github.com/cloudmesh/technologies/blob/master/chapters/incomming/genomics.md 
 paper:
-  - title: "YOU MUST PUT YOUR TITLE HERE"
-    keyword: Azure, AzureML
+  - title: Cloud Domo
+    keyword: Domo, API, Token
     url: https://github.com/cloudmesh-community/hid-sp18-523/tree/master/paper/paper.md 
     group: hid-sp18-523
 project:
