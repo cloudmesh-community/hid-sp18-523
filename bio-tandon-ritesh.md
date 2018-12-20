@@ -1,4 +1,4 @@
-\subsection{Tandon, Ritesh}
+# Tandon, Ritesh
 	
 Ritesh Tandon is a graduate student of MS data science program. This is his second semester. He has completed applied data mining and statistical analysis for effective decision making course in fall.
 	
