@@ -3,19 +3,14 @@ owner:
   lastname: Tandon
   hid: hid-sp18-523
   community: i524
-
 technologies:
-
   https://github.com/cloudmesh/technologies/blob/master/chapters/incomming/dremel.md 
   https://github.com/cloudmesh/technologies/blob/master/chapters/incomming/spanner.md 
   https://github.com/cloudmesh/technologies/blob/master/chapters/incomming/vision.md 
   https://github.com/cloudmesh/technologies/blob/master/chapters/incomming/h2o.md 
   https://github.com/cloudmesh/technologies/blob/master/chapters/incomming/genomics.md 
-
 paper:
-
   https://github.com/cloudmesh-community/hid-sp18-523/tree/master/paper 
-
 project:
   - keyword: docker, Scikit, AWS, Azure, Linear Regression, Boosted Decision
     title: SciKit Learn Algorithms with Rest API
