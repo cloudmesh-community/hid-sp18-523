@@ -427,6 +427,41 @@ python Project-BIgMartPrediction.py
 
 ```
 
+
+#### Testing Service Locally
+
+step 1 - Download project-code folder from github to local drive on Ubuntu
+
+step 2 - On terminal go to project-code folder
+
+step 3 - Run below command
+
+```
+make service
+```
+This will download swagger codegen client jar. Move default_controller.py, 
+dataset files ( train.csv and test.csv ) in respective folder.
+
+step 3 - Run below command
+
+```
+make run
+```
+
+This will run the REST API service. 
+Keep this terminal window open. Do not close it.
+
+step 4 - Open new terminal 
+
+step 5 - On terminal go to project-code folder
+
+step 6 - Run below command. This will call the REST API and will display
+         the prediction of train dataset
+
+```
+make test
+```
+
 #### Testing Using Docker Image
 
 step 1 - Download project-code folder from github to local drive on Ubuntu
