@@ -20,9 +20,9 @@ project:
   - keyword: docker, Scikit, AWS, Azure, Linear Regression, Boosted Decision
     title: SciKit Learn Algorithms with Rest API
     url: https://github.com/cloudmesh-community/hid-sp18-523/tree/master/project-report/report.md
-    group: hid-sp18-520 hid-sp18-523
+    group: hid-sp18-523 hid-sp18-520
     code: https://github.com/cloudmesh-community/hid-sp18-523/tree/master/project-code
 URL tutorial:
   - title: Puppet  
     url: https://github.com/cloudmesh-community/hid-sp18-520/tree/master/tutorial
-    group: hid-sp18-520, hid-sp18-523
+    group: hid-sp18-520 hid-sp18-523
