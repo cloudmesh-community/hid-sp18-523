@@ -4,8 +4,8 @@ Working demo [link](https://www.youtube.com/watch?v=xrLto4XPn1o)
 
 # Dataset –
 
-test dataset  - https://github.com/cloudmesh-community/hid-sp18-523/blob/master/project-code/test.csv
-train dataset - https://github.com/cloudmesh-community/hid-sp18-523/blob/master/project-code/train.csv
+* test dataset  - https://github.com/cloudmesh-community/hid-sp18-523/blob/master/project-code/test.csv
+* train dataset - https://github.com/cloudmesh-community/hid-sp18-523/blob/master/project-code/train.csv
 
 This is a dataset collected data from 10 different stores from different cities for 1559 products.
 
