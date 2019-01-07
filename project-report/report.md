@@ -108,6 +108,9 @@ respect to
 
 ## Dataset Details
 
+* test dataset  - https://github.com/cloudmesh-community/hid-sp18-523/blob/master/project-code/test.csv
+* train dataset - https://github.com/cloudmesh-community/hid-sp18-523/blob/master/project-code/train.csv
+
 It has following 12 attributes with continuous and categorical values
 with Unique Values
 
