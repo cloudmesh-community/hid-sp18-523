@@ -14,7 +14,7 @@ technologies:
 paper:
   - title: Cloud Domo
     keyword: Domo, API, Token
-    url: https://github.com/cloudmesh-community/hid-sp18-523/tree/master/paper/paper.md 
+    url: https://github.com/cloudmesh-community/book/blob/master/chapters/devops/puppet.md 
     group: hid-sp18-523
 project:
   - keyword: docker, Scikit, AWS, Azure, Linear Regression, Boosted Decision
