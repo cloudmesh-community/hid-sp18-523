@@ -3,10 +3,38 @@ Author: Tandon, Ritesh
 Spring 2018
 
 :o: please sort in reverse order
+:white_check_mark: sorted in reverse order and added work that has been completed in recent weeks
+
+## Week ( January 26 - Feb 03 , 2019 )
+
+* Set up two VM ( Ubuntu 18 04 ) on mac
+* Installed open source puppet 5 (server and agent) on local Ubuntu 18 04 VM and tested successfully as suggested by professor
+
+
+## Week ( January 19 - 25 , 2019 )
+
+* Installed open source puppet 4 (server and agent) on local Ubuntu 16 04 VM and tested successfully as suggested by professor
+* Added section for installing open source Puppet on VM in tutorial
+* Imroved tutorial content and implemented other review comments given by professor on Puppet tutorial
+
+
+## Week ( January 12 - 18 , 2019 )
+
+* Attended online meeting on Jan-17
+* Created bib reference file and created pull request
+* Implemented review comments given by professor on Puppet tutorial
+
+
+## Week ( January 7 - 11 , 2019 )
+
+* Worked on Puppet tutorial
+* Created pull request to merge tutorial in book
+* Removed the references from md and created bib file for reference
+* Implemented review comments given by professor on Puppet tutorial
 
 
 
-## Week ( December 02 - 08 )
+## Week ( December 02 - 08, 2018 )
 
 * Updated content of abstract dremel.md. Sent pull request for merging.
 * Updated content of abstract h2o. Sent pull request for merging.
@@ -14,16 +42,16 @@ Spring 2018
 * updated content of abstract vision. Sent pull request for merging. 
 * updated content of abstract genomics. Sent pull request for merging.
 * Dec - 06 - 2018 - Updated content in project-report in MD format
-* Dec - 07 - 2018 - Updated content in project-report in MD format
-* Dec - 08 - 2018 - Updated content in project-report in MD format
+* Dec - 07 - 2018 - Added code reproducing steps in MD file
+* Dec - 08 - 2018 - Improved code reproducing steps in md file
 
 
-## Week ( October 21 - 27  )
+## Week ( October 21 - 27, 2018  )
 
 * Updated content of abstract dremel
 * Updated content of abstract spanner
 
-## Week ( September 16 - 22  )
+## Week ( September 16 - 22, 2018  )
 
 * Updated content of abstract dremel
 * updated content of abstract spanner
@@ -31,12 +59,12 @@ Spring 2018
 * updated content of abstract vision 
 * updated content of abstract genomics
 
-## Week ( August 26 - 31  )
+## Week ( August 26 - 31, 2018  )
 
 * updated content of abstract spanner
 * updated content of abstract vision 
 
-## Week ( August 5 - 11  )
+## Week ( August 5 - 11, 2018  )
 
 * Updated content of abstract dremel
 * updated content of abstract h2o
