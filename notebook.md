@@ -34,7 +34,6 @@ Spring 2018
 * Implemented review comments given by professor on Puppet tutorial
 
 
-
 ## Week ( Dec 02 - Dec 08, 2018 )
 
 * Updated content of abstract dremel.md. Sent pull request for merging.
@@ -72,58 +71,56 @@ Spring 2018
 * updated content of abstract genomics
 
 
-
-## Week 20 ( May 14 - May 20 , 2018 ) 
+## Week ( May 14 - May 20 , 2018 ) 
 
 * Completed the project report and submitted for review.
 
 
-## Week 19 ( May 07 - May 13 , 2018 )
+## Week ( May 07 - May 13 , 2018 )
 
 * Tested and ran local REST service API
 * Deploy locally created docker image on cloud.
 
-## Week 18 ( Apr 30 - May 06 , 2018 )
+## Week ( Apr 30 - May 06 , 2018 )
 
 * Studied and learned about deploying docker image on cloud.
 * Attended an Online Meeting
 
-## Week 16 ( Apr 23 - Apr 29 , 2018 )
+## Week ( Apr 23 - Apr 29 , 2018 )
 
 * Started video recording the final project with colleague.
 * Improved project code to implement ML linear regression algorithm for prediction
 
-## Week 15 ( Apr 16 - Apr 22 , 2018 )
+## Week ( Apr 16 - Apr 22 , 2018 )
 
 * Used swagger to create REST service for project
 * Extended python code for exploratory analysis of data. Created correlation graph and histogram
 * Extended code to handle missing values
 
-## Week 14 ( Apr 09 - Apr 15 , 2018 )
+## Week ( Apr 09 - Apr 15 , 2018 )
 
 * worked on project.Created yml file for REST service for project
 * started writing python code for loading data to be used in service
 
-## Week 13 ( Apr 02 - Apr 08 , 2018 )
+## Week ( Apr 02 - Apr 08 , 2018 )
 
 * Did Not work. Had to travel out of US for a week for personal reason.
 
-## Week 12 ( Mar 26 - Apr 01 , 2018 )
-
+## Week ( Mar 26 - Apr 01 , 2018 )
 
 * Improved tutorial and submitted first version for review
 * Project research and prepared proposal.
 * Attended an Online Meeting
 
 
-## Week 11 ( Mar 19 - Mar 25 , 2018 )
+## Week ( Mar 19 - Mar 25 , 2018 )
 
 * Improved content of Puppet tutorial and paper
 * Attended an Online Meeting
 * * Worked on Technology abstract - Google Vision, Spanner
 
 
-## Week 10 ( Mar 12 - Mar 18 , 2018 )
+## Week ( Mar 12 - Mar 18 , 2018 )
 
 * Researched about Puppet for writing tutorial
 * Uploaded first code files on GitHub
@@ -131,7 +128,7 @@ Spring 2018
 * Attended an Online Meeting
 
 
-## Week 09 ( Mar 05 - Mar 11 , 2018 )
+## Week ( Mar 05 - Mar 11 , 2018 )
 
 * Created first bash script and successfully ran on VM
 * Worked on Technology abstract - Google Dremel, Genomics
@@ -139,7 +136,7 @@ Spring 2018
 * Researched and gather information about paper
 
 
-## Week 08 ( Feb 26 - Mar 04 , 2018 )
+## Week ( Feb 26 - Mar 04 , 2018 )
 
 * Installed docker on Ubuntu VM
 * Read about docker 
@@ -149,7 +146,7 @@ Spring 2018
 
 
 
-## Week 07 ( Feb 19 - Feb 25 , 2018 )
+## Week ( Feb 19 - Feb 25 , 2018 )
 
 
 * Read information in detail about latex validation check
@@ -159,21 +156,21 @@ Spring 2018
 * Read Containers - Docker documentation 
 
 
-## Week 06 ( Feb 12 - Feb 18 , 2018 )
+## Week ( Feb 12 - Feb 18 , 2018 )
 
 * Read chapters on latex formatting
 * Read about jabref and lachek tool
 * Read information about markdown
 
 
-## Week 05 ( Feb 05 - Feb 11 , 2018 )
+## Week ( Feb 05 - Feb 11 , 2018 )
 
 * Read information about swagger in book
 * Created sample test program using swagger on local Ubuntu 16 04 VM
 * Attended an Online Meeting
 
 
-## Week 4 ( Jan 20 - Feb 04 , 2018 )
+## Week ( Jan 20 - Feb 04 , 2018 )
 
 * 2018/01/30 - Installed pycharm and created yml file and uploaded to github.
 * 2018/01/31 - Went through the discussion/communication posted on Piazza.
@@ -183,7 +180,7 @@ Spring 2018
 * 2018/02/4 - Read the book, corrected the errors in google doc technology abstract.
 
 
-## Week 3 ( Jan 22 - Jan 29 , 2018 )
+## Week ( Jan 22 - Jan 29 , 2018 )
 
 * 2018/01/22 -  Went through the discussion/communication posted on Piazza. 
 * 2018/01/23 - Contributed to New Technology google doc assignments
@@ -193,14 +190,14 @@ Spring 2018
 * 2018/01/28 - Read setup of mongo db and REST API section from book; Installed mongodb on Ubuntu VM; Installed Eve
 * 2018/01/29 - Attended an Online Meeting
 
-## Week 2 ( Jan 15 - Jan 21 , 2018 )
+## Week ( Jan 15 - Jan 21 , 2018 )
 
 * 2018/01/16 - Went through the discussion/communication posted on Piazza. Read Week 1 and 2 book chapters
 * 2018/01/18 - Watched Lectures Videos posted on Piazza and completed online support hour poll.
 * 2018/01/19 - Verified Google docs access using University email ID.
 * 2018/01/20 - Completed Big Data Size assignment in Google docs
 
-## Week 1 ( Jan 8 - Jan 14 , 2018 )
+## Week ( Jan 8 - Jan 14 , 2018 )
 
 * 2018/01/9 - Read Piazza and course structure information
 * 2018/01/10 - Read the instruction about bio and posted bio on Piazza.
