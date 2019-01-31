@@ -73,71 +73,71 @@ Spring 2018
 
 
 
-# Week 20 	May, 2018 Notes -
+## Week 20 	May, 2018 
 * Completed the project report and submitted for review.
 
 
-# Week 19 	May, 2018 Notes -
----
+## Week 19 	May, 2018 
+
 * Tested and ran local REST service API
 * Deploy locally created docker image on cloud.
 
-# Week 18	 May, 2018 Notes -
----
+## Week 18	 May, 2018 
+
 * Studied and learned about deploying docker image on cloud.
 * Attended an Online Meeting
 
-# Week 16 	April, 2018 Notes -
----
+## Week 16 	April, 2018
+
 * Started video recording the final project with colleague.
 * Improved project code to implement ML linear regression algorithm for prediction
 
-# Week 15 	April, 2018 Notes -
----
+## Week 15 	April, 2018
+
 * Used swagger to create REST service for project
 * Extended python code for exploratory analysis of data. Created correlation graph and histogram
 * Extended code to handle missing values
 
-# Week 14 	April, 2018 Notes -
----
+## Week 14 	April, 2018
+
 * worked on project.Created yml file for REST service for project
 * started writing python code for loading data to be used in service
 
-# Week 13	 April , 2018 Notes -
----
+## Week 13	 April, 2018
+
 * Did Not work. Had to travel out of US for a week for personal reason.
 
-# Week 12	 March, 2018 Notes -
----
+## Week 12	 March, 2018
+
 * Improved tutorial and submitted first version for review
 * Project research and prepared proposal.
 * Attended an Online Meeting
 
 
-# Week 11 	March, 2018 Notes -
----
+## Week 11 	March, 2018
+
 * Improved content of Puppet tutorial and paper
 * Attended an Online Meeting
 
 
-# Week 10	 March, 2018 Notes -
----
+## Week 10	 March, 2018
+
 * Researched about Puppet for writing tutorial
 * Uploaded first code files on GitHub
 * Worked on paper
 * Attended an Online Meeting
 
 
-# Week 09	 March, 2018 Notes -
----
+## Week 09	 March, 2018
+
 * Created first bash script and successfully ran on VM
 * Worked on Technology paper - Google Dremel
 * Created first docker file and ran sample test service
 * Researched and gather information about paper
 
 
-# Week 08 	February, 2018 Notes -
----
+# Week 08 	February, 2018
+
 * Installed docker on Ubuntu VM
 * Read about docker 
 * Tested first makefile on VM
@@ -146,8 +146,8 @@ Spring 2018
 
 
 
-# Week 07	 February, 2018 Notes -
----
+## Week 07	 February, 2018
+
 * Read information in detail about latex validation check
 * Installed emacs on local Ubuntu VM
 * Installed Jabref on Local Ubuntu VM
@@ -155,24 +155,21 @@ Spring 2018
 * Read Containers - Docker documentation 
 
 
-# Week 06	 February, 2018 Notes -
----
+## Week 06	 February, 2018
 
 * Read chapters on latex formatting
 * Read about jabref and lachek tool
 * Read information about markdown
 
 
-# Week 05	 February, 2018 Notes -
----
+## Week 05	 February, 2018
+
 * Read information about swagger in book
 * Created sample test program using swagger on local Ubuntu 16 04 VM
 * Attended an Online Meeting
 
 
-
 ## Week 4 Notes
-
 
 * 2018/01/30 - Installed pycharm and created yml file and uploaded to github.
 * 2018/01/31 - Went through the discussion/communication posted on Piazza.
@@ -200,7 +197,6 @@ Spring 2018
 * 2018/01/20 - Completed Big Data Size assignment in Google docs
 
 ## Week 1 Notes
-
 
 * 2018/01/9 - Read Piazza and course structure information
 * 2018/01/10 - Read the instruction about bio and posted bio on Piazza.
