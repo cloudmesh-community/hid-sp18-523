@@ -118,6 +118,7 @@ Spring 2018
 
 * Improved content of Puppet tutorial and paper
 * Attended an Online Meeting
+* * Worked on Technology abstract - Google Vision, Spanner
 
 
 ## Week 10	 March, 2018
@@ -131,12 +132,12 @@ Spring 2018
 ## Week 09	 March, 2018
 
 * Created first bash script and successfully ran on VM
-* Worked on Technology paper - Google Dremel
+* Worked on Technology abstract - Google Dremel, Genomics
 * Created first docker file and ran sample test service
 * Researched and gather information about paper
 
 
-# Week 08 	February, 2018
+## Week 08 	February, 2018
 
 * Installed docker on Ubuntu VM
 * Read about docker 
