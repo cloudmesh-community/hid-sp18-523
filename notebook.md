@@ -6,27 +6,27 @@ Spring 2018
 
 :white_check_mark: sorted in reverse order and added work that has been completed in recent weeks
 
-## Week ( January 26 - Feb 03 , 2019 )
+## Week ( Jan 26 - Feb 03 , 2019 )
 
 * Set up two VM ( Ubuntu 18 04 ) on mac
 * Installed open source puppet 5 (server and agent) on local Ubuntu 18 04 VM and tested successfully as suggested by professor
 
 
-## Week ( January 19 - 25 , 2019 )
+## Week ( Jan 19 - Jan 25 , 2019 )
 
 * Installed open source puppet 4 (server and agent) on local Ubuntu 16 04 VM and tested successfully as suggested by professor
 * Added section for installing open source Puppet on VM in tutorial
 * Imroved tutorial content and implemented other review comments given by professor on Puppet tutorial
 
 
-## Week ( January 12 - 18 , 2019 )
+## Week ( Jan 12 - Jan 18 , 2019 )
 
 * Attended online meeting on Jan-17
 * Created bib reference file and created pull request
 * Implemented review comments given by professor on Puppet tutorial
 
 
-## Week ( January 7 - 11 , 2019 )
+## Week ( Jan 7 - Jan 11 , 2019 )
 
 * Worked on Puppet tutorial
 * Created pull request to merge tutorial in book
@@ -35,7 +35,7 @@ Spring 2018
 
 
 
-## Week ( December 02 - 08, 2018 )
+## Week ( Dec 02 - Dec 08, 2018 )
 
 * Updated content of abstract dremel.md. Sent pull request for merging.
 * Updated content of abstract h2o. Sent pull request for merging.
@@ -47,12 +47,12 @@ Spring 2018
 * Dec - 08 - 2018 - Improved code reproducing steps in md file
 
 
-## Week ( October 21 - 27, 2018  )
+## Week ( Oct 21 - Oct 27, 2018  )
 
 * Updated content of abstract dremel
 * Updated content of abstract spanner
 
-## Week ( September 16 - 22, 2018  )
+## Week ( Sep 16 - Sep 22, 2018  )
 
 * Updated content of abstract dremel
 * updated content of abstract spanner
@@ -60,20 +60,21 @@ Spring 2018
 * updated content of abstract vision 
 * updated content of abstract genomics
 
-## Week ( August 26 - 31, 2018  )
+## Week ( Aug 26 - Aug 31, 2018  )
 
 * updated content of abstract spanner
 * updated content of abstract vision 
 
-## Week ( August 5 - 11, 2018  )
+## Week ( Aug 5 - Aug 11, 2018  )
 
-* Updated content of abstract dremel
+* Updated content of abstract Dremel
 * updated content of abstract h2o
 * updated content of abstract genomics
 
 
 
 ## Week 20 ( May 14 - May 20 , 2018 ) 
+
 * Completed the project report and submitted for review.
 
 
@@ -182,7 +183,7 @@ Spring 2018
 * 2018/02/4 - Read the book, corrected the errors in google doc technology abstract.
 
 
-## Week 3 ( Jan 22 - 29 , 2018 )
+## Week 3 ( Jan 22 - Jan 29 , 2018 )
 
 * 2018/01/22 -  Went through the discussion/communication posted on Piazza. 
 * 2018/01/23 - Contributed to New Technology google doc assignments
@@ -192,14 +193,14 @@ Spring 2018
 * 2018/01/28 - Read setup of mongo db and REST API section from book; Installed mongodb on Ubuntu VM; Installed Eve
 * 2018/01/29 - Attended an Online Meeting
 
-## Week 2 ( Jan 15 - 21 , 2018 )
+## Week 2 ( Jan 15 - Jan 21 , 2018 )
 
 * 2018/01/16 - Went through the discussion/communication posted on Piazza. Read Week 1 and 2 book chapters
 * 2018/01/18 - Watched Lectures Videos posted on Piazza and completed online support hour poll.
 * 2018/01/19 - Verified Google docs access using University email ID.
 * 2018/01/20 - Completed Big Data Size assignment in Google docs
 
-## Week 1 ( Jan 8 - 14 , 2018 )
+## Week 1 ( Jan 8 - Jan 14 , 2018 )
 
 * 2018/01/9 - Read Piazza and course structure information
 * 2018/01/10 - Read the instruction about bio and posted bio on Piazza.
