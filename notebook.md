@@ -3,6 +3,7 @@ Author: Tandon, Ritesh
 Spring 2018
 
 :o: please sort in reverse order
+
 :white_check_mark: sorted in reverse order and added work that has been completed in recent weeks
 
 ## Week ( January 26 - Feb 03 , 2019 )
