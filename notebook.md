@@ -10,10 +10,12 @@ Spring 2018
 
 * Set up two VM ( Ubuntu 18 04 ) on mac
 * Installed open source puppet 5 (server and agent) on local Ubuntu 18 04 VM and tested successfully as suggested by professor
+* Online Hours - Attended online hours of professor. Asked questions about bib and review comments of Puppet paper
 
 
 ## Week ( Jan 19 - Jan 25 , 2019 )
 
+* Online Hours - Attended online hours and showed Puppet working on VM to TA
 * Installed open source puppet 4 (server and agent) on local Ubuntu 16 04 VM and tested successfully as suggested by professor
 * Added section for installing open source Puppet on VM in tutorial
 * Imroved tutorial content and implemented other review comments given by professor on Puppet tutorial
@@ -117,7 +119,7 @@ Spring 2018
 
 * Improved content of Puppet tutorial and paper
 * Attended an Online Meeting
-* * Worked on Technology abstract - Google Vision, Spanner
+* Worked on Technology abstract - Google Vision, Spanner
 
 
 ## Week ( Mar 12 - Mar 18 , 2018 )
