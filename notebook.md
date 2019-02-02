@@ -8,9 +8,12 @@ Spring 2018
 
 ## Week ( Jan 26 - Feb 03 , 2019 )
 
+* Added month in bib entries as per professor review comments and send pull request on 2/1
+* Made changes to bib as per professor suggestion and sent pull request on 1/30
+* Online Hours - Attended online hours on 1/30/19 of professor. Asked questions about bib and review comments of Puppet paper
 * Set up two VM ( Ubuntu 18 04 ) on mac
 * Installed open source puppet 5 (server and agent) on local Ubuntu 18 04 VM and tested successfully as suggested by professor
-* Online Hours - Attended online hours of professor. Asked questions about bib and review comments of Puppet paper
+
 
 
 ## Week ( Jan 19 - Jan 25 , 2019 )
