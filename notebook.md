@@ -8,12 +8,16 @@ Spring 2018
 
 ## Week ( Jan 26 - Feb 03 , 2019 )
 
+* Installed Puppet Enterprise on Ubuntu 18.04 using both web and text mode install methods and successfully tested. 
+* Updated Puppet Enterprise report content based on result of successful installation. 
+* Removed redundant steps from content, organized and simplified steps for Puppet Enterprise installation.
+* commited md file and sent pull request on 2/3
 * Added month in bib entries as per professor review comments and send pull request on 2/1
 * Made changes to bib as per professor suggestion and sent pull request on 1/30
 * Online Hours - Attended online hours on 1/30/19 of professor. Asked questions about bib and review comments of Puppet paper
 * Set up two VM ( Ubuntu 18 04 ) on mac
 * Installed open source puppet 5 (server and agent) on local Ubuntu 18 04 VM and tested successfully as suggested by professor
-
+* Created two VM. Installed Puppet Master on on one VM and Puppet agent on other VM. Used bridged network so that both VM can communicate with each other. Verified and tested successful installation. 
 
 
 ## Week ( Jan 19 - Jan 25 , 2019 )
