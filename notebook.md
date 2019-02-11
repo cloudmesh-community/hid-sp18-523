@@ -6,6 +6,12 @@ Spring 2018
 
 :white_check_mark: sorted in reverse order and added work that has been completed in recent weeks
 
+## Week ( Feb 04 - Feb 10 , 2019 )
+
+* Online Hours - Attended online hours on 1/30/19 of professor. Reviewed project with him 
+* Researched on professor comment of passing data parameters to REST API 
+* Enhanced REST API code created new end point
+
 ## Week ( Jan 26 - Feb 03 , 2019 )
 
 * Installed Puppet Enterprise on Ubuntu 18.04 using both web and text mode install methods and successfully tested. 
