@@ -467,7 +467,8 @@ API end point through browser or through curl getting response as -
 
 ```
 Last login: Tue Feb 12 16:30:27 on console
-Riteshs-MacBook-Pro:~ riteshtandon$ curl -X GET --header 'Accept: application/json' 'http://192.168.0.20:8080/cloudmesh/prediction'
+Riteshs-MacBook-Pro:~ riteshtandon$ curl -X GET --header 
+'Accept: application/json' 'http://192.168.0.20:8080/cloudmesh/prediction'
 {
   "model": [
     [
@@ -504,7 +505,9 @@ Riteshs-MacBook-Pro:~ riteshtandon$ curl -X GET --header 'Accept: application/js
     ]
   ]
 }
-Riteshs-MacBook-Pro:~ riteshtandon$ curl -X GET --header 'Accept: application/json' 'http://192.168.0.20:8080/cloudmesh/prediction/FDA15'
+Riteshs-MacBook-Pro:~ riteshtandon$ curl -X GET --header 
+'Accept: application/json' 
+'http://192.168.0.20:8080/cloudmesh/prediction/FDA15'
 {
   "model": [
     [
