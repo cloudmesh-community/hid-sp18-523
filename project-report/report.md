@@ -462,6 +462,66 @@ step 6 - Run below command. This will call the REST API and will display
 make test
 ```
 
+step 7 - This can also be tested from any other machine in network calling
+API end point through browser or through curl getting response as -
+
+```
+Last login: Tue Feb 12 16:30:27 on console
+Riteshs-MacBook-Pro:~ riteshtandon$ curl -X GET --header 'Accept: application/json' 'http://192.168.0.20:8080/cloudmesh/prediction'
+{
+  "model": [
+    [
+      1876.7327564836178, 
+      1528.4817421301, 
+      1892.8023371209229, 
+      2548.0233282746017, 
+      5189.8230258564545, 
+      1883.3689375991453, 
+      589.2033736393378, 
+      2780.68395206951, 
+      1499.760788801912, 
+      3045.9721254204405, 
+      1968.4695323567164, 
+      1300.2848035122838, 
+      1877.110359154556, 
+      2050.536500392658, 
+      889.7200648564203, 
+      2557.6876043777715, 
+      3110.200419177716, 
+      2782.4854718425654, 
+      3226.5136785157088, 
+      1112.7847099793014, 
+      2763.799860825796, 
+      3925.4426743310987, 
+      762.4932104272953, 
+      382.6422989313028, 
+      3037.9100512338555, 
+      1431.6549667867473, 
+      947.9033732457308, 
+      2518.86020758495, 
+      3848.570657222426, 
+      2026.42745986608
+    ]
+  ]
+}
+Riteshs-MacBook-Pro:~ riteshtandon$ curl -X GET --header 'Accept: application/json' 'http://192.168.0.20:8080/cloudmesh/prediction/FDA15'
+{
+  "model": [
+    [
+      3735.138, 
+      5976.2208, 
+      6474.2392, 
+      5976.2208, 
+      498.0184, 
+      6474.2392, 
+      6474.2392, 
+      5976.2208
+    ]
+  ]
+}
+Riteshs-MacBook-Pro:~ riteshtandon$ 
+```
+
 #### Testing Using Docker Image
 
 step 1 - Download project-code folder from github to local drive on Ubuntu
