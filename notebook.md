@@ -8,6 +8,8 @@ Spring 2018
 
 ## Week ( Feb 04 - Feb 10 , 2019 )
 
+* Run the REST API on Guest and successfully Curl API response from host
+* set up environment to deploy REST Open service on Ubuntu Guest OS and host Mac. Set up bridged network so that host and VM can talk.
 * Enhanced REST API code and created new end point to pass item id as parameter and retreived item sales as result
 * Researched on professor comment of passing data parameters to REST API
 * Online Hours - Attended online hours on 1/30/19 of professor. Reviewed project with him 
