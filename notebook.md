@@ -8,9 +8,10 @@ Spring 2018
 
 ## Week ( Feb 04 - Feb 10 , 2019 )
 
+* Enhanced REST API code and created new end point to pass item id as parameter and retreived item sales as result
+* Researched on professor comment of passing data parameters to REST API
 * Online Hours - Attended online hours on 1/30/19 of professor. Reviewed project with him 
-* Researched on professor comment of passing data parameters to REST API 
-* Enhanced REST API code created new end point
+
 
 ## Week ( Jan 26 - Feb 03 , 2019 )
 
