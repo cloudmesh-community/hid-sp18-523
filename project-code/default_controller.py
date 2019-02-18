@@ -1,7 +1,9 @@
 import connexion
 import six
 
-from swagger_server.models.prediction import PREDICTION  # noqa: E501
+from swagger_server.models.prediction import PREDICTION  
+from swagger_server.models import GETITEMSALES 
+from swagger_server.models import GETITEMOUTLETSALES 
 from swagger_server import util
 
 from subprocess import Popen, PIPE
@@ -10,7 +12,6 @@ from sys import stdout
 import subprocess
 import numpy as np
 import pandas as pd
-#import seaborn as sns
  
 from statsmodels.nonparametric.kde import KDEUnivariate
 from statsmodels.nonparametric import smoothers_lowess
@@ -28,7 +29,7 @@ from sklearn.ensemble import BaggingClassifier,GradientBoostingClassifier
 
 from sklearn.model_selection import GridSearchCV
 from sklearn.model_selection import RandomizedSearchCV
-from azureml import Workspace
+
 from sklearn.base import BaseEstimator,TransformerMixin
 from sklearn.preprocessing import LabelEncoder
 from sklearn.pipeline import Pipeline
@@ -40,9 +41,11 @@ from sklearn.metrics import mean_squared_error
 from sklearn.ensemble import GradientBoostingRegressor
 from sklearn import cross_validation,metrics
 from flask import jsonify
+from flask import request, Flask
+from html import HTML
 
 
-def prediction_get():  # noqa: E501
+def prediction_get():  
     """process_get
 
     Returns process information of the hosting server # noqa: E501
@@ -50,19 +53,6 @@ def prediction_get():  # noqa: E501
 
     :rtype: PROCESS
     """
-
-    #import matplotlib.pyplot as plt
-    #get_ipython().magic(u'matplotlib inline')
-
-
-
-    # # Read data from BigMart datasets for Train and Test
-
-    # In[7]:
-
-
-
-
 
     train = pd.read_csv('./train.csv')
     test = pd.read_csv('./test.csv')
@@ -72,15 +62,6 @@ def prediction_get():  # noqa: E501
     test['source']='test'
     data = pd.concat([train, test],ignore_index=True)
 
-
-    train.head(10)
-
-    test.head(10)
-    print(train.describe())
-
-    print(test.describe())
-
-    print(data.describe())
     data.isnull().sum()
 
     data.apply(lambda x: len(x.unique()))
@@ -99,7 +80,7 @@ def prediction_get():  # noqa: E501
 
     data['Item_Visibility'] = data['Item_Visibility'].mask(data['Item_Visibility'] == 0,data['Item_Visibility'].mean(skipna=True))
 
-    data.head(10)
+
 
 
     data['Item_Identifier'].value_counts()
@@ -158,7 +139,6 @@ def prediction_get():  # noqa: E501
     data.drop(['Item_Type','Outlet_Establishment_Year'],axis=1,inplace=True)
 
 
-    data.head()
 
     trainr = data.loc[data['source']=="train"]
     testr = data.loc[data['source']=="test"]
@@ -175,10 +155,6 @@ def prediction_get():  # noqa: E501
 
 
     X_train, X_test, y_train, y_test = train_test_split(Xtrain, ytrain)
-    #print(X_train.shape, X_test.shape, y_train.shape, y_test.shape)
-
-
-    # In[45]:
 
 
     # Create a dataset without Item_Identifier
@@ -190,77 +166,42 @@ def prediction_get():  # noqa: E501
         ('linear', LinearRegression())
     ])
 
-    r_pipeline.fit(X_train[predictors], y_train)
+    lm=r_pipeline.fit(X_train[predictors], y_train)
     preds = r_pipeline.predict(X_test[predictors])
 
 
-
-    cv_score = cross_validation.cross_val_score(r_pipeline, X_train[predictors], y_train, cv=20, 
-                                            scoring='mean_squared_error')
-    cv_score = np.sqrt(np.abs(cv_score))
-    RMSE = cv_score.mean()
-
-
-    RMSEd = mean_squared_error(preds, y_test)
-    RMSEsd=np.sqrt(RMSEd)
-
-
-
-    pipedesc = Pipeline([('std_scaler', StandardScaler()),
-                     ('grboostregmodel', GradientBoostingRegressor(n_estimators=100, learning_rate=0.1,
-                                                                   max_depth=1, random_state=0, loss='ls'))])
-
-    dscrmol = pipedesc.fit(X_train[predictors], y_train)
-    #print(dscrmol.get_params())
-    preddesctree = dscrmol.predict(X_test[predictors])
-
-
-    cv_scoredesc = cross_validation.cross_val_score(pipedesc, X_train[predictors], y_train, cv=20, 
-                                            scoring='mean_squared_error')
-    cv_scoredesct = np.sqrt(np.abs(cv_scoredesc))
-    RMSEdesc = cv_scoredesct.mean()
-
-
-    gb_grid_params = {'learning_rate': [0.1, 0.05]
-              #'max_depth': [4, 6, 8]
-              #'min_samples_leaf': [20, 50,100,150],
-              #'max_features': [1.0, 0.3, 0.1] 
-              }
-
-    gb_gs = GradientBoostingRegressor(n_estimators = 60)
-    clfgrd = grid_search.GridSearchCV(gb_gs,
-                               gb_grid_params,
-                               cv=20, 
-                               n_jobs=10)
-    clfgrdmof=clfgrd.fit(X_train[predictors], y_train)
-
-
-    clfpred = clfgrdmof.predict(X_test[predictors])
-
-
-    cvgd_scoredesc = cross_validation.cross_val_score(clfgrd, X_train[predictors], y_train, cv=20, 
-                                            scoring='mean_squared_error')
-    cvgd_scoredesct = np.sqrt(np.abs(cvgd_scoredesc))
-    RMSEdescgd = cvgd_scoredesct.mean()
-    #print('RMSE is ', RMSEdescgd)
-
-
-    results = pd.DataFrame(columns=["Description", "RMSE"])
-    results.loc[len(results)] = ["LinearModel", RMSE]
-    results.loc[len(results)] = ["GradientBoost", RMSEdesc]
-    results.loc[len(results)] = ["HypertunedGradientBoost", RMSEdescgd]
-    results
-
     bigmartpred = []
-    overallprediction=clfgrdmof.predict(testr[predictors])
+    overallprediction=lm.predict(testr[predictors])
     bigmartpred.append(overallprediction.tolist())
 
-    #print(overallprediction)
 
-    #import pickle
-    #filename = 'finalized_model.pkl'
-    #pickle.dump(clfgrdmof, open(filename, 'wb'))
-
-    #loaded_model = pickle.load(open(filename, 'rb'))
-    #Test1 = loaded_model.predict(testr[predictors])
     return PREDICTION(bigmartpred)
+
+
+def item_getitemsales(Item_Id):
+    d = pd.read_csv('./train.csv')
+    #t = pd.DataFrame()
+    t= []
+
+    df = d.set_index("Item_Identifier", drop = False)
+    
+    t.append((df.loc[Item_Id,["Item_Outlet_Sales","Outlet_Identifier"]]).to_html(index=False))
+
+    #t.append((df.loc[Item_Id,["Item_Outlet_Sales","Outlet_Identifier"]]).to_dict(orient='list'))
+    
+    return GETITEMSALES(t)
+
+app = Flask(__name__)
+
+@app.route('/item')
+def item_getitemoutletsales():
+    d = pd.read_csv('./train.csv')
+    t = []
+    item_id = request.args.get('item_id', None)
+    outlet_code = request.args.get('outlet_code', None)
+
+    df = d.set_index(["Item_Identifier","Outlet_Identifier"], drop = False)
+    
+    t.append((df.loc[(df["Item_Identifier"]==item_id) & (df["Outlet_Identifier"]==outlet_code),"Item_Outlet_Sales"]).tolist())
+    
+    return GETITEMOUTLETSALES(t)
