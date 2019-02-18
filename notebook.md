@@ -6,6 +6,20 @@ Spring 2018
 
 :white_check_mark: sorted in reverse order and added work that has been completed in recent weeks
 
+
+## Week ( Feb 11 - Feb 17 , 2019 ) 
+* Checked in code in github
+* Implemented additional API endpoint that returns sales transactions of an item id 
+that is passed as path parameter.
+* Implemented additional API endpoint that returns sales transactions of an item id for 
+given outlet store that is passed as query string parameter.
+* Cleaned and improved prediction end point code
+* Cleaned and improved yaml file
+* Added description in yaml documentation detailing what each endpoint of API does.
+* Attended online hours on 2/14/19 with professor. Reviewed project with him. Noted down 
+his review comments and worked on it.
+
+
 ## Week ( Feb 04 - Feb 10 , 2019 )
 
 * Run the REST API on Guest and successfully Curl API response from host
