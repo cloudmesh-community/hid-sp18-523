@@ -410,9 +410,110 @@ Link for localhost
 * <http://localhost:8080/cloudmesh/prediction>
 
 
+
 ## Code Reproducing steps
 
-Environment - Ubuntu 16.04 , python
+Environment - Ubuntu 1, python
+
+#### Open API Specification
+
+```
+swagger: "2.0"
+info:
+ version: "0.0.1"
+ title: "Item Sales API"
+ description: "This API is designed to provide historical data of sales transactions that occured in mutiple outlets spread across Europe of big retail giant. API provides sales information of given items and oulets to consumers.
+This eventually helps them plan their inventory and place order quantity. API also predicts sales of items based on their weight, fat content, visibility,     price and type"
+ termsOfService: "http://swagger.io/terms/"
+ contact:
+  name: "Ritesh Tandon, IU, MS Data Science - 2018"
+ license:
+  name: "Apache"
+host: "localhost:8080"
+basePath: "/cloudmesh"
+schemes:
+ - "http"
+consumes :
+ - "application/json"
+produces :
+ - "application/json"
+paths:
+ /prediction:
+   get:
+    summary : "Predicts sales of items based on their weight, fat content, visibility, price and type. This API endpoint returns predicted sales quantity in batch mode."
+    description : "Predicts sales of items based on their weight, fat content, visibility, price and type. This API endpoint returns predicted sales quantity in batch mode."
+    produces:
+     - "application/json"
+    responses:
+     "200":
+       description: "Successfully fetched predicted sales of items based on their weight, fat content, visibility, price and type in batch mode "
+
+       schema:
+         $ref: "#/definitions/PREDICTION"
+
+
+ /item/{Item_Id}:
+    get:
+      operationId: item.getitemsales
+      summary: "This API endpoint returns sales transactions of an itemid that is passed as path parameter. It returns item id, outlet store and sales."
+      description: "This API endpoint returns sales transactions of an itemid that is passed as path parameter. It returns item id, outlet store and sales."
+      parameters:
+        - name: Item_Id
+          in: path
+          description: Item Id
+          type: string
+          required: True
+      responses:
+        200:
+          description: Successfully fetched Sale of given item id in all outlet store.
+          schema:
+            $ref: "#/definitions/GETITEMSALES"
+
+ /item:
+    get:
+      operationId: item.getitemoutletsales
+      summary: "This API endpoint returns sales transactions of an itemid for given outlet store that is passed as query string parameter."
+      description: "This API endpoint returns sales transactions of an itemid for given outlet store that is passed as query string parameter."
+      parameters:
+        - name: item_id
+          in: query
+          description: Item Id passed in query string
+          type: string
+          required: True
+        - name: outlet_code
+          in: query
+          description: outlet code passed in query string
+          type: string
+          required: True
+      responses:
+        200:
+          description: Successfully fetched Sale of given item id in given outlet
+          schema:
+            $ref: "#/definitions/GETITEMOUTLETSALES"
+definitions:
+ PREDICTION:
+  type: "object"
+  required :
+   - "model"
+  properties:
+   model:
+    type: "string"
+ GETITEMSALES:
+  type: "object"
+  required :
+   - "model"
+  properties:
+   model:
+    type: "string"
+ GETITEMOUTLETSALES:
+  type: "object"
+  required :
+   - "model"
+  properties:
+   model:
+    type: "string"
+
+```
 
 #### Testing using local python instance
 
