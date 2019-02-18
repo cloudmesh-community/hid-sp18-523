@@ -422,8 +422,12 @@ swagger: "2.0"
 info:
  version: "0.0.1"
  title: "Item Sales API"
- description: "This API is designed to provide historical data of sales transactions that occured in mutiple outlets spread across Europe of big retail giant. API provides sales information of given items and oulets to consumers.
-This eventually helps them plan their inventory and place order quantity. API also predicts sales of items based on their weight, fat content, visibility,     price and type"
+ description: "This API is designed to provide historical data of sales 
+ transactions that occured in mutiple outlets spread across Europe of big 
+ retail giant. API provides sales information of given items and oulets 
+ to consumers.This eventually helps them plan their inventory and place 
+ order quantity. API also predicts sales of items based on their weight, 
+ fat content, visibility,     price and type"
  termsOfService: "http://swagger.io/terms/"
  contact:
   name: "Ritesh Tandon, IU, MS Data Science - 2018"
@@ -440,13 +444,18 @@ produces :
 paths:
  /prediction:
    get:
-    summary : "Predicts sales of items based on their weight, fat content, visibility, price and type. This API endpoint returns predicted sales quantity in batch mode."
-    description : "Predicts sales of items based on their weight, fat content, visibility, price and type. This API endpoint returns predicted sales quantity in batch mode."
+    summary : "Predicts sales of items based on their weight, fat content, 
+    visibility, price and type. This API endpoint returns predicted sales 
+    quantity in batch mode."
+    description : "Predicts sales of items based on their weight, fat content, 
+    visibility, price and type. This API endpoint returns predicted sales 
+    quantity in batch mode."
     produces:
      - "application/json"
     responses:
      "200":
-       description: "Successfully fetched predicted sales of items based on their weight, fat content, visibility, price and type in batch mode "
+       description: "Successfully fetched predicted sales of items based on 
+       their weight, fat content, visibility, price and type in batch mode "
 
        schema:
          $ref: "#/definitions/PREDICTION"
@@ -455,8 +464,12 @@ paths:
  /item/{Item_Id}:
     get:
       operationId: item.getitemsales
-      summary: "This API endpoint returns sales transactions of an itemid that is passed as path parameter. It returns item id, outlet store and sales."
-      description: "This API endpoint returns sales transactions of an itemid that is passed as path parameter. It returns item id, outlet store and sales."
+      summary: "This API endpoint returns sales transactions of an itemid 
+      that is passed as path parameter. It returns item id, outlet store 
+      and sales."
+      description: "This API endpoint returns sales transactions of an itemid 
+      that is passed as path parameter. It returns item id, outlet store 
+      and sales."
       parameters:
         - name: Item_Id
           in: path
@@ -472,8 +485,10 @@ paths:
  /item:
     get:
       operationId: item.getitemoutletsales
-      summary: "This API endpoint returns sales transactions of an itemid for given outlet store that is passed as query string parameter."
-      description: "This API endpoint returns sales transactions of an itemid for given outlet store that is passed as query string parameter."
+      summary: "This API endpoint returns sales transactions of an itemid for given 
+      outlet store that is passed as query string parameter."
+      description: "This API endpoint returns sales transactions of an itemid for 
+      given outlet store that is passed as query string parameter."
       parameters:
         - name: item_id
           in: query
