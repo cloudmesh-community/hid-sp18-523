@@ -702,15 +702,6 @@ Performance was benchmarked on different cloud and local environment.
 On comparison we observed that prediction performance
 was best on AWS cloud. 
 
-## Appendix
-
-Web service was deployed on Azure Cloud. Weservice endpoints
-was exposed to predict price of passed Item Identifiers. 
-
-Deployment and usage playback Video of using exposed webservice 
-endpoint is uploaded at below location.
-
-* <https://www.youtube.com/watch?v=xrLto4XPn1o&t=518s>
 
 ## Acknowledgement 
 
@@ -722,6 +713,7 @@ and suggestions to write this paper.
 Arijit and Ritesh worked on data processing,Data exploration and designing 
 the Machine learning Algorithms. We both have brainstromed on visualizing 
 data. Arijit worked on Azure cloud and creating web service and Ritesh 
-worked on Docker image creation on local machine. We both worked on 
-comparing performance benchmarks. Compared the time running on AWS cloud 
-to prepare the time comparision chart and project report.
+worked on creating REST Open API and tested on local machine through
+Swagger UI. We both worked on comparing performance benchmarks. Compared the 
+time running on AWS cloud to prepare the time comparision chart and project 
+report.
