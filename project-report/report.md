@@ -248,10 +248,6 @@ created as
 * Update the Settings with API POST URL
 * Update the API key generated from Web service from Azure ML studio.
 
-Expose the Web Service from Azure cloud
-
-Click on the below link to access the prediction web service
-* <https://predictbigmart.azurewebsites.net/>
 
 Entered the values used to for testing locally, from the 
 +@fig:WebServiceResult, we see that amount should matched
@@ -408,6 +404,8 @@ image on port- 8080 will predict prices of all items of datset.
 Link for localhost 
 
 * <http://localhost:8080/cloudmesh/prediction>
+* <http://localhost:8080/cloudmesh/item/FDA15>
+* <http://localhost:8080/cloudmesh/item?item_id=FDA15&outlet_code=OUT049>
 
 
 
