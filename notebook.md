@@ -9,8 +9,8 @@ Spring 2018
 ## Week ( Feb 25 - Mar 03 , 2019 ) 
 * Cleaned and improved API code and checked in Makefile, prediction.yaml
   and defaultcontroller.py
-* Tested all end points of service using Swagger UI. Uploading train data file
-  , Uploading test data file , calling prediction end point. 
+* Tested all end points of service using Swagger UI ( Uploaded train and test data file
+  using POST API endpoint calls, tested prediction and item sales end points ) 
 * Updated report.md file with additional API specification.
 * Cleaned puppet.md file as per professor review comments.
 
