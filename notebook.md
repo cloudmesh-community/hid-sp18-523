@@ -6,6 +6,24 @@ Spring 2018
 
 :white_check_mark: sorted in reverse order and added work that has been completed in recent weeks
 
+## Week ( Feb 25 - Mar 03 , 2019 ) 
+* Cleaned and improved API code and checked in Makefile, prediction.yaml
+  and defaultcontroller.py
+* Tested all end points of service using Swagger UI. Uploading train data file
+  , Uploading test data file , calling prediction end point. 
+* Updated report.md file with additional API specification.
+* Cleaned puppet.md file as per professor review comments.
+
+## Week ( Feb 18 - Feb 24 , 2019 ) 
+
+* Changed prediction.yaml file to define specification of two additional API endpoints 
+  that lets user upload test and train data file.
+* Improved and cleaned makefile and commented the code that moved test and train data
+  file. User can now upload these data files using POST API end points.
+* Attended online hours on 2/21/19 with professor. Reviewed project with him. Noted down 
+  professor review comments of implementing two new endpoints for uploading files and 
+  worked on it.
+
 
 ## Week ( Feb 11 - Feb 17 , 2019 ) 
 * Checked in code in github
