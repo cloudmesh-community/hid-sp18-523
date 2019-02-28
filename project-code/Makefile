@@ -12,10 +12,10 @@ service:
 	#cp -r data $(FLASKDIR)
 	rm $(FLASKDIR)/swagger_server/controllers/default_controller.py
 	cp -r default_controller.py $(FLASKDIR)/swagger_server/controllers
-	cp -r train.csv $(FLASKDIR)/swagger_server/controllers
-	cp -r test.csv $(FLASKDIR)/swagger_server/controllers
-	cp -r train.csv $(FLASKDIR)
-	cp -r test.csv $(FLASKDIR)
+	#cp -r train.csv $(FLASKDIR)/swagger_server/controllers
+	#cp -r test.csv $(FLASKDIR)/swagger_server/controllers
+	#cp -r train.csv $(FLASKDIR)
+	#cp -r test.csv $(FLASKDIR)
 
 run: 
 	cd $(FLASKDIR) && pip install -r requirements.txt && \
