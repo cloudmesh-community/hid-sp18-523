@@ -503,6 +503,48 @@ paths:
           description: Successfully fetched Sale of given item id in given outlet
           schema:
             $ref: "#/definitions/GETITEMOUTLETSALES"
+  /uploadtrain:
+    post:
+      operationId: uploadtrain.uploadtrainfile
+      summary: "This API endpoint can be used to upload train csv file. This csv file 
+      is used to train linear regression model for prediction."
+      description: "This API endpoint can be used to upload train csv file. This csv 
+      file is used to train linear regression model for prediction."
+      consumes:
+        - multiform/form-data
+      parameters:
+        - name: uptrainfile
+          in: formData
+          description: file to upload
+          type: file
+          required: True
+      responses:
+        200:
+          description: Successfully uploaded file
+          schema:
+            $ref: "#/definitions/UPLOADTRAINFILE"
+ /uploadtest:
+    post:
+      operationId: uploadtest.uploadtestfile
+      summary: "This API endpoint can be used to upload test csv file. 
+      prediction prices of items listed in this csv file can be obtained by 
+      calling api prediction endpoint."
+      description: "This API endpoint can be used to upload test csv file. 
+      prediction prices of items listed in this csv file can be obtained by 
+      calling api prediction endpoint."
+      consumes:
+        - multiform/form-data
+      parameters:
+        - name: uptestfile
+          in: formData
+          description: file to upload
+          type: file
+          required: True
+      responses:
+        200:
+          description: Successfully uploaded file
+          schema:
+            $ref: "#/definitions/UPLOADTESTFILE"            
 definitions:
  PREDICTION:
   type: "object"
@@ -525,6 +567,23 @@ definitions:
   properties:
    model:
     type: "string"
+  UPLOADTRAINFILE:
+  type: "string"
+  format: binary
+  required :
+   - "model"
+  properties:
+   model:
+    type: "string"
+ UPLOADTESTFILE:
+  type: "string"
+  format: binary
+  required :
+   - "model"
+  properties:
+   model:
+    type: "string"
+
 
 ```
 
