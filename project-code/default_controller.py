@@ -1,9 +1,12 @@
 import connexion
 import six
+import os
 
 from swagger_server.models.prediction import PREDICTION  
 from swagger_server.models import GETITEMSALES 
-from swagger_server.models import GETITEMOUTLETSALES 
+from swagger_server.models import GETITEMOUTLETSALES
+from swagger_server.models import UPLOADTRAINFILE
+from swagger_server.models import UPLOADTESTFILE 
 from swagger_server import util
 
 from subprocess import Popen, PIPE
@@ -205,3 +208,26 @@ def item_getitemoutletsales():
     t.append((df.loc[(df["Item_Identifier"]==item_id) & (df["Outlet_Identifier"]==outlet_code),"Item_Outlet_Sales"]).tolist())
     
     return GETITEMOUTLETSALES(t)
+
+def uploadtrain_uploadtrainfile():
+    t = []
+    t.append("successful!!")
+    #item_id = request.args.get('upfile', None)
+
+    if request.method == 'POST':
+      f = request.files['uptrainfile']
+      f.save(os.path.join('.','train.csv'))
+    
+    return UPLOADTRAINFILE(t)
+
+def uploadtest_uploadtestfile():
+    t = []
+    t.append("successful!!")
+    #item_id = request.args.get('upfile', None)
+
+    if request.method == 'POST':
+      f = request.files['uptestfile']
+      f.save(os.path.join('.','test.csv'))
+    
+    return UPLOADTESTFILE(t)
+
