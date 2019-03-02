@@ -1,4 +1,4 @@
-# SciKit Learn Algorithms with Rest API
+# Managing item sales transactions and predicting quantity using REST API
 
 | Ritesh Tandon, Arijit Sinha
 | arisinha@iu.edu, ritandon@iu.edu
@@ -16,33 +16,34 @@ Keywords: docker, Scikit, AWS, Azure, Linear Regression, Boosted Decision
 ## Abstract
 
 In current world, data is getting generated and stored with different 
-storage systems. We need to use this data for a better understanding, 
-analyze and can estimate the future scenarios with certain probability. 
-There are many algorithms, which have developed and implemented for 
-providing better accuracy on the future scenarios.
+storage systems. We need to use this data for better understanding, 
+analysis and estimate future scenarios with certain probability. 
+There are many algorithms which have been developed and implemented for 
+providing better accuracy on future scenarios.
 
 ## Introduction
 
-Scikit learn is a library created for machine learning algorithms,
-which uses different datasets gathered over years to learn and predicts
+Scikit learn is a library created for machine learning algorithms.
+This can be used on different datasets gathered over years to learn and predict
 future scenarios. This library have methods for implementing supervized
 and unsupervized machine learning algorithm.
-Supervised algorithms are on the dataset, which has the target variable,
-which need to be predicted or estimated. This datasets can be acted with
-below different approaches
-Classification is based on the classes and the labeled data, we need to
-predict the unlabeled data.
+Supervised algorithms is used on dataset with target variable
+that needs to be predicted or estimated. This datasets can be acted with
+different approaches- 
+Classification is based on the classes and labeled data, we need to
+predict unlabeled data.
 Regression is based on the continuous variable or data, we need to
-predict the future state of data is known as regression
-Unsupervised algorithms are on the dataset, where we do not see the
-target variable for prediction, we learn its behavior set of vector
-input variable to identify the clustering group of similar behavior data 
-or sample [@sckitml]. Kaggle is a known location for different kind of 
-datasets gathered by various institutes across globe.
+predict future state of data.
+Unsupervised algorithms use datasets that does not have target variable.
+.Similar observations are grouped into buckets based on different methods
+such as distance between observations. This method is called clustering.
+These clusters are assigned classes for predicting[@sckitml]. 
+Kaggle is known location for different kind of datasets gathered by various 
+institutes across globe.
 
 ## Scope of work
 
-Below are the 3 algorithm from Scikit learn
+Following alogorithms are used 
 
 * Implement Linear Regression
 * Implement Boosted Decision
@@ -70,7 +71,7 @@ the products:
   Removal of the columns which doesn’t any correlation with target
   variable
 * REST data prediction: it will be the service, which will do multiple
-    predictions using multiple algorithms as below
+    predictions using multiple algorithms
 * Rest API with Linear Regression – Display the outcome of product and
   predicted price
 * Rest API with Boosted Decision – Display the outcome of product and
@@ -80,15 +81,10 @@ the products:
 
 Cloud technology utilized will be Microsoft Azure, AWS, it has been
 implemented at Local machine and Docker.
-We have acquired the dataset from Kaggle and read the data dictionary
-details on different websites which includes below describes attributes.
-We have 14204 instances and 13 attributes in the dataset, which will be
-spitted into Training and Test Data set. This dataset is available on
-public websites
-BigMart Dataset, With this dataset, we will predict the sale price of
-various products based on the learning of historical data in the
-datasets using different algorithm. The dataset has various data with
-respect to
+We have acquired Bigmart dataset from Kaggle. 
+We have 14204 instances and 13 attributes in dataset, which will be
+spitted into Training and Test Data set. This dataset has following
+attributes
 
 * Item Fat Content
 * Item Identifier
@@ -169,8 +165,8 @@ Created on Azure ML Studio, 3 Learning Algorithms used
 * Linear Regression
 * HyperTuned Boosted Decision Tree
 
-As seen in the results below in +@fig:RMSEComparisionResults and +@fig:HypertunedAlgorithmRMSEComparision 
-regarding the RMSE result scores, Hyper-tuned Boosted Decision 
+As seen in results  +@fig:RMSEComparisionResults and +@fig:HypertunedAlgorithmRMSEComparision 
+regarding RMSE result scores, Hyper-tuned Boosted Decision 
 Tree has provided better results.
 
 ![RMSE Comparision Results](images/RMSEComparison.png){#fig:RMSEComparisionResults}
@@ -192,7 +188,7 @@ From the score function, have extracted only 2 columns
 * Item Identifer
 * Item Outlet Sales
 
-In below +@fig:OutputofPredictionfromModels shows WebService
+In +@fig:OutputofPredictionfromModels shows WebService
 input and WebService Output using the selected model on
 the dataset with predicted value.
 
@@ -208,7 +204,7 @@ API key, which will be used for Azure Cloud deployment.
 
 ![Azure MLStudio Webservice Deploy](images/Webservicedeploy.png){#fig:AzureMLStudioWebserviceDeploy}
 
-It will provide an option to Test web service locally with below options
+It will provide an option to Test web service locally
 
 * Click on Test button enabled at the bottom of the screen
 * Download the CSV file from the tool to test the Web API with
@@ -220,7 +216,7 @@ Once Web Service is created locally, It creates a hyper link
 with name of the web service. On clicking this hyperlink 
 service dashboard opens up that let the develop set up and 
 configure web service on Azure cloud for consumption as 
-shown in the below +@fig:WebServiceConfigrationDetails. 
+shown in  +@fig:WebServiceConfigrationDetails. 
 
 It provides test tab on the dashboard where we can provide
 inputs and get the prediction values given by model after 
@@ -292,7 +288,7 @@ training model, fitting model, evaluating model, tuning model and
 prediction steps was executed on Azure notebook instance. 
 It took 15.2 ms for overall batch prediction using notebook. 
 Computation time using model saved on disk was recorded  as 
-1.95 mili seconds as shown in below code.
+1.95 mili seconds as shown.
 
 ### Code
 
@@ -593,7 +589,7 @@ step 1 - Download project-code folder from github to local drive on Ubuntu
 
 step 2 - On terminal go to project-code folder
 
-step 2 - Run below command to exceute locally
+step 2 - Run command to exceute locally
 
 ```
 python Project-BIgMartPrediction.py
@@ -607,7 +603,7 @@ step 1 - Download project-code folder from github to local drive on Ubuntu
 
 step 2 - On terminal go to project-code folder
 
-step 3 - Run below command
+step 3 - Run command
 
 ```
 make service
@@ -615,7 +611,7 @@ make service
 This will download swagger codegen client jar. Move default_controller.py, 
 dataset files ( train.csv and test.csv ) in respective folder.
 
-step 3 - Run below command
+step 3 - Run command
 
 ```
 make run
@@ -628,8 +624,8 @@ step 4 - Open new terminal
 
 step 5 - On terminal go to project-code folder
 
-step 6 - Run below command. This will call the REST API and will display
-         the prediction of train dataset
+step 6 - Run command. This will call REST API and will display
+         prediction of train dataset
 
 ```
 make test
@@ -704,26 +700,26 @@ step 1 - Download project-code folder from github to local drive on Ubuntu
 
 step 2 - On terminal go to project-code folder
 
-step 3 - Run below command
+step 3 - Run command
 
 ```
 make service
 ```
 
-step 4 - Run below command to build docker image by name cloudmeshprediction
+step 4 - Run command to build docker image by name cloudmeshprediction
 
 ```
 make docker-build
 ```
 
-step 5 - Run below command to start service. This will create service endpoint
+step 5 - Run command to start service. This will create service endpoint
          and will start the service on local environment
          
 ```
 make docker-start
 ```
 
-step 6 - Open new terminal and run below command
+step 6 - Open new terminal and run command
 
 ```
 curl -H "Content-Type: application/json" http://localhost:8080/cloudmesh/prediction
@@ -744,11 +740,8 @@ with 0.03 second.
 
 ## Conclusion
 
-In this project, below two models have been implemented and hyper-tuned. 
-
-* Boosted Decision
-* Linear Regression
-* HyperTuned Boosted Decision
+Linear Regression, Boosted Decision and Hypertuned Boosted Decision
+models were implemented. 
 
 Best model was decided based on accuracy and that was used for prediction
 of sales price of items across all store outlets.
@@ -762,7 +755,7 @@ was best on AWS cloud.
 
 ## Acknowledgement 
 
-The authors would like to thank Dr. Gregor von Laszewski for his support
+Authors would like to thank Dr. Gregor von Laszewski for his support
 and suggestions to write this paper.
 
 ## Workbreakdown
