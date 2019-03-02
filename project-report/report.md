@@ -19,7 +19,11 @@ In current world, data is getting generated and stored with different
 storage systems. We need to use this data for better understanding, 
 analysis and estimate future scenarios with certain probability. 
 There are many algorithms which have been developed and implemented for 
-providing better accuracy on future scenarios.
+providing better accuracy on future scenarios. This project comprises
+of two parts on one hand it lets users manage items sales transactions
+ and on the other hand it lets users predict sales quantity of given
+ item of given outlet. Thus helping corporate store manage their nventory 
+ stock to meet their retail outlet demands.
 
 ## Introduction
 
