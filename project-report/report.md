@@ -106,7 +106,7 @@ It has following 12 attributes with continuous and categorical values
 * Outlet Type has 4 unique values
 
 train dataset is used by corporate users to store historical sales 
-transactions of items of different outlet stores which can then by 
+transactions of items of different outlet stores which can then be 
 queried by outlet users to view their transactions. This dataset is 
 also used by implementation of prediction operation to train the 
 model.
