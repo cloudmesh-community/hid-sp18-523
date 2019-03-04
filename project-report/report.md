@@ -385,6 +385,7 @@ Local End Time:
 
 ## Open API endpoints
 
+![API Enpoints](images/api-endpoints.png){#fig:APIRndpoints}
 
 Link for localhost 
 
