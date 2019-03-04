@@ -396,12 +396,12 @@ swagger: "2.0"
 info:
  version: "0.0.1"
  title: "Item Sales API"
- description: "This API is designed to provide historical data of sales 
- transactions that occured in mutiple outlets spread across Europe of big 
- retail giant. API provides sales information of given items and oulets 
- to consumers.This eventually helps them plan their inventory and place 
- order quantity. API also predicts sales of items based on their weight, 
- fat content, visibility,     price and type"
+ description: "This API is designed to provide historical data of sales
+ transactions that occured in mutiple outlets spread across Europe of 
+ big retail giant. API provides sales information of given items and 
+ oulets to consumers. This eventually helps them plan their inventory 
+ and place order quantity. API also predicts sales of items based on 
+ their weight, fat content, visibility, price and type"
  termsOfService: "http://swagger.io/terms/"
  contact:
   name: "Ritesh Tandon, IU, MS Data Science - 2018"
@@ -421,15 +421,16 @@ paths:
     summary : "Predicts sales of items based on their weight, fat content, 
     visibility, price and type. This API endpoint returns predicted sales 
     quantity in batch mode."
-    description : "Predicts sales of items based on their weight, fat content, 
-    visibility, price and type. This API endpoint returns predicted sales 
-    quantity in batch mode."
+    description : "Predicts sales of items based on their weight, fat 
+    content, visibility, price and type. This API endpoint returns predicted 
+    sales quantity in batch mode."
     produces:
      - "application/json"
     responses:
      "200":
-       description: "Successfully fetched predicted sales of items based on 
-       their weight, fat content, visibility, price and type in batch mode "
+       description: "Successfully fetched predicted sales of items based 
+       on their 
+       weight, fat content, visibility, price and type in batch mode "
 
        schema:
          $ref: "#/definitions/PREDICTION"
@@ -442,8 +443,8 @@ paths:
       that is passed as path parameter. It returns item id, outlet store 
       and sales."
       description: "This API endpoint returns sales transactions of an itemid 
-      that is passed as path parameter. It returns item id, outlet store 
-      and sales."
+      that is passed as path parameter. It returns item id, outlet store and 
+      sales."
       parameters:
         - name: Item_Id
           in: path
@@ -452,16 +453,16 @@ paths:
           required: True
       responses:
         200:
-          description: Successfully fetched Sale of given item id in all outlet store.
+          description: Successfully fetched Sale of given item id in all 
+          outlet store.
           schema:
             $ref: "#/definitions/GETITEMSALES"
-
- /item:
+ /sale:
     get:
-      operationId: item.getitemoutletsales
-      summary: "This API endpoint returns sales transactions of an itemid for given 
+      operationId: sale.getitemoutletsales
+      summary: "This API endpoint returns sales quantity of an itemid for given 
       outlet store that is passed as query string parameter."
-      description: "This API endpoint returns sales transactions of an itemid for 
+      description: "This API endpoint returns sales quantity of an itemid for 
       given outlet store that is passed as query string parameter."
       parameters:
         - name: item_id
@@ -479,13 +480,109 @@ paths:
           description: Successfully fetched Sale of given item id in given outlet
           schema:
             $ref: "#/definitions/GETITEMOUTLETSALES"
-  /uploadtrain:
+ /item:
+    get:
+      operationId: item.getitemdetails
+      summary: "This API endpoint returns all details of an itemid for given 
+      outlet store that is passed as query string parameter."
+      description: "This API endpoint returns all details of an itemid for 
+      given outlet store that is passed as query string parameter."
+      parameters:
+        - name: item_id
+          in: query
+          description: Item Id passed in query string
+          type: string
+          required: True
+        - name: outlet_id
+          in: query
+          description: Outlet Identifier passed in query string
+          type: string
+          required: True
+      responses:
+        200:
+          description: Successfully fetched Sale of given item id in given outlet
+          schema:
+            $ref: "#/definitions/GETITEMDETAILS"
+    put:
+      operationId: item.additem
+      summary: "This API endpoint add item details such as such as weight, MRP, 
+      visibility index, outlet type, outlet identifier, year, sales quantity etc."
+      description: "This API endpoint add item details such as such as weight, 
+      MRP, visibility index, outlet type, outlet identifier, year, sales 
+      quantity etc."
+      parameters:
+        - name: Item_Identifier
+          in: query
+          description: Item Id passed in query string
+          type: string
+          required: True
+        - name: Item_Weight
+          in: query
+          description: item weight passed in query string
+          type: string
+          required: True
+        - name: Item_Fat_Content
+          in: query
+          description: Item fat content passed in query string
+          type: string
+          required: True
+        - name: Item_Visibility
+          in: query
+          description: outlet visibility passed in query string
+          type: string
+          required: True
+        - name: Item_Type
+          in: query
+          description: Item type passed in query string
+          type: string
+          required: True
+        - name: Item_MRP
+          in: query
+          description: Item MRP passed in query string
+          type: string
+          required: True
+        - name: Outlet_Identifier
+          in: query
+          description: Outlet Identfier passed in query string
+          type: string
+          required: True
+        - name: Outlet_Establishment_Year
+          in: query
+          description: outlet year passed in query string
+          type: string
+          required: True
+        - name: Outlet_Size
+          in: query
+          description: outlet size passed in query string
+          type: string
+          required: True
+        - name: Outlet_Location_Type
+          in: query
+          description: outlet location type passed in query string
+          type: string
+          required: True
+        - name: Outlet_Type
+          in: query
+          description: outlet type passed in query string
+          type: string
+          required: True
+        - name: Item_Outlet_Sales
+          in: query
+          description: item outlet sales passed in query string
+          type: string
+          required: True
+      responses:
+        200:
+          description: Successfully added item details
+          schema:
+            $ref: "#/definitions/ADDITEM"
+ /data/train:
     post:
-      operationId: uploadtrain.uploadtrainfile
-      summary: "This API endpoint can be used to upload train csv file. This csv file 
-      is used to train linear regression model for prediction."
-      description: "This API endpoint can be used to upload train csv file. This csv 
-      file is used to train linear regression model for prediction."
+      operationId: train.uploadtrainfile
+      summary: "This API endpoint can be used to upload train csv file. 
+      This csv file is used to train linear regression model for prediction."
+      description: "This API endpoint can be used to upload train csv file. 
+      This csv file is used to train linear regression model for prediction."
       consumes:
         - multiform/form-data
       parameters:
@@ -499,15 +596,15 @@ paths:
           description: Successfully uploaded file
           schema:
             $ref: "#/definitions/UPLOADTRAINFILE"
- /uploadtest:
+ /data/test:
     post:
-      operationId: uploadtest.uploadtestfile
+      operationId: test.uploadtestfile
       summary: "This API endpoint can be used to upload test csv file. 
-      prediction prices of items listed in this csv file can be obtained by 
-      calling api prediction endpoint."
+      prediction prices of items listed in this csv file can be obtained 
+      by calling api prediction endpoint."
       description: "This API endpoint can be used to upload test csv file. 
-      prediction prices of items listed in this csv file can be obtained by 
-      calling api prediction endpoint."
+      prediction prices of items listed in this csv file can be obtained 
+      by calling api prediction endpoint."
       consumes:
         - multiform/form-data
       parameters:
@@ -520,7 +617,7 @@ paths:
         200:
           description: Successfully uploaded file
           schema:
-            $ref: "#/definitions/UPLOADTESTFILE"            
+            $ref: "#/definitions/UPLOADTESTFILE"
 definitions:
  PREDICTION:
   type: "object"
@@ -543,7 +640,7 @@ definitions:
   properties:
    model:
     type: "string"
-  UPLOADTRAINFILE:
+ UPLOADTRAINFILE:
   type: "string"
   format: binary
   required :
@@ -559,7 +656,21 @@ definitions:
   properties:
    model:
     type: "string"
-
+ ADDITEM:
+  type: "string"
+  format: binary
+  required :
+   - "model"
+  properties:
+   model:
+    type: "string"
+ GETITEMDETAILS:
+  type: "object"
+  required :
+   - "model"
+  properties:
+   model:
+    type: "string"
 
 ```
 
