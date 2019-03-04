@@ -9,7 +9,7 @@
 
 ---
 
-Keywords: docker, Scikit, AWS, Azure, Linear Regression, Boosted Decision
+Keywords: docker, Scikit, Open API, REST, Swagger, Linear Regression
 
 ---
 
@@ -22,28 +22,24 @@ There are many algorithms which have been developed and implemented for
 providing better accuracy on future scenarios. This project comprises
 of two parts on one hand it lets users manage items sales transactions
  and on the other hand it lets users predict sales quantity of given
- item of given outlet. Thus helping corporate store manage their nventory 
+ item of given outlet. Thus helping corporate store manage their inventory 
  stock to meet their retail outlet demands.
 
 ## Introduction
 
-Scikit learn is a library created for machine learning algorithms.
-This can be used on different datasets gathered over years to learn and predict
-future scenarios. This library have methods for implementing supervized
-and unsupervized machine learning algorithm.
-Supervised algorithms is used on dataset with target variable
-that needs to be predicted or estimated. This datasets can be acted with
-different approaches- 
-Classification is based on the classes and labeled data, we need to
-predict unlabeled data.
-Regression is based on the continuous variable or data, we need to
-predict future state of data.
-Unsupervised algorithms use datasets that does not have target variable.
-.Similar observations are grouped into buckets based on different methods
-such as distance between observations. This method is called clustering.
-These clusters are assigned classes for predicting[@sckitml]. 
-Kaggle is known location for different kind of datasets gathered by various 
-institutes across globe.
+Bigmart is big retail outlet chain in Europe. This project aims to help
+manage their inventory stock to fulfill demands  of their retail outlets
+using state of the art cutting edge cloud based technology. System exposes 
+inventory related information through OPEN API that can be deployed on cloud.
+This allows system to scale seamlessly if organization expands to open new 
+outlets or if sales transaction grows exponentially. On premise applications
+running in outlet store can access these API enpoint regardless of language
+they are written in. This API also provides future sales prediction of specific 
+item in given outlet based on historical transactions. This prediction information
+helps organization to mage their stock efficiently eventually reducing loss that 
+occur either through over stocking or losing sales opportunity because of non 
+availability of items in given outlet.
+
 
 ## Scope of work
 
