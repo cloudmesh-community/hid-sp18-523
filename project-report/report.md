@@ -43,44 +43,28 @@ availability of items.
 
 ## Scope of work
 
-Following alogorithms are used 
+Open API that allows corporate users to upload historical sales transactions
+data for all outlets in batch mode using file upload.
+Open API that allows store outlet users to insert invidividual 
+item sales transactions for given store outlet.
+Open API that allows store outlet users to query and view item details by passing
+item idendifier and store outlet identifier.
+Open API that allows store outlet users to query and view sales information 
+by passing item idendifier and store outlet identifier.
+Open API that allows corporate users to upload details of items they wish to
+get quantity prediction.
 
-* Implement Linear Regression
-* Implement Boosted Decision
-* Implement Hyper-tuned Boosted Decision
-
-## Reason
-
-We are planning to use Regression learning algorithm because the target
-variable is numerical and continuous in nature. We will be creating ML
-pipeline using linear, regularized linear, tree and forest learning
-algorithm. We will compare and evaluate different models based on RMSE
-of learning algorithm [@sckitml].
 
 ## Technology Stack
 
-Python will be used for Data loading, preprocessing and cleaning. Using
-Scikit learn library, we will implement variety of algorithms to conduct
-above process and finally will predict the sale price of its products.
+API is defined with Open API specification. Swagger codegen is used to 
+build sever side code stubs and client side SDK. Swagger UI is used to
+test API endpoints. Python flask micro web framework. Python pandas
+, numpy is used for data cleansing and pre processing. Python sklearn
+preprocessing package is used for treating and imputing missing values.
+Python linear_model package is used to create linear model for prediction.
+Python Jupyter notebook is used for data exploration and data visualization.
 
-REST services has been implemented to provide a prediction of price of
-the products:
-
-* REST data preprocessing: It will be the service, which does the data
-  processing with removal or imputing the data with mean or median.
-  Removal of the columns which doesn’t any correlation with target
-  variable
-* REST data prediction: it will be the service, which will do multiple
-    predictions using multiple algorithms
-* Rest API with Linear Regression – Display the outcome of product and
-  predicted price
-* Rest API with Boosted Decision – Display the outcome of product and
-  predicted price
-* Rest API with Hyper-tuned Boosted Decision – Display the outcome of
-  product and predicted price
-
-Cloud technology utilized will be Microsoft Azure, AWS, it has been
-implemented at Local machine and Docker.
 We have acquired Bigmart dataset from Kaggle. 
 We have 14204 instances and 13 attributes in dataset, which will be
 spitted into Training and Test Data set. This dataset has following
@@ -108,7 +92,6 @@ attributes
 * train dataset - https://github.com/cloudmesh-community/hid-sp18-523/blob/master/project-code/train.csv
 
 It has following 12 attributes with continuous and categorical values
-with Unique Values
 
 * Item Fat Content has 5 unique values
 * Item Identifier has 1559 unique values
@@ -122,6 +105,15 @@ with Unique Values
 * Outlet Location Type has 3 unique values
 * Outlet Size has 4 unique values
 * Outlet Type has 4 unique values
+
+train dataset is used by corporate users to store historical sales 
+transactions of items of different outlet stores which can then by 
+queried by outlet users to view their transactions. This dataset is 
+also used by implementation of prediction operation to train the 
+model.
+
+test dataset is used by corporate users to pass it to prediction
+endpoint of API in order to get estimated future sales quantity.
 
 ## Data Visualization
 
@@ -155,7 +147,7 @@ us with deciding which feature are influencing the prediction.
 
 Azure ML studio provides the GUI interface for creating the Machine
 Learning Train models and Predictions. It provides a provision to
-integrate with Azure Cloud and expose the Web Services
+integrate with Azure Cloud and expose Web Service
 
 ## Train Model with Azure
 
@@ -175,9 +167,9 @@ Tree has provided better results.
 
 ## Predictive Model
 
-Update the Trained model with Test dataset for predicting the Item
-Outlet Sales data. Verified and updated the data cleaning process which
-we have implemented for Train dataset. After converting the categorical
+Update Trained model with Test dataset for predicting Item
+Outlet Sales data. Verified and updated data cleaning process which
+we have implemented for Train dataset. After converting categorical
 data with indicators, we can apply the trained model.
 
 Created predictive model using the above Hyper-tuned Boosted Decision
@@ -407,7 +399,7 @@ Link for localhost
 
 ## Code Reproducing steps
 
-Environment - Ubuntu 1, python
+Environment - Ubuntu , python
 
 #### Open API Specification
 
