@@ -38,7 +38,7 @@ they are written in. This API also provides future sales prediction of specific
 item in given outlet based on historical transactions. This prediction information
 helps organization to mage their stock efficiently eventually reducing loss that 
 occur either through over stocking or losing sales opportunity because of non 
-availability of items in given outlet.
+availability of items.
 
 
 ## Scope of work
