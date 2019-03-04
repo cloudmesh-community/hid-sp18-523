@@ -116,31 +116,34 @@ endpoint of API in order to get estimated future sales quantity.
 
 ## Data Visualization
 
-The histogram in +@fig:HistogramofImportantAttributes shows the 
-distribution of data of different variables from the dataset.
-These are the important feature influencing the predicted 
-output
+The histogram in +@fig:HistogramofImportantAttributes shows 
+distribution of data of different variables from dataset.
+These are mportant feature influencing prediction of item
+sales quantity exposed through prediction API enspoint.
 
 ![Histogram of Important Attributes](images/HistrogramofImpAttributes.png){#fig:HistogramofImportantAttributes}
 
-In +@fig:CorrelationMatrixbetweenVariables shows the 
-plot about the corelation between variables in the dataset.
-This will display the features which are higly correlated in 
+In +@fig:CorrelationMatrixbetweenVariables plot shows 
+corelation between variables in dataset.
+The graph displays features which are higly correlated in 
 darker color.
 
 ![Correlation Matrix between Variables](images/Correlation.png){#fig:CorrelationMatrixbetweenVariables}
 
-## Data Exploration
-
-Analyzed and plotted the categorical and continuous feature summaries to 
-see which feature is closely related with target variable. This helped
-us with deciding which feature are influencing the prediction.
 
 ## Data Preprocessing
 
-* Missing values (2439) of item weight is replaced with mean.
-* Missing values (4016) of outlet size observations, which been
-  replaced with mode.
+Not all historical outlet store data ( train.csv ) transactions 
+has information information of all required attributes. We had to
+treat these missing values in order for predicting item sales quantity.
+We observed that there were 2439 entries of item weight that were 
+missing. This needs to be filled in order to improve accuracy of
+prediction. We decided to fill missing values with mean as that improved
+accuracy of our prediction mode. We have also observed that there were
+4016 records that were missing values of outlet size. Since outlet size
+is categorical data, we decided to replace these values with mode. Outlet
+size with most number of records is used to fill in these missing values.
+
 
 ## Azure ML Studio
 
@@ -380,13 +383,8 @@ Local End Time:
  1278.2714367 ]
 ```
 
-## Docker
+## Open API endpoints
 
-Docker Image was created on local environment. Excution of docker image of
-model predict prices for passed dataset. This code can be reproduced  
-using Docker commands.
-Once replicated locally, running locahost endpoint url created by docker
-image on port- 8080 will predict prices of all items of datset.
 
 Link for localhost 
 
