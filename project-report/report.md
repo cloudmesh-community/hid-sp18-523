@@ -387,17 +387,7 @@ Local End Time:
 
 ![API Enpoints](images/api-endpoints.png){#fig:APIRndpoints}
 
-Link for localhost 
 
-* <http://localhost:8080/cloudmesh/prediction>
-* <http://localhost:8080/cloudmesh/item/FDA15>
-* <http://localhost:8080/cloudmesh/item?item_id=FDA15&outlet_code=OUT049>
-
-
-
-## Code Reproducing steps
-
-Environment - Ubuntu , python
 
 #### Open API Specification
 
@@ -573,11 +563,17 @@ definitions:
 
 ```
 
+
+## Code Reproducing steps
+
+Environment - Ubuntu , python
+
+
 #### Testing using local python instance
 
-step 1 - Download project-code folder from github to local drive on Ubuntu
+step 1 - git clone https://github.com/cloudmesh-community/hid-sp18-523/tree/master/project-code
 
-step 2 - On terminal go to project-code folder
+step 2 - cd project-code
 
 step 2 - Run command to exceute locally
 
@@ -589,9 +585,9 @@ python Project-BIgMartPrediction.py
 
 #### Testing Service Locally
 
-step 1 - Download project-code folder from github to local drive on Ubuntu
+step 1 - git clone https://github.com/cloudmesh-community/hid-sp18-523/tree/master/project-code
 
-step 2 - On terminal go to project-code folder
+step 2 - cd project-code
 
 step 3 - Run command
 
@@ -612,7 +608,7 @@ Keep this terminal window open. Do not close it.
 
 step 4 - Open new terminal 
 
-step 5 - On terminal go to project-code folder
+step 5 - Go to project-code folder
 
 step 6 - Run command. This will call REST API and will display
          prediction of train dataset
@@ -686,9 +682,9 @@ Riteshs-MacBook-Pro:~ riteshtandon$
 
 #### Testing Using Docker Image
 
-step 1 - Download project-code folder from github to local drive on Ubuntu
+step 1 - git clone https://github.com/cloudmesh-community/hid-sp18-523/tree/master/project-code
 
-step 2 - On terminal go to project-code folder
+step 2 - cd project-code
 
 step 3 - Run command
 
