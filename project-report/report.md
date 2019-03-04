@@ -43,16 +43,15 @@ availability of items.
 
 ## Scope of work
 
-Open API that allows corporate users to upload historical sales transactions
-data for all outlets in batch mode using file upload.
-Open API that allows store outlet users to insert invidividual 
-item sales transactions for given store outlet.
-Open API that allows store outlet users to query and view item details by passing
-item idendifier and store outlet identifier.
-Open API that allows store outlet users to query and view sales information 
-by passing item idendifier and store outlet identifier.
-Open API that allows corporate users to upload details of items they wish to
-get quantity prediction.
+To develop Open API that allows corporate users to upload historical sales 
+transactions data for all outlets in batch mode using file upload.
+Store outlet users should also be able to insert invidividual 
+item sales transactions for given store outlet. This Open API will allow
+store outlet users to query and view item details by passing item idendifier 
+and store outlet identifier. It should have feature that allows store outlet 
+users to query and view sales information  by passing item idendifier and 
+store outlet identifier. In addition it should  allows corporate users to upload 
+details of items they wish to get predictive quantity.
 
 
 ## Technology Stack
