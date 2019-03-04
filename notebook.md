@@ -6,7 +6,19 @@ Spring 2018
 
 :white_check_mark: sorted in reverse order and added work that has been completed in recent weeks
 
+
 ## Week ( Feb 25 - Mar 03 , 2019 ) 
+* Changed heading of the project to be more meaningful.
+* Changed abstract content to explain project context.
+* Enhanced and updated introduction to explain project context and summary in much more meaningful way as compared to earlier which was only scikit library specific.
+* Changed scope of work to provide details of Open API functionality to be more relevant
+* Changed Technology stack to highlight tools and technology used as compared to earlier that was only highlighting usage of scikit library.
+* Enhanced dataset detail section.
+* Enhanced and updated dataset preprocessing section to explain how and why preprocessing was done in sentence form.
+* Added Open API endpoints image showing all endpoints of OpenAPI.
+* Changed Open API resource endpoints name to NOUN such as data/train , data/test, /sale
+* Added one more /item PUT endpoint that allows user to insert item detail record. 
+* Attended professor online session on Thursday 02/24/2019 and noted down all review comments to work on.
 * Cleaned and improved API code and checked in Makefile, prediction.yaml
   and defaultcontroller.py
 * Tested all end points of service using Swagger UI ( Uploaded train and test data file
