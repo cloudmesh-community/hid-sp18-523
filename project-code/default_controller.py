@@ -5,8 +5,10 @@ import os
 from swagger_server.models.prediction import PREDICTION  
 from swagger_server.models import GETITEMSALES 
 from swagger_server.models import GETITEMOUTLETSALES
+from swagger_server.models import GETITEMDETAILS
 from swagger_server.models import UPLOADTRAINFILE
-from swagger_server.models import UPLOADTESTFILE 
+from swagger_server.models import UPLOADTESTFILE
+from swagger_server.models import ADDITEM 
 from swagger_server import util
 
 from subprocess import Popen, PIPE
@@ -188,16 +190,29 @@ def item_getitemsales(Item_Id):
 
     df = d.set_index("Item_Identifier", drop = False)
     
-    t.append((df.loc[Item_Id,["Item_Outlet_Sales","Outlet_Identifier"]]).to_html(index=False))
+    #t.append((df.loc[Item_Id,["Item_Outlet_Sales","Outlet_Identifier"]]).to_html(index=False))
 
     #t.append((df.loc[Item_Id,["Item_Outlet_Sales","Outlet_Identifier"]]).to_dict(orient='list'))
+    t.append((df.loc[Item_Id,["Item_Outlet_Sales","Outlet_Identifier"]]).to_dict())
     
     return GETITEMSALES(t)
 
 app = Flask(__name__)
 
 @app.route('/item')
-def item_getitemoutletsales():
+def item_getitemdetails():
+    d = pd.read_csv('./train.csv')
+    t = []
+    item_id = request.args.get('item_id', None)
+    outlet_id = request.args.get('outlet_id', None)
+
+    df = d.set_index(["Item_Identifier","Outlet_Identifier"], drop = False)
+    
+    t.append((df.loc[(df["Item_Identifier"]==item_id) & (df["Outlet_Identifier"]==outlet_id),]).to_json())
+    
+    return GETITEMDETAILS(t)
+
+def sale_getitemoutletsales():
     d = pd.read_csv('./train.csv')
     t = []
     item_id = request.args.get('item_id', None)
@@ -209,7 +224,7 @@ def item_getitemoutletsales():
     
     return GETITEMOUTLETSALES(t)
 
-def uploadtrain_uploadtrainfile():
+def train_uploadtrainfile():
     t = []
     t.append("successful!!")
     #item_id = request.args.get('upfile', None)
@@ -220,7 +235,7 @@ def uploadtrain_uploadtrainfile():
     
     return UPLOADTRAINFILE(t)
 
-def uploadtest_uploadtestfile():
+def test_uploadtestfile():
     t = []
     t.append("successful!!")
     #item_id = request.args.get('upfile', None)
@@ -230,4 +245,33 @@ def uploadtest_uploadtestfile():
       f.save(os.path.join('.','test.csv'))
     
     return UPLOADTESTFILE(t)
+
+def item_additem():
+    t = []
+    t.append("successful!!")
+    #item_id = request.args.get('upfile', None)
+
+    Item_Identifier = request.args.get('Item_Identifier', None)
+    Item_Weight = request.args.get('Item_Weight', None)
+    Item_Fat_Content = request.args.get('Item_Fat_Content', None)
+    Item_Visibility = request.args.get('Item_Visibility', None)
+    Item_Type = request.args.get('Item_Type', None)
+    Item_MRP = request.args.get('Item_MRP', None)
+    Outlet_Identifier = request.args.get('Outlet_Identifier', None)
+    Outlet_Establishment_Year = request.args.get('Outlet_Establishment_Year', None)
+    Outlet_Size = request.args.get('Outlet_Size', None)
+    Outlet_Location_Type = request.args.get('Outlet_Location_Type', None)
+    Outlet_Type = request.args.get('Outlet_Type', None)
+    Item_Outlet_Sales = request.args.get('Item_Outlet_Sales', None)
+    
+    df = pd.DataFrame()
+    df = df.append({'Item_Identifier':Item_Identifier,'Item_Weight':Item_Weight,'Item_Fat_Content':Item_Fat_Content,'Item_Visibility': Item_Visibility,'Item_Type':Item_Type,'Item_MRP': Item_MRP,'Outlet_Identifier': Outlet_Identifier,'Outlet_Establishment_Year': Outlet_Establishment_Year,'Outlet_Size': Outlet_Size,'Outlet_Location_Type': Outlet_Location_Type,'Outlet_Type': Outlet_Type,'Item_Outlet_Sales': Item_Outlet_Sales}, ignore_index=True)
+    sequence =['Item_Identifier','Item_Weight','Item_Fat_Content','Item_Visibility','Item_Type','Item_MRP','Outlet_Identifier','Outlet_Establishment_Year','Outlet_Size','Outlet_Location_Type','Outlet_Type','Item_Outlet_Sales']
+    df=df.reindex(columns=sequence)
+    #df.to_csv('train.csv',mode='a',header=False, index=False)
+    outfile = open('train.csv',mode='a')
+    df.astype(str).to_csv(outfile,header=False, index=False)
+    outfile.close()
+    
+    return ADDITEM(t)
 
