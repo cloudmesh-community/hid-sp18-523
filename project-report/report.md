@@ -722,7 +722,7 @@ successfull result indicate that file has been uploaded
 successfully
 
 ```
-ritesh@ritesh-ubuntu1:~/project-code$ curl -X POST --header 
+~/project-code$ curl -X POST --header 
 'Content-Type: multipart/form-data' 
 --header 'Accept: application/json' {"type":"formData"} 
 -F 'uptrainfile=@train.csv' 'http://localhost:8080/cloudmesh/data/train'
@@ -738,7 +738,7 @@ step 7 - Get item sale information by passing item identifier as path
 parameter to Open API endpoint
 
 ```
-:~/project-code$ curl -H "Content-Type: application/json" 
+~/project-code$ curl -H "Content-Type: application/json" 
 http://localhost:8080/cloudmesh/item/FDA15
 ```
 
@@ -746,7 +746,7 @@ successfull result will show item sale quantity along with store
 identifier
 
 ```
-:~/project-code$ curl -H "Content-Type: application/json" 
+~/project-code$ curl -H "Content-Type: application/json" 
 http://localhost:8080/cloudmesh/item/FDA15
 {
   "model": [
