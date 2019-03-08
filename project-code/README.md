@@ -808,14 +808,14 @@ step 9 - Get Sale of item by calling /sale API endpoint for given outlet
 by passing item id and outlet code as query string parameter
 
 ```
-ritesh@ritesh-ubuntu1:~/project-code$ curl -H "Content-Type: application/json" 
+~/project-code$ curl -H "Content-Type: application/json" 
 'http://localhost:8080/cloudmesh/sale?item_id=FDA15&outlet_code=OUT049'
 ```
 
 successfull result will just display sale quantity information 
 
 ```
-ritesh@ritesh-ubuntu1:~/project-code$ curl 
+~/project-code$ curl 
 -H "Content-Type: application/json" 
 'http://localhost:8080/cloudmesh/sale?item_id=FDA15&outlet_code=OUT049'
 {
@@ -831,7 +831,7 @@ ritesh@ritesh-ubuntu1:~/project-code$ curl
 step 10 - Run command to load test data using /data/test
          API end point
 ```
-ritesh@ritesh-ubuntu1:~/project-code$ curl -X POST --header 
+~/project-code$ curl -X POST --header 
 'Content-Type: multipart/form-data' --header 
 'Accept: application/json' {"type":"formData"} 
 -F 'uptestfile=@test.csv' 'http://localhost:8080/cloudmesh/data/test'
@@ -842,7 +842,7 @@ uploaded
 
 
 ```
-ritesh@ritesh-ubuntu1:~/project-code$ curl -X POST --header 
+~/project-code$ curl -X POST --header 
 'Content-Type: multipart/form-data' --header 
 'Accept: application/json' {"type":"formData"} 
 -F 'uptestfile=@test.csv' 'http://localhost:8080/cloudmesh/data/test'
@@ -860,7 +860,7 @@ listed in test data file by calling /prediction API end point
 
 
 ```
-ritesh@ritesh-ubuntu1:~/project-code$ curl -H 
+~/project-code$ curl -H 
 "Content-Type: application/json" http://localhost:8080/cloudmesh/prediction
 ```
 
@@ -868,7 +868,7 @@ successfull result will display predictive quantity of test data items
 using linear regression method.
 
 ```
-ritesh@ritesh-ubuntu1:~/project-code$ curl 
+~/project-code$ curl 
 -H "Content-Type: application/json" http://localhost:8080/cloudmesh/prediction
 {
   "model": [
