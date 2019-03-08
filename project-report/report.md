@@ -383,6 +383,13 @@ Local End Time:
  1278.2714367 ]
 ```
 
+## Open API
+
+REST Open API was created using Swagger codegen for storing and managing 
+sales transactions that occuers in different outlet stores.  Other than
+managing transactions, API also predicts item sales quantity for given batch
+of items using linear regression method.
+
 ## Open API endpoints
 
 ![API Enpoints](images/api-endpoints.png){#fig:APIRndpoints}
@@ -763,10 +770,152 @@ http://localhost:8080/cloudmesh/item/FDA15
 
 ```
 
+step 8 - Get all details of item for given outlet by passing 
+item id and outlet id as query string to /item
+API end point
 
+```
+~/project-code$ curl -H "Content-Type: application/json" 
+'http://localhost:8080/cloudmesh/item?item_id=FDA15&outlet_id=OUT049'
+```
+
+successfull result will display details of given
+item and outlet store
+
+```
+~/project-code$ curl -H "Content-Type: application/json" 
+'http://localhost:8080/cloudmesh/item?item_id=FDA15&outlet_id=OUT049'
+{
+  "model": [
+    "{\"Item_Identifier\":{\"[\"FDA15\",\"OUT049\"]\":\"FDA15\"},
+    \"Item_Weight\":{\"[\"FDA15\",\"OUT049\"]\":9.3},
+    \"Item_Fat_Content\":{\"[\"FDA15\",\"OUT049\"]\":\"Low Fat\"},
+    \"Item_Visibility\":{\"[\"FDA15\",\"OUT049\"]\":0.016047301},
+    \"Item_Type\":{\"[\"FDA15\",\"OUT049\"]\":\"Dairy\"},
+    \"Item_MRP\":{\"[\"FDA15\",\"OUT049\"]\":249.8092},
+    \"Outlet_Identifier\":{\"[\"FDA15\",\"OUT049\"]\":\"OUT049\"},
+    \"Outlet_Establishment_Year\":{\"[\"FDA15\",\"OUT049\"]\":1999},
+    \"Outlet_Size\":{\"[\"FDA15\",\"OUT049\"]\":\"Medium\"},
+    \"Outlet_Location_Type\":{\"[\"FDA15\",\"OUT049\"]\":\"Tier 1\"},
+    \"Outlet_Type\":{\"[\"FDA15\",\"OUT049\"]\":\"Supermarket Type1\"},
+    \"Item_Outlet_Sales\":{\"[\"FDA15\",\"OUT049\"]\":3735.138}}"
+  ]
+}
+```
+
+
+step 9 - Get Sale of item by calling /sale API endpoint for given outlet 
+by passing item id and outlet code as query string parameter
+
+```
+ritesh@ritesh-ubuntu1:~/project-code$ curl -H "Content-Type: application/json" 
+'http://localhost:8080/cloudmesh/sale?item_id=FDA15&outlet_code=OUT049'
+```
+
+successfull result will just display sale quantity information 
+
+```
+ritesh@ritesh-ubuntu1:~/project-code$ curl 
+-H "Content-Type: application/json" 
+'http://localhost:8080/cloudmesh/sale?item_id=FDA15&outlet_code=OUT049'
+{
+  "model": [
+    [
+      3735.138
+    ]
+  ]
+}
+
+```
+
+step 10 - Run command to load test data using /data/test
+         API end point
+```
+ritesh@ritesh-ubuntu1:~/project-code$ curl -X POST --header 
+'Content-Type: multipart/form-data' --header 
+'Accept: application/json' {"type":"formData"} 
+-F 'uptestfile=@test.csv' 'http://localhost:8080/cloudmesh/data/test'
+```
+
+successfull message result will indicate that test file has been 
+uploaded 
+
+
+```
+ritesh@ritesh-ubuntu1:~/project-code$ curl -X POST --header 
+'Content-Type: multipart/form-data' --header 
+'Accept: application/json' {"type":"formData"} 
+-F 'uptestfile=@test.csv' 'http://localhost:8080/cloudmesh/data/test'
+curl: (7) Couldn't connect to server
+{
+  "model": [
+    "successful!!"
+  ]
+}
+```
+
+
+step 11 - Run command to get prediction of sales quantity of items
+listed in test data file by calling /prediction API end point
+
+
+```
+ritesh@ritesh-ubuntu1:~/project-code$ curl -H 
+"Content-Type: application/json" http://localhost:8080/cloudmesh/prediction
+```
+
+successfull result will display predictive quantity of test data items
+using linear regression method.
+
+```
+ritesh@ritesh-ubuntu1:~/project-code$ curl 
+-H "Content-Type: application/json" http://localhost:8080/cloudmesh/prediction
+{
+  "model": [
+    [
+      1857.1406639820989, 
+      1563.2871665661592, 
+      1834.231027551627, 
+      2581.450544775922, 
+      5159.461138379451, 
+      1919.533023840407, 
+      627.6994262925587, 
+      2803.1335223421875, 
+      1508.992328153954, 
+      3072.745089319022, 
+      1999.6589439699842, 
+      1327.040653005452, 
+      1816.3873392549926, 
+      2056.702717158843, 
+      912.9796569607081, 
+      2537.4069529934063, 
+      3082.8856104726055, 
+      2763.159286304049, 
+      3204.078913003401, 
+      1110.070131269718, 
+      2810.2681164220576, 
+      3846.3743818872504, 
+      826.7525706134691, 
+      342.6092963525098, 
+      3006.7573564539343, 
+      1414.1059565447613, 
+      924.7275399636796, 
+      2529.0310769705984, 
+      3823.1790049697015, 
+      2022.4847250844673
+    ]
+  ]
+}
+
+```
 
 
 ## Performance Comparison
+
+Performance comparision was done for executing python
+notebook on three different environment . Two different 
+clouds ( Azure and AWS ) and local.
+
 
 Environment  | Description       |  Elapsed Time
 -------------|-------------------|----------------
@@ -782,7 +931,7 @@ with 0.03 second.
 ## Conclusion
 
 Linear Regression, Boosted Decision and Hypertuned Boosted Decision
-models were implemented. 
+models were implemented in python notebook code.  
 
 Best model was decided based on accuracy and that was used for prediction
 of sales price of items across all store outlets.
@@ -804,7 +953,7 @@ and suggestions to write this paper.
 Arijit and Ritesh worked on data processing,Data exploration and designing 
 the Machine learning Algorithms. We both have brainstromed on visualizing 
 data. Arijit worked on Azure cloud and creating web service and Ritesh 
-worked on creating REST Open API and tested on local machine through
-Swagger UI. We both worked on comparing performance benchmarks. Compared the 
-time running on AWS cloud to prepare the time comparision chart and project 
-report.
+worked on creating REST Open API using linear regression methodand tested 
+on local machine through Swagger UI. We both worked on comparing performance 
+python notebook code that was executed on two clouds for benchmark benchmarks. 
+
