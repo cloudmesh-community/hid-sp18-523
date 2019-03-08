@@ -682,20 +682,6 @@ definitions:
 Environment - Ubuntu , python
 
 
-#### Testing using local python instance
-
-step 1 - git clone https://github.com/cloudmesh-community/hid-sp18-523/tree/master/project-code
-
-step 2 - cd project-code
-
-step 2 - Run command to exceute locally
-
-```
-python Project-BIgMartPrediction.py
-
-```
-
-
 #### Testing Service Locally
 
 step 1 - git clone https://github.com/cloudmesh-community/hid-sp18-523/tree/master/project-code
@@ -721,108 +707,64 @@ Keep this terminal window open. Do not close it.
 
 step 4 - Open new terminal 
 
-step 5 - Go to project-code folder
+step 5 - cd project-code
 
-step 6 - Run command. This will call REST API and will display
-         prediction of train dataset
-
-```
-make test
-```
-
-step 7 - This can also be tested from any other machine in network calling
-API end point through browser or through curl getting response as -
+step 6 - Run command to load train data using /data/tarin
+         API end point
 
 ```
-Last login: Tue Feb 12 16:30:27 on console
-Riteshs-MacBook-Pro:~ riteshtandon$ curl -X GET --header 
-'Accept: application/json' 'http://192.168.0.20:8080/cloudmesh/prediction'
+~/project-code$ curl -X POST --header 'Content-Type: multipart/form-data' 
+--header 'Accept: application/json' {"type":"formData"} 
+-F 'uptrainfile=@train.csv' 'http://localhost:8080/cloudmesh/data/train'
+```
+
+successfull result indicate that file has been uploaded 
+successfully
+
+```
+ritesh@ritesh-ubuntu1:~/project-code$ curl -X POST --header 
+'Content-Type: multipart/form-data' 
+--header 'Accept: application/json' {"type":"formData"} 
+-F 'uptrainfile=@train.csv' 'http://localhost:8080/cloudmesh/data/train'
+curl: (52) Empty reply from server
 {
   "model": [
-    [
-      1876.7327564836178, 
-      1528.4817421301, 
-      1892.8023371209229, 
-      2548.0233282746017, 
-      5189.8230258564545, 
-      1883.3689375991453, 
-      589.2033736393378, 
-      2780.68395206951, 
-      1499.760788801912, 
-      3045.9721254204405, 
-      1968.4695323567164, 
-      1300.2848035122838, 
-      1877.110359154556, 
-      2050.536500392658, 
-      889.7200648564203, 
-      2557.6876043777715, 
-      3110.200419177716, 
-      2782.4854718425654, 
-      3226.5136785157088, 
-      1112.7847099793014, 
-      2763.799860825796, 
-      3925.4426743310987, 
-      762.4932104272953, 
-      382.6422989313028, 
-      3037.9100512338555, 
-      1431.6549667867473, 
-      947.9033732457308, 
-      2518.86020758495, 
-      3848.570657222426, 
-      2026.42745986608
-    ]
+    "successful!!"
   ]
 }
-Riteshs-MacBook-Pro:~ riteshtandon$ curl -X GET --header 
-'Accept: application/json' 
-'http://192.168.0.20:8080/cloudmesh/prediction/FDA15'
+```
+
+step 7 - Get item sale information by passing item identifier as path
+parameter to Open API endpoint
+
+```
+:~/project-code$ curl -H "Content-Type: application/json" 
+http://localhost:8080/cloudmesh/item/FDA15
+```
+
+successfull result will show item sale quantity along with store 
+identifier
+
+```
+:~/project-code$ curl -H "Content-Type: application/json" 
+http://localhost:8080/cloudmesh/item/FDA15
 {
   "model": [
-    [
-      3735.138, 
-      5976.2208, 
-      6474.2392, 
-      5976.2208, 
-      498.0184, 
-      6474.2392, 
-      6474.2392, 
-      5976.2208
-    ]
+    {
+      "Item_Outlet_Sales": {
+        "FDA15": 5976.2208
+      }, 
+      "Outlet_Identifier": {
+        "FDA15": "OUT017"
+      }
+    }
   ]
 }
-Riteshs-MacBook-Pro:~ riteshtandon$ 
-```
-
-#### Testing Using Docker Image
-
-step 1 - git clone https://github.com/cloudmesh-community/hid-sp18-523/tree/master/project-code
-
-step 2 - cd project-code
-
-step 3 - Run command
 
 ```
-make service
-```
 
-step 4 - Run command to build docker image by name cloudmeshprediction
 
-```
-make docker-build
-```
 
-step 5 - Run command to start service. This will create service endpoint
-         and will start the service on local environment
-         
-```
-make docker-start
-```
-
-step 6 - Open new terminal and run command
-
-```
-curl -H "Content-Type: application/json" http://localhost:8080/cloudmesh/prediction
-```
 
 ## Performance Comparison
 
