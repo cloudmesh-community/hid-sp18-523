@@ -9,7 +9,7 @@
 
 ---
 
-Keywords: docker, Scikit, AWS, Azure, Linear Regression, Boosted Decision
+Keywords: docker, Scikit, Open API, REST, Swagger, Linear Regression
 
 ---
 
@@ -22,69 +22,48 @@ There are many algorithms which have been developed and implemented for
 providing better accuracy on future scenarios. This project comprises
 of two parts on one hand it lets users manage items sales transactions
  and on the other hand it lets users predict sales quantity of given
- item of given outlet. Thus helping corporate store manage their nventory 
+ item of given outlet. Thus helping corporate store manage their inventory 
  stock to meet their retail outlet demands.
 
 ## Introduction
 
-Scikit learn is a library created for machine learning algorithms.
-This can be used on different datasets gathered over years to learn and predict
-future scenarios. This library have methods for implementing supervized
-and unsupervized machine learning algorithm.
-Supervised algorithms is used on dataset with target variable
-that needs to be predicted or estimated. This datasets can be acted with
-different approaches- 
-Classification is based on the classes and labeled data, we need to
-predict unlabeled data.
-Regression is based on the continuous variable or data, we need to
-predict future state of data.
-Unsupervised algorithms use datasets that does not have target variable.
-.Similar observations are grouped into buckets based on different methods
-such as distance between observations. This method is called clustering.
-These clusters are assigned classes for predicting[@sckitml]. 
-Kaggle is known location for different kind of datasets gathered by various 
-institutes across globe.
+Bigmart is big retail outlet chain in Europe. This project aims to help
+manage their inventory stock to fulfill demands  of their retail outlets
+using state of the art cutting edge cloud based technology. System exposes 
+inventory related information through OPEN API that can be deployed on cloud.
+This allows system to scale seamlessly if organization expands to open new 
+outlets or if sales transaction grows exponentially. On premise applications
+running in outlet store can access these API enpoint regardless of language
+they are written in. This API also provides future sales prediction of specific 
+item in given outlet based on historical transactions. This prediction information
+helps organization to manage their stock efficiently eventually reducing loss that 
+occur either through over stocking or losing sales opportunity because of non 
+availability of items.
+
 
 ## Scope of work
 
-Following alogorithms are used 
+To develop Open API that allows corporate users to upload historical sales 
+transactions data for all outlets in batch mode using file upload.
+Store outlet users should also be able to insert invidividual 
+item sales transactions for given store outlet. This Open API will allow
+store outlet users to query and view item details by passing item idendifier 
+and store outlet identifier. It should have feature that allows store outlet 
+users to query and view sales information  by passing item idendifier and 
+store outlet identifier. In addition it should  allows corporate users to upload 
+details of items they wish to get predictive quantity.
 
-* Implement Linear Regression
-* Implement Boosted Decision
-* Implement Hyper-tuned Boosted Decision
-
-## Reason
-
-We are planning to use Regression learning algorithm because the target
-variable is numerical and continuous in nature. We will be creating ML
-pipeline using linear, regularized linear, tree and forest learning
-algorithm. We will compare and evaluate different models based on RMSE
-of learning algorithm [@sckitml].
 
 ## Technology Stack
 
-Python will be used for Data loading, preprocessing and cleaning. Using
-Scikit learn library, we will implement variety of algorithms to conduct
-above process and finally will predict the sale price of its products.
+API is defined with Open API specification. Swagger codegen is used to 
+build sever side code stubs and client side SDK. Swagger UI is used to
+test API endpoints. Python flask micro web framework. Python pandas
+, numpy is used for data cleansing and pre processing. Python sklearn
+preprocessing package is used for treating and imputing missing values.
+Python linear_model package is used to create linear model for prediction.
+Python Jupyter notebook is used for data exploration and data visualization.
 
-REST services has been implemented to provide a prediction of price of
-the products:
-
-* REST data preprocessing: It will be the service, which does the data
-  processing with removal or imputing the data with mean or median.
-  Removal of the columns which doesn’t any correlation with target
-  variable
-* REST data prediction: it will be the service, which will do multiple
-    predictions using multiple algorithms
-* Rest API with Linear Regression – Display the outcome of product and
-  predicted price
-* Rest API with Boosted Decision – Display the outcome of product and
-  predicted price
-* Rest API with Hyper-tuned Boosted Decision – Display the outcome of
-  product and predicted price
-
-Cloud technology utilized will be Microsoft Azure, AWS, it has been
-implemented at Local machine and Docker.
 We have acquired Bigmart dataset from Kaggle. 
 We have 14204 instances and 13 attributes in dataset, which will be
 spitted into Training and Test Data set. This dataset has following
@@ -112,7 +91,6 @@ attributes
 * train dataset - https://github.com/cloudmesh-community/hid-sp18-523/blob/master/project-code/train.csv
 
 It has following 12 attributes with continuous and categorical values
-with Unique Values
 
 * Item Fat Content has 5 unique values
 * Item Identifier has 1559 unique values
@@ -127,39 +105,51 @@ with Unique Values
 * Outlet Size has 4 unique values
 * Outlet Type has 4 unique values
 
+train dataset is used by corporate users to store historical sales 
+transactions of items of different outlet stores which can then be 
+queried by outlet users to view their transactions. This dataset is 
+also used by implementation of prediction operation to train the 
+model.
+
+test dataset is used by corporate users to pass it to prediction
+endpoint of API in order to get estimated future sales quantity.
+
 ## Data Visualization
 
-The histogram in +@fig:HistogramofImportantAttributes shows the 
-distribution of data of different variables from the dataset.
-These are the important feature influencing the predicted 
-output
+The histogram in +@fig:HistogramofImportantAttributes shows 
+distribution of data of different variables from dataset.
+These are mportant feature influencing prediction of item
+sales quantity exposed through prediction API enspoint.
 
 ![Histogram of Important Attributes](images/HistrogramofImpAttributes.png){#fig:HistogramofImportantAttributes}
 
-In +@fig:CorrelationMatrixbetweenVariables shows the 
-plot about the corelation between variables in the dataset.
-This will display the features which are higly correlated in 
+In +@fig:CorrelationMatrixbetweenVariables plot shows 
+corelation between variables in dataset.
+The graph displays features which are higly correlated in 
 darker color.
 
 ![Correlation Matrix between Variables](images/Correlation.png){#fig:CorrelationMatrixbetweenVariables}
 
-## Data Exploration
-
-Analyzed and plotted the categorical and continuous feature summaries to 
-see which feature is closely related with target variable. This helped
-us with deciding which feature are influencing the prediction.
 
 ## Data Preprocessing
 
-* Missing values (2439) of item weight is replaced with mean.
-* Missing values (4016) of outlet size observations, which been
-  replaced with mode.
+Not all historical outlet store data ( train.csv ) transactions 
+has information information of all required attributes. We had to
+treat these missing values in order for predicting item sales quantity.
+We observed that there were 2439 entries of item weight that were 
+missing. This needs to be filled in order to improve accuracy of
+prediction. We decided to fill missing values with mean as that improved
+accuracy of our prediction mode. We have also observed that there were
+4016 records that were missing values of outlet size. Since outlet size
+is categorical data, we decided to replace these values with mode. Outlet
+size with most number of records is used to fill in these missing values.
+
 
 ## Azure ML Studio
 
 Azure ML studio provides the GUI interface for creating the Machine
 Learning Train models and Predictions. It provides a provision to
-integrate with Azure Cloud and expose the Web Services
+integrate with Azure Cloud and expose Web Service
 
 ## Train Model with Azure
 
@@ -179,9 +169,9 @@ Tree has provided better results.
 
 ## Predictive Model
 
-Update the Trained model with Test dataset for predicting the Item
-Outlet Sales data. Verified and updated the data cleaning process which
-we have implemented for Train dataset. After converting the categorical
+Update Trained model with Test dataset for predicting Item
+Outlet Sales data. Verified and updated data cleaning process which
+we have implemented for Train dataset. After converting categorical
 data with indicators, we can apply the trained model.
 
 Created predictive model using the above Hyper-tuned Boosted Decision
@@ -393,25 +383,18 @@ Local End Time:
  1278.2714367 ]
 ```
 
-## Docker
+## Open API
 
-Docker Image was created on local environment. Excution of docker image of
-model predict prices for passed dataset. This code can be reproduced  
-using Docker commands.
-Once replicated locally, running locahost endpoint url created by docker
-image on port- 8080 will predict prices of all items of datset.
+REST Open API was created using Swagger codegen for storing and managing 
+sales transactions that occuers in different outlet stores.  Other than
+managing transactions, API also predicts item sales quantity for given batch
+of items using linear regression method.
 
-Link for localhost 
+## Open API endpoints
 
-* <http://localhost:8080/cloudmesh/prediction>
-* <http://localhost:8080/cloudmesh/item/FDA15>
-* <http://localhost:8080/cloudmesh/item?item_id=FDA15&outlet_code=OUT049>
+![API Enpoints](images/api-endpoints.png){#fig:APIRndpoints}
 
 
-
-## Code Reproducing steps
-
-Environment - Ubuntu 1, python
 
 #### Open API Specification
 
@@ -421,11 +404,11 @@ info:
  version: "0.0.1"
  title: "Item Sales API"
  description: "This API is designed to provide historical data of sales 
- transactions that occured in mutiple outlets spread across Europe of big 
- retail giant. API provides sales information of given items and oulets 
- to consumers.This eventually helps them plan their inventory and place 
- order quantity. API also predicts sales of items based on their weight, 
- fat content, visibility,     price and type"
+ transactions that occured in mutiple outlets spread across Europe of 
+ big retail giant. API provides sales information of given items and 
+ oulets to consumers. This eventually helps them plan their inventory 
+ and place order quantity. API also predicts sales of items based on their 
+ weight, fat content, visibility, price and type"
  termsOfService: "http://swagger.io/terms/"
  contact:
   name: "Ritesh Tandon, IU, MS Data Science - 2018"
@@ -456,18 +439,17 @@ paths:
        their weight, fat content, visibility, price and type in batch mode "
 
        schema:
-         $ref: "#/definitions/PREDICTION"
+         $ref: "#/definitions/Prediction"
 
 
  /item/{Item_Id}:
     get:
       operationId: item.getitemsales
-      summary: "This API endpoint returns sales transactions of an itemid 
-      that is passed as path parameter. It returns item id, outlet store 
-      and sales."
+      summary: "This API endpoint returns sales transactions of an itemid that 
+      is passed as path parameter. It returns item id, outlet store and sales."
       description: "This API endpoint returns sales transactions of an itemid 
-      that is passed as path parameter. It returns item id, outlet store 
-      and sales."
+      that is passed as path parameter. It returns item id, outlet store and 
+      sales."
       parameters:
         - name: Item_Id
           in: path
@@ -476,17 +458,17 @@ paths:
           required: True
       responses:
         200:
-          description: Successfully fetched Sale of given item id in all outlet store.
+          description: Successfully fetched Sale of given item id in all 
+          outlet store.
           schema:
-            $ref: "#/definitions/GETITEMSALES"
-
- /item:
+            $ref: "#/definitions/ItemSale"
+ /sale:
     get:
-      operationId: item.getitemoutletsales
-      summary: "This API endpoint returns sales transactions of an itemid for given 
-      outlet store that is passed as query string parameter."
-      description: "This API endpoint returns sales transactions of an itemid for 
+      operationId: sale.getitemoutletsales
+      summary: "This API endpoint returns sales quantity of an itemid for 
       given outlet store that is passed as query string parameter."
+      description: "This API endpoint returns sales quantity of an itemid 
+      for given outlet store that is passed as query string parameter."
       parameters:
         - name: item_id
           in: query
@@ -500,18 +482,117 @@ paths:
           required: True
       responses:
         200:
-          description: Successfully fetched Sale of given item id in given outlet
+          description: Successfully fetched Sale of given item id in given 
+          outlet
           schema:
-            $ref: "#/definitions/GETITEMOUTLETSALES"
-  /uploadtrain:
+            $ref: "#/definitions/ItemOutletSale"
+ /item:
+    get:
+      operationId: item.getitemdetails
+      summary: "This API endpoint returns all details of an itemid for given 
+      outlet store that is passed as query string parameter."
+      description: "This API endpoint returns all details of an itemid for 
+      given outlet store that is passed as query string parameter."
+      parameters:
+        - name: item_id
+          in: query
+          description: Item Id passed in query string
+          type: string
+          required: True
+        - name: outlet_id
+          in: query
+          description: Outlet Identifier passed in query string
+          type: string
+          required: True
+      responses:
+        200:
+          description: Successfully fetched Sale of given item id in given 
+          outlet
+          schema:
+            $ref: "#/definitions/ItemDetail"
+    put:
+      operationId: item.additem
+      summary: "This API endpoint add item details such as such as weight, 
+      MRP, visibility index, outlet type, outlet identifier, year, sales 
+      quantity etc."
+      description: "This API endpoint add item details such as such as weight, 
+      MRP, visibility index, outlet type, outlet identifier, year, sales 
+      quantity etc."
+      parameters:
+        - name: Item_Identifier
+          in: query
+          description: Item Id passed in query string
+          type: string
+          required: True
+        - name: Item_Weight
+          in: query
+          description: item weight passed in query string
+          type: string
+          required: True
+        - name: Item_Fat_Content
+          in: query
+          description: Item fat content passed in query string
+          type: string
+          required: True
+        - name: Item_Visibility
+          in: query
+          description: outlet visibility passed in query string
+          type: string
+          required: True
+        - name: Item_Type
+          in: query
+          description: Item type passed in query string
+          type: string
+          required: True
+        - name: Item_MRP
+          in: query
+          description: Item MRP passed in query string
+          type: string
+          required: True
+        - name: Outlet_Identifier
+          in: query
+          description: Outlet Identfier passed in query string
+          type: string
+          required: True
+        - name: Outlet_Establishment_Year
+          in: query
+          description: outlet year passed in query string
+          type: string
+          required: True
+        - name: Outlet_Size
+          in: query
+          description: outlet size passed in query string
+          type: string
+          required: True
+        - name: Outlet_Location_Type
+          in: query
+          description: outlet location type passed in query string
+          type: string
+          required: True
+        - name: Outlet_Type
+          in: query
+          description: outlet type passed in query string
+          type: string
+          required: True
+        - name: Item_Outlet_Sales
+          in: query
+          description: item outlet sales passed in query string
+          type: string
+          required: True
+      responses:
+        200:
+          description: Successfully added item details
+          schema:
+            $ref: "#/definitions/Item"
+ /data/train:
     post:
-      operationId: uploadtrain.uploadtrainfile
-      summary: "This API endpoint can be used to upload train csv file. This csv file 
-      is used to train linear regression model for prediction."
-      description: "This API endpoint can be used to upload train csv file. This csv 
-      file is used to train linear regression model for prediction."
+      operationId: train.uploadtrainfile
+      summary: "This API endpoint can be used to upload train csv file. 
+      This csv file is used to train linear regression model for prediction."
+      description: "This API endpoint can be used to upload train csv file. 
+      This csv file is used to train linear regression model for prediction."
       consumes:
-        - multiform/form-data
+        - multipart/form-data
       parameters:
         - name: uptrainfile
           in: formData
@@ -522,18 +603,18 @@ paths:
         200:
           description: Successfully uploaded file
           schema:
-            $ref: "#/definitions/UPLOADTRAINFILE"
- /uploadtest:
+            $ref: "#/definitions/DataTrain"
+ /data/test:
     post:
-      operationId: uploadtest.uploadtestfile
+      operationId: test.uploadtestfile
       summary: "This API endpoint can be used to upload test csv file. 
-      prediction prices of items listed in this csv file can be obtained by 
-      calling api prediction endpoint."
+      prediction prices of items listed in this csv file can be obtained 
+      by calling api prediction endpoint."
       description: "This API endpoint can be used to upload test csv file. 
-      prediction prices of items listed in this csv file can be obtained by 
-      calling api prediction endpoint."
+      prediction prices of items listed in this csv file can be obtained 
+      by calling api prediction endpoint."
       consumes:
-        - multiform/form-data
+        - multipart/form-data
       parameters:
         - name: uptestfile
           in: formData
@@ -544,30 +625,30 @@ paths:
         200:
           description: Successfully uploaded file
           schema:
-            $ref: "#/definitions/UPLOADTESTFILE"            
+            $ref: "#/definitions/DataTest"
 definitions:
- PREDICTION:
+ Prediction:
   type: "object"
   required :
    - "model"
   properties:
    model:
     type: "string"
- GETITEMSALES:
+ ItemSale:
   type: "object"
   required :
    - "model"
   properties:
    model:
     type: "string"
- GETITEMOUTLETSALES:
+ ItemOutletSale:
   type: "object"
   required :
    - "model"
   properties:
    model:
     type: "string"
-  UPLOADTRAINFILE:
+ DataTrain:
   type: "string"
   format: binary
   required :
@@ -575,9 +656,24 @@ definitions:
   properties:
    model:
     type: "string"
- UPLOADTESTFILE:
+ DataTest:
   type: "string"
   format: binary
+  required :
+   - "model"
+  properties:
+   model:
+    type: "string"
+ Item:
+  type: "string"
+  format: binary
+  required :
+   - "model"
+  properties:
+   model:
+    type: "string"
+ ItemDetail:
+  type: "object"
   required :
    - "model"
   properties:
@@ -587,25 +683,17 @@ definitions:
 
 ```
 
-#### Testing using local python instance
 
-step 1 - Download project-code folder from github to local drive on Ubuntu
+## Code Reproducing steps
 
-step 2 - On terminal go to project-code folder
-
-step 2 - Run command to exceute locally
-
-```
-python Project-BIgMartPrediction.py
-
-```
+Environment - Ubuntu , python
 
 
 #### Testing Service Locally
 
-step 1 - Download project-code folder from github to local drive on Ubuntu
+step 1 - git clone https://github.com/cloudmesh-community/hid-sp18-523/tree/master/project-code
 
-step 2 - On terminal go to project-code folder
+step 2 - cd project-code
 
 step 3 - Run command
 
@@ -626,110 +714,208 @@ Keep this terminal window open. Do not close it.
 
 step 4 - Open new terminal 
 
-step 5 - On terminal go to project-code folder
+step 5 - cd project-code
 
-step 6 - Run command. This will call REST API and will display
-         prediction of train dataset
-
-```
-make test
-```
-
-step 7 - This can also be tested from any other machine in network calling
-API end point through browser or through curl getting response as -
+step 6 - Run command to load train data using /data/tarin
+         API end point
 
 ```
-Last login: Tue Feb 12 16:30:27 on console
-Riteshs-MacBook-Pro:~ riteshtandon$ curl -X GET --header 
-'Accept: application/json' 'http://192.168.0.20:8080/cloudmesh/prediction'
+~/project-code$ curl -X POST --header 'Content-Type: multipart/form-data' 
+--header 'Accept: application/json' {"type":"formData"} 
+-F 'uptrainfile=@train.csv' 'http://localhost:8080/cloudmesh/data/train'
+```
+
+successfull result indicate that file has been uploaded 
+successfully
+
+```
+~/project-code$ curl -X POST --header 
+'Content-Type: multipart/form-data' 
+--header 'Accept: application/json' {"type":"formData"} 
+-F 'uptrainfile=@train.csv' 'http://localhost:8080/cloudmesh/data/train'
+curl: (52) Empty reply from server
+{
+  "model": [
+    "successful!!"
+  ]
+}
+```
+
+step 7 - Get item sale information by passing item identifier as path
+parameter to Open API endpoint
+
+```
+~/project-code$ curl -H "Content-Type: application/json" 
+http://localhost:8080/cloudmesh/item/FDA15
+```
+
+successfull result will show item sale quantity along with store 
+identifier
+
+```
+~/project-code$ curl -H "Content-Type: application/json" 
+http://localhost:8080/cloudmesh/item/FDA15
+{
+  "model": [
+    {
+      "Item_Outlet_Sales": {
+        "FDA15": 5976.2208
+      }, 
+      "Outlet_Identifier": {
+        "FDA15": "OUT017"
+      }
+    }
+  ]
+}
+
+```
+
+step 8 - Get all details of item for given outlet by passing 
+item id and outlet id as query string to /item
+API end point
+
+```
+~/project-code$ curl -H "Content-Type: application/json" 
+'http://localhost:8080/cloudmesh/item?item_id=FDA15&outlet_id=OUT049'
+```
+
+successfull result will display details of given
+item and outlet store
+
+```
+~/project-code$ curl -H "Content-Type: application/json" 
+'http://localhost:8080/cloudmesh/item?item_id=FDA15&outlet_id=OUT049'
+{
+  "model": [
+    "{\"Item_Identifier\":{\"[\"FDA15\",\"OUT049\"]\":\"FDA15\"},
+    \"Item_Weight\":{\"[\"FDA15\",\"OUT049\"]\":9.3},
+    \"Item_Fat_Content\":{\"[\"FDA15\",\"OUT049\"]\":\"Low Fat\"},
+    \"Item_Visibility\":{\"[\"FDA15\",\"OUT049\"]\":0.016047301},
+    \"Item_Type\":{\"[\"FDA15\",\"OUT049\"]\":\"Dairy\"},
+    \"Item_MRP\":{\"[\"FDA15\",\"OUT049\"]\":249.8092},
+    \"Outlet_Identifier\":{\"[\"FDA15\",\"OUT049\"]\":\"OUT049\"},
+    \"Outlet_Establishment_Year\":{\"[\"FDA15\",\"OUT049\"]\":1999},
+    \"Outlet_Size\":{\"[\"FDA15\",\"OUT049\"]\":\"Medium\"},
+    \"Outlet_Location_Type\":{\"[\"FDA15\",\"OUT049\"]\":\"Tier 1\"},
+    \"Outlet_Type\":{\"[\"FDA15\",\"OUT049\"]\":\"Supermarket Type1\"},
+    \"Item_Outlet_Sales\":{\"[\"FDA15\",\"OUT049\"]\":3735.138}}"
+  ]
+}
+```
+
+
+step 9 - Get Sale of item by calling /sale API endpoint for given outlet 
+by passing item id and outlet code as query string parameter
+
+```
+ritesh@ritesh-ubuntu1:~/project-code$ curl -H "Content-Type: application/json" 
+'http://localhost:8080/cloudmesh/sale?item_id=FDA15&outlet_code=OUT049'
+```
+
+successfull result will just display sale quantity information 
+
+```
+ritesh@ritesh-ubuntu1:~/project-code$ curl 
+-H "Content-Type: application/json" 
+'http://localhost:8080/cloudmesh/sale?item_id=FDA15&outlet_code=OUT049'
 {
   "model": [
     [
-      1876.7327564836178, 
-      1528.4817421301, 
-      1892.8023371209229, 
-      2548.0233282746017, 
-      5189.8230258564545, 
-      1883.3689375991453, 
-      589.2033736393378, 
-      2780.68395206951, 
-      1499.760788801912, 
-      3045.9721254204405, 
-      1968.4695323567164, 
-      1300.2848035122838, 
-      1877.110359154556, 
-      2050.536500392658, 
-      889.7200648564203, 
-      2557.6876043777715, 
-      3110.200419177716, 
-      2782.4854718425654, 
-      3226.5136785157088, 
-      1112.7847099793014, 
-      2763.799860825796, 
-      3925.4426743310987, 
-      762.4932104272953, 
-      382.6422989313028, 
-      3037.9100512338555, 
-      1431.6549667867473, 
-      947.9033732457308, 
-      2518.86020758495, 
-      3848.570657222426, 
-      2026.42745986608
+      3735.138
     ]
   ]
 }
-Riteshs-MacBook-Pro:~ riteshtandon$ curl -X GET --header 
-'Accept: application/json' 
-'http://192.168.0.20:8080/cloudmesh/prediction/FDA15'
+
+```
+
+step 10 - Run command to load test data using /data/test
+         API end point
+```
+ritesh@ritesh-ubuntu1:~/project-code$ curl -X POST --header 
+'Content-Type: multipart/form-data' --header 
+'Accept: application/json' {"type":"formData"} 
+-F 'uptestfile=@test.csv' 'http://localhost:8080/cloudmesh/data/test'
+```
+
+successfull message result will indicate that test file has been 
+uploaded 
+
+
+```
+ritesh@ritesh-ubuntu1:~/project-code$ curl -X POST --header 
+'Content-Type: multipart/form-data' --header 
+'Accept: application/json' {"type":"formData"} 
+-F 'uptestfile=@test.csv' 'http://localhost:8080/cloudmesh/data/test'
+curl: (7) Couldn't connect to server
+{
+  "model": [
+    "successful!!"
+  ]
+}
+```
+
+
+step 11 - Run command to get prediction of sales quantity of items
+listed in test data file by calling /prediction API end point
+
+
+```
+ritesh@ritesh-ubuntu1:~/project-code$ curl -H 
+"Content-Type: application/json" http://localhost:8080/cloudmesh/prediction
+```
+
+successfull result will display predictive quantity of test data items
+using linear regression method.
+
+```
+ritesh@ritesh-ubuntu1:~/project-code$ curl 
+-H "Content-Type: application/json" http://localhost:8080/cloudmesh/prediction
 {
   "model": [
     [
-      3735.138, 
-      5976.2208, 
-      6474.2392, 
-      5976.2208, 
-      498.0184, 
-      6474.2392, 
-      6474.2392, 
-      5976.2208
+      1857.1406639820989, 
+      1563.2871665661592, 
+      1834.231027551627, 
+      2581.450544775922, 
+      5159.461138379451, 
+      1919.533023840407, 
+      627.6994262925587, 
+      2803.1335223421875, 
+      1508.992328153954, 
+      3072.745089319022, 
+      1999.6589439699842, 
+      1327.040653005452, 
+      1816.3873392549926, 
+      2056.702717158843, 
+      912.9796569607081, 
+      2537.4069529934063, 
+      3082.8856104726055, 
+      2763.159286304049, 
+      3204.078913003401, 
+      1110.070131269718, 
+      2810.2681164220576, 
+      3846.3743818872504, 
+      826.7525706134691, 
+      342.6092963525098, 
+      3006.7573564539343, 
+      1414.1059565447613, 
+      924.7275399636796, 
+      2529.0310769705984, 
+      3823.1790049697015, 
+      2022.4847250844673
     ]
   ]
 }
-Riteshs-MacBook-Pro:~ riteshtandon$ 
-```
-
-#### Testing Using Docker Image
-
-step 1 - Download project-code folder from github to local drive on Ubuntu
-
-step 2 - On terminal go to project-code folder
-
-step 3 - Run command
 
 ```
-make service
-```
 
-step 4 - Run command to build docker image by name cloudmeshprediction
-
-```
-make docker-build
-```
-
-step 5 - Run command to start service. This will create service endpoint
-         and will start the service on local environment
-         
-```
-make docker-start
-```
-
-step 6 - Open new terminal and run command
-
-```
-curl -H "Content-Type: application/json" http://localhost:8080/cloudmesh/prediction
-```
 
 ## Performance Comparison
+
+Performance comparision was done for executing python
+notebook on three different environment . Two different 
+clouds ( Azure and AWS ) and local.
+
 
 Environment  | Description       |  Elapsed Time
 -------------|-------------------|----------------
@@ -742,12 +928,10 @@ giving performance of 0.0082 seconds whereas prediction on
 Azure has took 0.0152 seconds. lowest being the local environment 
 with 0.03 second.
 
-Working demo [link](https://www.youtube.com/watch?v=xrLto4XPn1o)
-
 ## Conclusion
 
 Linear Regression, Boosted Decision and Hypertuned Boosted Decision
-models were implemented. 
+models were implemented in python notebook code.  
 
 Best model was decided based on accuracy and that was used for prediction
 of sales price of items across all store outlets.
@@ -769,7 +953,7 @@ and suggestions to write this paper.
 Arijit and Ritesh worked on data processing,Data exploration and designing 
 the Machine learning Algorithms. We both have brainstromed on visualizing 
 data. Arijit worked on Azure cloud and creating web service and Ritesh 
-worked on creating REST Open API and tested on local machine through
-Swagger UI. We both worked on comparing performance benchmarks. Compared the 
-time running on AWS cloud to prepare the time comparision chart and project 
-report.
+worked on creating REST Open API using linear regression methodand tested 
+on local machine through Swagger UI. We both worked on comparing performance 
+python notebook code that was executed on two clouds for benchmark benchmarks. 
+
