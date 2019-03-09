@@ -1,7 +1,7 @@
 # Managing item sales transactions and predicting quantity using REST API
 
 | Ritesh Tandon, Arijit Sinha
-| arisinha@iu.edu, ritandon@iu.edu
+| ritandon@iu.edu, arisinha@iu.edu
 | Indiana University Bloomington
 | hid: hid-sp18-523,  hid-sp18-520
 | github: [:cloud:](https://github.com/cloudmesh-community/hid-sp18-523/tree/master/project-report/report.md)
@@ -934,7 +934,8 @@ Linear Regression, Boosted Decision and Hypertuned Boosted Decision
 models were implemented in python notebook code.  
 
 Best model was decided based on accuracy and that was used for prediction
-of sales price of items across all store outlets.
+of sales quantity of items across store outlets which helps in inventory
+and stock management.
 
 Model was  deployed on Azure Cloud, AWS Cloud and Local machine for 
 predicting prices. Docker image was created for reproducing. 
