@@ -386,7 +386,7 @@ Local End Time:
 ## Open API
 
 REST Open API was created using Swagger codegen for storing and managing 
-sales transactions that occuers in different outlet stores.  Other than
+sales transactions that occurs in different outlet stores.  Other than
 managing transactions, API also predicts item sales quantity for given batch
 of items using linear regression method.
 
