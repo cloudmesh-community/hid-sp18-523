@@ -608,10 +608,10 @@ paths:
     post:
       operationId: test.uploadtestfile
       summary: "This API endpoint can be used to upload test csv file. 
-      prediction prices of items listed in this csv file can be obtained 
+      prediction quantity of items listed in this csv file can be obtained 
       by calling api prediction endpoint."
       description: "This API endpoint can be used to upload test csv file. 
-      prediction prices of items listed in this csv file can be obtained 
+      prediction quantity of items listed in this csv file can be obtained 
       by calling api prediction endpoint."
       consumes:
         - multipart/form-data
