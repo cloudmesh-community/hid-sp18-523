@@ -7,6 +7,18 @@ Spring 2018
 :white_check_mark: sorted in reverse order and added work that has been completed in recent weeks
 
 
+
+## Week ( Mar 04 - Mar 10 , 2019 )
+* Attended professor online session on Thursday 03/07/2019 and noted down all review comments to work on
+* Cleaned and improved API code. Changed schema name in open API yaml file and changed python code file accordingly
+* Implemented error handling code in python controller file
+* Tested all end points of service using Swagger UI and through curl commands
+* Checked in prediction yaml and controller python file in github
+* Updated report.md file with updated API specification
+* Added more content in report.md, added verbatim of output of API testing CURL commands
+* Organized report.md content and checked it in github.
+
+
 ## Week ( Feb 25 - Mar 03 , 2019 ) 
 * Changed heading of the project to be more meaningful.
 * Changed abstract content to explain project context.
@@ -18,7 +30,7 @@ Spring 2018
 * Added Open API endpoints image showing all endpoints of OpenAPI.
 * Changed Open API resource endpoints name to NOUN such as data/train , data/test, /sale
 * Added one more /item PUT endpoint that allows user to insert item detail record. 
-* Attended professor online session on Thursday 02/24/2019 and noted down all review comments to work on.
+* Attended professor online session on Thursday 02/28/2019 and noted down all review comments to work on.
 * Cleaned and improved API code and checked in Makefile, prediction.yaml
   and defaultcontroller.py
 * Tested all end points of service using Swagger UI ( Uploaded train and test data file
