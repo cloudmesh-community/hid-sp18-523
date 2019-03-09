@@ -25,4 +25,4 @@ project:
 URL tutorial:
   - title: Puppet  
     url: https://github.com/cloudmesh-community/book/blob/master/chapters/devops/puppet.md
-    group: hid-sp18-520 hid-sp18-523
+    group: hid-sp18-523 hid-sp18-520
