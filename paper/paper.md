@@ -13,9 +13,6 @@ Keywords: Domo, API, token
 
 ---
 
-
-## Introduction
-
 Domo is cloud based data integration platform that enables employees to
 engage with globally distributed data in real time. It provides
 flexibility to outside partners and third party vendors to integrate and
