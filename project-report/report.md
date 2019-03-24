@@ -716,7 +716,7 @@ step 4 - Open new terminal
 
 step 5 - cd project-code
 
-step 6 - Run command to load train data using /data/tarin
+step 6 - Run command to load train data using /data/train
          API end point
 
 ```
@@ -741,7 +741,30 @@ curl: (52) Empty reply from server
 }
 ```
 
-step 7 - Get item sale information by passing item identifier as path
+step 7 - Insert new item with all its details using /item PUT endpoint 
+
+```
+curl -X PUT --header 'Content-Type: application/json' --header 
+'Accept: application/json' 'http://localhost:8080/cloudmesh/item
+?Item_Identifier=RRR05&Item_Weight=5&Item_Fat_Content=LOW
+&Item_Visibility=0.01&Item_Type=Dairy&Item_MRP=72&Outlet_Identifier=OUT111
+&Outlet_Establishment_Year=2018&Outlet_Size=Medium
+&Outlet_Location_Type=Tier%201&Outlet_Type=Supermarket&Item_Outlet_Sales=2400'
+```
+
+successfull result indicate that new item details have been inserted with
+all details. This data can further be used for querying and predictive
+modeling.
+
+```
+{
+  "model": [
+    "successful!!"
+  ]
+}```
+
+
+step 8 - Get item sale information by passing item identifier as path
 parameter to Open API endpoint
 
 ```
@@ -770,7 +793,7 @@ http://localhost:8080/cloudmesh/item/FDA15
 
 ```
 
-step 8 - Get all details of item for given outlet by passing 
+step 9 - Get all details of item for given outlet by passing 
 item id and outlet id as query string to /item
 API end point
 
@@ -804,7 +827,7 @@ item and outlet store
 ```
 
 
-step 9 - Get Sale of item by calling /sale API endpoint for given outlet 
+step 10 - Get Sale of item by calling /sale API endpoint for given outlet 
 by passing item id and outlet code as query string parameter
 
 ```
@@ -828,7 +851,7 @@ successfull result will just display sale quantity information
 
 ```
 
-step 10 - Run command to load test data using /data/test
+step 11 - Run command to load test data using /data/test
          API end point
 ```
 ~/project-code$ curl -X POST --header 
@@ -855,7 +878,7 @@ curl: (7) Couldn't connect to server
 ```
 
 
-step 11 - Run command to get prediction of sales quantity of items
+step 12 - Run command to get prediction of sales quantity of items
 listed in test data file by calling /prediction API end point
 
 
