@@ -761,8 +761,8 @@ modeling.
   "model": [
     "successful!!"
   ]
-}```
-
+}
+```
 
 step 8 - Get item sale information by passing item identifier as path
 parameter to Open API endpoint
