@@ -22,7 +22,7 @@ project:
     url: https://github.com/cloudmesh-community/hid-sp18-523/tree/master/project-report/report.md
     group: hid-sp18-523 hid-sp18-520
     code: https://github.com/cloudmesh-community/hid-sp18-523/tree/master/project-code
-URL tutorial:
+chapter:
   - title: Puppet  
     url: https://github.com/cloudmesh-community/book/blob/master/chapters/devops/puppet.md
     group: hid-sp18-523 hid-sp18-520
