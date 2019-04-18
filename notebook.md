@@ -6,6 +6,10 @@ Spring 2018
 
 :white_check_mark: sorted in reverse order and added work that has been completed in recent weeks
 
+## Week ( Apr 07 - Apr 14 , 2019 )
+* Attended thursday's professor online session
+* Discussed project and chapter with professor
+
 ## Week ( Mar 18 - Mar 24 , 2019 )
 * Attended professor online session on Thursday 03/21/2019 and review project report file
 * Added step for inseting item details using /item PUT API endpoint
