@@ -6,9 +6,18 @@ Spring 2018
 
 :white_check_mark: sorted in reverse order and added work that has been completed in recent weeks
 
-## Week ( Apr 07 - Apr 14 , 2019 )
+## Week ( Apr 15 - Apr 21 , 2019 )
+* Attended thursday's professor online session
+* Reviewed open APi with professor
+* Reviewed data exploration , data processing python code and controller code for open api
+
+
+## Week ( Apr 08 - Apr 14 , 2019 )
 * Attended thursday's professor online session
 * Discussed project and chapter with professor
+
+## Week ( Apr 01 - Apr 07 , 2019 )
+* Attended thursday's professor online session
 
 ## Week ( Mar 18 - Mar 24 , 2019 )
 * Attended professor online session on Thursday 03/21/2019 and review project report file
