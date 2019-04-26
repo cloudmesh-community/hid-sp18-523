@@ -6,6 +6,18 @@ Spring 2018
 
 :white_check_mark: sorted in reverse order and added work that has been completed in recent weeks
 
+
+## Week ( Apr 22 - Apr 28 , 2019 )
+* setup new Ubuntu 19.04 VM
+* Installed cloudmesh-installer , cloudmesh-cmd5 and other base backages on new VM
+* debugged set up issues and resolved them.
+* Successfully tested cms help command
+* Started implementing `$cms vm ping` command and noted that local code was failing because `cloudmesh.bar` instead of `cloudmesh-bar` in `cloudmesh-sys/cloudmesh/sys/manage.py` file. Notified professor of this.
+* Attended professor online session on wednesday. Debugged `cms vm` command issue and resolved issue.
+* Successfully implemented and tested `cms vm ping --ipaddress=<any-domain-name-to-test>`
+
+
+
 ## Week ( Apr 15 - Apr 21 , 2019 )
 * Attended thursday's professor online session
 * Reviewed open APi with professor
