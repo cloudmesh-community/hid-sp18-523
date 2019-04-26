@@ -15,7 +15,8 @@ Spring 2018
 * Started implementing `$cms vm ping` command and noted that local code was failing because `cloudmesh.bar` instead of `cloudmesh-bar` in `cloudmesh-sys/cloudmesh/sys/manage.py` file. Notified professor of this.
 * Attended professor online session on wednesday. Debugged `cms vm` command issue and resolved issue.
 * Successfully implemented and tested `cms vm ping --ipaddress=<any-domain-name-to-test>`
-
+* Installed cloudmesh-nn locally to test. Have to install python tkinter separately to execute `cms nn start` command successfully. Installer code can be improved to include this.
+* Successfully Tested `http://localhost:8080/project19/data/output/input.txt` after running cloudmesh nn service
 
 
 ## Week ( Apr 15 - Apr 21 , 2019 )
