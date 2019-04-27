@@ -18,6 +18,7 @@ paper:
     group: hid-sp18-523
 project:
   - keyword: docker, Scikit, AWS, Azure, Linear Regression, Boosted Decision
+  - status: 100%
     title: Managing item sales transactions and predicting quantity using REST
     url: https://github.com/cloudmesh-community/hid-sp18-523/tree/master/project-report/report.md
     group: hid-sp18-523 hid-sp18-520
