@@ -8,15 +8,21 @@ Spring 2018
 
 
 ## Week ( Apr 22 - Apr 28 , 2019 )
-* setup new Ubuntu 19.04 VM
-* Installed cloudmesh-installer , cloudmesh-cmd5 and other base backages on new VM
-* debugged set up issues and resolved them.
-* Successfully tested cms help command
-* Started implementing `$cms vm ping` command and noted that local code was failing because `cloudmesh.bar` instead of `cloudmesh-bar` in `cloudmesh-sys/cloudmesh/sys/manage.py` file. Notified professor of this.
-* Attended professor online session on wednesday. Debugged `cms vm` command issue and resolved issue.
-* Successfully implemented and tested `cms vm ping --ipaddress=<any-domain-name-to-test>`
-* Installed cloudmesh-nn locally to test. Have to install python tkinter separately to execute `cms nn start` command successfully. Installer code can be improved to include this.
+
+* Tested cloudmesh-nn `http://localhost:8080/project19/experiment/knn/results/boxplot/input.txt`.
+* Tested cloudmesh-nn `http://localhost:8080/project19/experiment/knn/input.txt`. Fixed error regarding path in partition.py file. Fixed error related to slicing of indices in partition.py file, indices needs to type cast to int
+* Successfully tested cloudmesh-nn `http://localhost:8080/project19/data/boxplot/norm/input.txt` 
+* Successfully tested cloudmesh-nn `http://localhost:8080/project19/data/boxplot/raw/input.txt` 
 * Successfully Tested `http://localhost:8080/project19/data/output/input.txt` after running cloudmesh nn service
+* Installed cloudmesh-nn locally to test. Have to install python tkinter separately to execute `cms nn start` command successfully. Installer code can be improved to include this.
+* Successfully implemented and tested `cms vm ping --ipaddress=<any-domain-name-to-test>`
+* Attended professor online session on wednesday. Debugged `cms vm` command issue and resolved issue.
+* Started implementing `$cms vm ping` command and noted that local code was failing because `cloudmesh.bar` instead of `cloudmesh-bar` in `cloudmesh-sys/cloudmesh/sys/manage.py` file. Notified professor of this.
+* Successfully tested cms help command
+* debugged set up issues and resolved them.
+* Installed cloudmesh-installer , cloudmesh-cmd5 and other base backages on new VM
+* setup new Ubuntu 19.04 VM
+
 
 
 ## Week ( Apr 15 - Apr 21 , 2019 )
