@@ -9,8 +9,11 @@ Spring 2018
 
 ## Week ( Apr 22 - Apr 28 , 2019 )
 
+* Added new end point in nn.yaml file for uploading file data into mongo db
+* Implemented method in data.py file to create mongodb database called `nfl` and `players` collection. Code loads data of file passed as path parameter to  mongodb database.
+* Successfully tested cloudmesh-nn `http://localhost:8080/project19/data/upload/input.txt` and verified that data is inserted into mongodb collection using `curl -X PUT --header 'Content-Type: application/json'   'http://localhost:8080/project19/data/upload/input.txt
 * Tested cloudmesh-nn `http://localhost:8080/project19/experiment/knn/results/boxplot/input.txt`.
-* Tested cloudmesh-nn `http://localhost:8080/project19/experiment/knn/input.txt`. Fixed error regarding path in partition.py file. Fixed error related to slicing of indices in partition.py file, indices needs to type cast to int
+* Tested cloudmesh-nn `http://localhost:8080/project19/experiment/knn/input.txt`. Fixed error regarding path in partition.py file. Fixed error related to slicing of indices in partition.py file, indices needs to type cast to int. Sent pull request for merging code.
 * Successfully tested cloudmesh-nn `http://localhost:8080/project19/data/boxplot/norm/input.txt` 
 * Successfully tested cloudmesh-nn `http://localhost:8080/project19/data/boxplot/raw/input.txt` 
 * Successfully Tested `http://localhost:8080/project19/data/output/input.txt` after running cloudmesh nn service
