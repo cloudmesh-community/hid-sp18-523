@@ -8,7 +8,7 @@ Spring 2018
 
 ## Week ( Apr 29 - Apr 3 , 2019 )
 
-* Added spec of new end point /data/player in nn.yaml file for inserting single player record into mongo db. This end point passes single players details in querty string parameter
+* Added spec of new end point /data/player in nn.yaml file for inserting single player record into mongo db. This end point passes single players details in query string parameter
 * Implemented method in data.py file for inserting single player details passed as query string parameter into `players` collection of `nfl` mongo db database. This method stores parameter values into variables which is then used to insert document into collection and return successfull message. This method return appropriate message if database or collection does not exist.
 * After changing code started service using `$cms nn start`
 * Successfully tested inserting single player detail into mongo db using 
