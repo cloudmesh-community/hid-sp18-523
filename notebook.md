@@ -12,8 +12,8 @@ Spring 2018
 * Implemented method in data.py file for inserting single player details passed as query string parameter into `players` collection of `nfl` mongo db database. This method stores parameter values into variables which is then used to insert document into collection and return successfull message. This method return appropriate message if database or collection does not exist.
 * After changing code started service using `$cms nn start`
 * Successfully tested inserting single player detail into mongo db using 
-`curl -X PUT "http://localhost:8080/project19/data/player?Player=DarnellTest1&Pos=OT&Ht=75&Wt=333&Forty=5.55&Vertical=24&BenchReps=22&BroadJump=93&Cone=8.47&Shuttle=4.97&Year=1999&Pfr_ID=AlfoDa19&AV=0.1&Team=Kansas%20City&Round=5&Pick=187" -H  "accept: application/json"`
-and got `successfully inserted record into players collection` message from service
+`curl -X PUT "http://localhost:8080/project19/data/player?Player=DarnellTest1&Pos=OT&Ht=75&Wt=333&Forty=5.55&Vertical=24&BenchReps=22&BroadJump=93&Cone=8.47&Shuttle=4.97&Year=1999&Pfr_ID=AlfoDa19&AV=0.1&Team=Kansas%20City&Round=5&Pick=187" -H  "accept: application/json"`.
+* Got `successfully inserted record into players collection` message from service
 * Verified and looked at newly inserted record into `players` collection of `nfl` db.
 
 
